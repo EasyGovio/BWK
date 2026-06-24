@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<!--
+╔═══════════════════════════════════════════════════════════════╗
+║         🛡️  PACDI FRAMEWORK — KORUNAN ESER                   ║
+║                                                               ║
+║  © 2026 PACDI Global Yazılım Ltd. Şti.                       ║
+║  FSEK Tescil No: 2026/18897                                   ║
+║  Tüm Hakları Saklıdır / Alle Rechte vorbehalten               ║
+║                                                               ║
+║  Bu yazılım mimarisi PACDI Yazılım Kütüphanesi FSEK           ║
+║  tescili kapsamında yasal koruma altındadır.                  ║
+║  İzinsiz kopyalama yasal yaptırıma tabidir.                   ║
+║                                                               ║
+║  pacdi.eu · info@pacdi.eu                                     ║
+╚═══════════════════════════════════════════════════════════════╝
+-->
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ausbildung | BWK BildungsWerk in Kreuzberg</title>
+    <meta name="description" content="Berufsausbildung im BWK – Bessere Chancen für junge Menschen. Ausbildung mit besonderer Unterstützung, Verbundausbildung und KAUSA-Servicestelle." />
+
+    <link rel="canonical" href="https://bwk-berlin.de/ausbildung.html" />
+
+    <meta property="og:title" content="Ausbildung | BWK BildungsWerk" />
+    <meta property="og:description" content="Berufsausbildung mit besonderer Unterstützung – seit 40 Jahren im BWK." />
+    <meta property="og:url" content="https://bwk-berlin.de/ausbildung.html" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8426936740213369" crossorigin="anonymous"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6ML8EDW0H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-E6ML8EDW0H');
+    </script>
+
+    <style>
+        /* PACDI Base – aynı stil index.html'deki gibi */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-body, #f8fafc);
+            color: var(--text-color, #1e293b);
+            line-height: 1.6;
+            padding: 0 0 2rem 0;
+            transition: background 0.3s, color 0.3s;
+        }
+        :root {
+            --navy: #0B1E35;
+            --gold: #F0D080;
+            --gold-dark: #C9A84C;
+            --gold-dim: rgba(240, 208, 128, 0.15);
+            --gold-border: rgba(240, 208, 128, 0.3);
+            --amber: #f59e0b;
+            --amber-bg: #fffbeb;
+            --amber-border: #fcd34d;
+            --gray-50: #f8fafc;
+            --gray-100: #f1f5f9;
+            --gray-200: #e2e8f0;
+            --gray-300: #cbd5e1;
+            --gray-600: #475569;
+            --gray-700: #334155;
+            --gray-800: #1e293b;
+            --white: #ffffff;
+            --shadow: 0 4px 16px rgba(11, 30, 53, 0.08);
+            --radius: 1.2rem;
+
+            --bwk-blue: #323276;
+            --bwk-yellow: #dbe11d;
+            --bwk-pink: #d53a96;
+            --bwk-lightblue: #436aad;
+            --bwk-gray: #f0f0ee;
+
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --bg-alt: #f1f5f9;
+            --bg-input: #ffffff;
+            --text-color: #1e293b;
+            --text-muted: #475569;
+            --border-color: #e2e8f0;
+            --card-shadow: 0 4px 16px rgba(11, 30, 53, 0.08);
+        }
+
+        [data-theme="dark"] {
+            --bg-body: #0f172a;
+            --bg-card: #1e293b;
+            --bg-alt: #1e293b;
+            --bg-input: #1e293b;
+            --text-color: #e2e8f0;
+            --text-muted: #94a3b8;
+            --border-color: #334155;
+            --card-shadow: 0 4px 16px rgba(0,0,0,0.4);
+            --bwk-blue: #1e293b;
+            --bwk-yellow: #F0D080;
+            --bwk-pink: #d53a96;
+            --bwk-lightblue: #436aad;
+            --bwk-gray: #1e293b;
+            --amber-bg: #2d1f00;
+            --amber-border: #92400e;
+            --gray-50: #0f172a;
+            --gray-100: #1e293b;
+            --gray-200: #334155;
+            --gray-300: #475569;
+            --gray-600: #94a3b8;
+            --gray-700: #cbd5e1;
+            --gray-800: #e2e8f0;
+            --white: #1e293b;
+        }
+
+        [data-theme="dark"] .site-header { background: #0f172a; border-bottom-color: var(--bwk-yellow); }
+        [data-theme="dark"] .card { background: var(--bg-card); border-color: var(--border-color); }
+        [data-theme="dark"] .card:hover { border-color: var(--bwk-yellow); }
+        [data-theme="dark"] .lang-btn { color: rgba(255,255,255,0.5); }
+        [data-theme="dark"] .lang-btn.active { background: var(--bwk-yellow); color: var(--navy); }
+        [data-theme="dark"] .pdf-btn { border-color: rgba(255,255,255,0.1); color: rgba(255,255,255,0.5); }
+        [data-theme="dark"] .pdf-btn:hover { background: rgba(255,255,255,0.05); color: #fff; }
+        [data-theme="dark"] .site-footer { background: #0f172a; border-top-color: var(--bwk-yellow); }
+        [data-theme="dark"] .cta-banner { background: #0f172a; border-color: var(--bwk-yellow); }
+        [data-theme="dark"] #ai-search { background: var(--bg-input); color: var(--text-color); border-color: var(--border-color); }
+
+        html { scroll-behavior: smooth; }
+
+        h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; color: var(--text-color); }
+        h1 { font-size: 1.7rem; letter-spacing: -0.3px; }
+        h2 { font-size: 1.4rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+        h2 .icon { font-size: 1.6rem; }
+        h3 { font-size: 1.05rem; margin-bottom: 0.3rem; }
+        p { color: var(--text-muted); }
+        a { color: var(--text-color); text-decoration: none; }
+
+        .container { max-width: 960px; margin: 0 auto; padding: 0 1rem; }
+
+        #progress-bar { position: fixed; top: 0; left: 0; height: 4px; background: var(--bwk-yellow); width: 0%; z-index: 1000; transition: width 0.1s ease; }
+
+        .site-header { background: var(--bwk-blue); padding: 1.2rem 1rem; border-bottom: 3px solid var(--bwk-yellow); position: sticky; top: 0; z-index: 100; transition: background 0.3s; }
+        .header-inner { max-width: 960px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.8rem; }
+        .site-title { color: var(--white); font-size: 1.15rem; font-weight: 700; letter-spacing: -0.2px; }
+        .site-title span { color: var(--bwk-yellow); }
+        .site-title small { display: block; font-size: 0.6rem; font-weight: 400; color: rgba(255, 255, 255, 0.5); letter-spacing: 0.08em; margin-top: 0.05rem; }
+        .header-actions { display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap; }
+        .pdf-btn { background: transparent; border: 1px solid rgba(255, 255, 255, 0.2); color: rgba(255, 255, 255, 0.7); font-size: 0.7rem; padding: 0.3rem 0.8rem; border-radius: 2rem; cursor: pointer; transition: 0.2s; font-family: system-ui; font-weight: 500; white-space: nowrap; }
+        .pdf-btn:hover { background: rgba(255, 255, 255, 0.1); color: #fff; }
+        .lang-toggle { display: flex; background: rgba(255, 255, 255, 0.08); border-radius: 2rem; padding: 0.15rem; gap: 0.1rem; flex-shrink: 0; }
+        .lang-btn { background: transparent; border: none; color: rgba(255, 255, 255, 0.5); font-size: 0.7rem; font-weight: 600; padding: 0.3rem 0.7rem; border-radius: 2rem; cursor: pointer; transition: all 0.2s; font-family: system-ui; text-transform: uppercase; letter-spacing: 0.04em; }
+        .lang-btn.active { background: var(--bwk-yellow); color: var(--bwk-blue); }
+        .lang-btn:hover:not(.active) { color: var(--white); }
+        .theme-toggle { background: rgba(255,255,255,0.08); border: none; color: rgba(255,255,255,0.7); font-size: 1rem; padding: 0.3rem 0.6rem; border-radius: 2rem; cursor: pointer; transition: 0.2s; line-height: 1; }
+        .theme-toggle:hover { background: rgba(255,255,255,0.15); color: #fff; }
+
+        .section { padding: 2.5rem 0; border-bottom: 1px solid var(--border-color); }
+        .section:last-of-type { border-bottom: none; }
+        .section-alt { background: var(--bg-alt); }
+        .section-sub { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
+
+        .card { background: var(--bg-card); border-radius: var(--radius); padding: 1.5rem; border: 1px solid var(--border-color); transition: border-color 0.2s, box-shadow 0.2s, background 0.3s; }
+        .card:hover { border-color: var(--bwk-yellow); box-shadow: var(--card-shadow); }
+        .card .icon { font-size: 2.2rem; display: block; margin-bottom: 0.5rem; }
+        .card h3 { color: var(--text-color); }
+        .card p { font-size: 0.88rem; color: var(--text-muted); }
+
+        .bwk-service-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+        @media (min-width: 640px) { .bwk-service-grid { grid-template-columns: 1fr 1fr; } }
+        .bwk-service { padding: 1.5rem; border-radius: var(--radius); color: #fff; }
+        .bwk-service h3 { color: #fff; font-size: 1.1rem; }
+        .bwk-service p { color: rgba(255,255,255,0.85); font-size: 0.85rem; }
+        .bwk-service a { color: #fff; font-weight: 600; display: inline-block; margin-top: 0.5rem; }
+        .bwk-service a::after { content: " →"; }
+        .bwk-service.bwk-yellow-bg { background: var(--bwk-yellow); color: var(--bwk-blue); }
+        .bwk-service.bwk-yellow-bg h3 { color: var(--bwk-blue); }
+        .bwk-service.bwk-yellow-bg p { color: var(--bwk-blue); }
+        .bwk-service.bwk-yellow-bg a { color: var(--bwk-blue); }
+        .bwk-service.bwk-pink-bg { background: var(--bwk-pink); }
+        .bwk-service.bwk-lightblue-bg { background: var(--bwk-lightblue); }
+        .bwk-service.bwk-blue-bg { background: var(--bwk-blue); }
+
+        .cta-banner { background: var(--bwk-blue); border-radius: var(--radius); padding: 2rem 1.5rem; text-align: center; margin: 2rem 0 1rem 0; border: 1px solid var(--bwk-yellow); }
+        .cta-banner h3 { color: var(--bwk-yellow); font-size: 1.2rem; margin-bottom: 0.4rem; }
+        .cta-banner p { color: rgba(255, 255, 255, 0.7); font-size: 0.9rem; margin-bottom: 1.2rem; }
+        .cta-banner .cta-btn { display: inline-block; background: var(--bwk-yellow); color: var(--bwk-blue); font-weight: 700; padding: 0.6rem 2rem; border-radius: 2rem; transition: background 0.2s, transform 0.2s; }
+        .cta-banner .cta-btn:hover { background: var(--gold-dark); transform: translateY(-2px); }
+
+        .site-footer { background: var(--bwk-blue); color: rgba(255, 255, 255, 0.4); padding: 1.8rem 1rem; margin-top: 2rem; text-align: center; font-size: 0.75rem; border-top: 2px solid var(--bwk-yellow); }
+        .site-footer a { color: var(--bwk-yellow); font-weight: 500; transition: color 0.2s; }
+        .site-footer a:hover { text-decoration: underline; color: #ffffff; }
+
+        @media print {
+            #progress-bar, .pdf-btn, .lang-toggle, .site-header .header-actions .pdf-btn,
+            .site-header .lang-toggle, #back-to-top, .theme-toggle { display: none !important; }
+            .site-header { position: static !important; border-bottom: 2px solid var(--bwk-yellow); }
+            body { background: #fff !important; color: #000 !important; padding: 0; }
+            .card, .cta-banner { border: 1px solid #ccc !important; box-shadow: none !important; background: #fff !important; }
+            .site-footer { background: #eee !important; color: #333 !important; border-top: 1px solid #ccc !important; }
+            .site-footer a { color: #0B1E35 !important; }
+        }
+
+        @media (max-width: 480px) {
+            .site-title { font-size: 1rem; }
+            .header-inner { flex-direction: column; align-items: stretch; gap: 0.5rem; }
+            .header-actions { justify-content: space-between; }
+            .lang-toggle { align-self: flex-start; }
+            h2 { font-size: 1.2rem; }
+            .card { padding: 1.2rem; }
+        }
+        @media (min-width: 640px) {
+            .header-inner { flex-wrap: nowrap; }
+            .site-title small { display: inline; margin-left: 0.3rem; font-size: 0.55rem; }
+        }
+
+        #back-to-top { position: fixed; bottom: 2rem; right: 2rem; width: 2.5rem; height: 2.5rem; border-radius: 50%; background: var(--bwk-blue); color: var(--bwk-yellow); border: 1px solid var(--bwk-yellow); font-size: 1.2rem; cursor: pointer; display: none; z-index: 99; justify-content: center; align-items: center; box-shadow: var(--card-shadow); transition: background 0.2s, transform 0.2s; }
+        #back-to-top:hover { background: var(--bwk-yellow); color: var(--bwk-blue); transform: scale(1.05); }
+        @media (max-width: 480px) { #back-to-top { bottom: 1.5rem; right: 1.5rem; width: 2.2rem; height: 2.2rem; font-size: 1rem; } }
+
+        .nav-sticky { position: sticky; top: 80px; z-index: 50; transition: box-shadow 0.2s; background: var(--bg-alt); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 1rem; margin-bottom: 1.5rem; }
+        .nav-sticky.scrolled { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+        .nav-link-active { background: var(--bwk-yellow) !important; color: var(--bwk-blue) !important; border-color: var(--bwk-yellow) !important; }
+
+        mark { background: #fde047; color: #1e293b; padding: 0 0.1rem; border-radius: 2px; }
+        [data-theme="dark"] mark { background: #facc15; color: #0f172a; }
+
+        .bwk-address { background: var(--bg-card); padding: 1.5rem; border-radius: var(--radius); border: 1px solid var(--border-color); }
+    </style>
+</head>
+<body>
+
+<div id="progress-bar" role="progressbar"></div>
+
+<header class="site-header" id="site-header">
+    <div class="header-inner">
+        <div class="site-title">
+            BWK BildungsWerk
+            <span>/ Kreuzberg</span>
+            <small>Berlin</small>
+        </div>
+        <div class="header-actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Koyu/Açık mod">🌗</button>
+            <button class="pdf-btn" onclick="saveAsPdf()" aria-label="PDF">📄 PDF</button>
+            <div class="lang-toggle" role="group">
+                <button class="lang-btn active" data-lang="tr">TR</button>
+                <button class="lang-btn" data-lang="de">DE</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+
+    <div class="card" style="margin: 1rem 0; padding: 1rem; border-color: var(--bwk-yellow);">
+        <input type="text" id="ai-search" placeholder="🔍 Rehberde ara... (Örn: Ausbildung, Umschulung, Beruf)"
+               style="width:100%; padding:0.6rem 1rem; border-radius:2rem; border:1px solid var(--border-color); font-size:0.9rem; font-family:system-ui; outline:none; transition:border-color 0.2s; background:var(--bg-input); color:var(--text-color);">
+    </div>
+
+    <div class="nav-sticky" id="quickNav">
+        <h4 style="font-size: 0.85rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.5rem; letter-spacing: 0.05em;">📍 <span data-i18n="nav-baslik">Hızlı Navigasyon</span></h4>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+            <a href="index.html" style="font-size: 0.8rem; background: var(--bg-card); padding: 0.3rem 0.8rem; border-radius: 1rem; border: 1px solid var(--border-color); text-decoration:none; color:var(--text-color); font-weight:500; transition:0.2s;" data-i18n="nav-home">🏠 Start</a>
+            <a href="umschulung.html" style="font-size: 0.8rem; background: var(--bg-card); padding: 0.3rem 0.8rem; border-radius: 1rem; border: 1px solid var(--border-color); text-decoration:none; color:var(--text-color); font-weight:500; transition:0.2s;" data-i18n="nav-umschulung">🔄 Umschulung</a>
+            <a href="ausbildung.html" class="nav-link-active" style="font-size: 0.8rem; background: var(--bg-card); padding: 0.3rem 0.8rem; border-radius: 1rem; border: 1px solid var(--border-color); text-decoration:none; color:var(--text-color); font-weight:500; transition:0.2s;" data-i18n="nav-ausbildung">📚 Ausbildung</a>
+            <a href="weiterbildung.html" style="font-size: 0.8rem; background: var(--bg-card); padding: 0.3rem 0.8rem; border-radius: 1rem; border: 1px solid var(--border-color); text-decoration:none; color:var(--text-color); font-weight:500; transition:0.2s;" data-i18n="nav-weiterbildung">📈 Weiterbildung</a>
+            <a href="avoed.html" style="font-size: 0.8rem; background: var(--bg-card); padding: 0.3rem 0.8rem; border-radius: 1rem; border: 1px solid var(--border-color); text-decoration:none; color:var(--text-color); font-weight:500; transition:0.2s;" data-i18n="nav-avoed">🏛️ AVöD</a>
+            <a href="kontakt.html" style="font-size: 0.8rem; background: var(--bg-card); padding: 0.3rem 0.8rem; border-radius: 1rem; border: 1px solid var(--border-color); text-decoration:none; color:var(--text-color); font-weight:500; transition:0.2s;" data-i18n="nav-kontakt">📞 Kontakt</a>
+        </div>
+    </div>
+
+    <section class="section" id="section-ausbildung">
+        <h1><span class="icon">📚</span> <span data-i18n="ausbildung-title">Berufsausbildung – Bessere Chancen für junge Menschen</span></h1>
+        <p class="section-sub" data-i18n="ausbildung-sub">Seit 40 Jahren engagiert sich das BWK für die Berufsausbildung von jungen Menschen, insbesondere mit Migrationshintergrund.</p>
+
+        <div class="card" style="margin-bottom:1.5rem;">
+            <p data-i18n="ausbildung-text1">Das BWK engagiert sich seit 40 Jahren als außerbetrieblicher Ausbilder für die Berufsausbildung von jungen Menschen, insbesondere von Jugendlichen mit Migrationshintergrund. Unser vorrangiges Ziel ist es, Jugendlichen eine vielversprechende Lebensperspektive zu ermöglichen und sie erfolgreich in ein Arbeitsleben zu integrieren. Dafür arbeiten wir eng mit den Berliner Arbeitsverwaltungen, den Jugendberufsagenturen, den Berliner Kammern sowie den zuständigen Stellen auf Landes- wie auch auf Bezirksebene zusammen.</p>
+        </div>
+
+        <h2><span class="icon">🎯</span> <span data-i18n="ausbildung-support-title">Ausbildung mit besonderer Unterstützung</span></h2>
+        <p class="section-sub" data-i18n="ausbildung-support-sub">Ob Friseur/in, Fahrradmonteur/in oder Pfleger/in – in vielen Berufsfeldern bilden wir aus.</p>
+        <div class="card">
+            <p data-i18n="ausbildung-support-text1">Ob Friseur/in, Fahrradmonteur/in oder Pfleger/in – in vielen Berufsfeldern, in denen wir Umschulungen anbieten, bilden wir auch aus. Dabei erhalten unsere Auszubildenden im BWK zusätzlich zur regulären betrieblichen Ausbildung auch Stützunterricht in allen relevanten Berufsschulfächern sowie sozialpädagogische Unterstützung bei persönlichen Problemen.</p>
+            <p data-i18n="ausbildung-support-text2">Praktische Erfahrungen sammeln die Azubis bei Praxiseinsätzen in Berliner Betrieben. In einigen Ausbildungsberufen bieten wir die Möglichkeit einer interkulturellen Ausbildung mit Auslandspraktika.</p>
+        </div>
+
+        <h2><span class="icon">🤝</span> <span data-i18n="ausbildung-verbund-title">Verbundausbildung</span></h2>
+        <p class="section-sub" data-i18n="ausbildung-verbund-sub">Gemeinsam mit Kooperationsbetrieben – das BAPP-System.</p>
+        <div class="card">
+            <p data-i18n="ausbildung-verbund-text">Einige Ausbildungsberufe bietet das BWK im sogenannten Verbundsystem BAPP (Berliner Ausbildungsplatzprogramm) an. Dabei führen wir den praktischen Teil der Ausbildung gemeinsam mit einem Kooperationsbetrieb durch. Die Hälfte ihrer Ausbildungszeit verbringen die Azubis in diesem Betrieb. Ziel ist es, die Jugendlichen schon während der Ausbildung an Unternehmen der freien Wirtschaft zu binden und eine Übernahme nach der Ausbildung zu erleichtern.</p>
+        </div>
+
+        <h2><span class="icon">🏛️</span> <span data-i18n="ausbildung-kausa-title">KAUSA-Servicestelle Berlin</span></h2>
+        <p class="section-sub" data-i18n="ausbildung-kausa-sub">Ausbilden in Berlin – Beratung für Unternehmen mit Migrationshintergrund.</p>
+        <div class="card">
+            <p data-i18n="ausbildung-kausa-text">Die KAUSA-Servicestelle Berlin im BWK berät Berliner Unternehmen mit Migrationshintergrund und Schüler(innen) zu allen Ausbildungsthemen. Auf diesen Webseiten lesen Sie mehr: Ausbilden für die Zukunft und Webseite der KAUSA-Servicestelle Berlin.</p>
+        </div>
+    </section>
+
+    <div class="cta-banner">
+        <h3 data-i18n="cta-title">📩 Haben Sie Fragen zur Ausbildung?</h3>
+        <p data-i18n="cta-text">Wir beraten Sie gerne zu unseren Ausbildungsangeboten und den Möglichkeiten der Förderung.</p>
+        <a href="kontakt.html" class="cta-btn" data-i18n="cta-btn">📞 Jetzt Kontakt aufnehmen</a>
+    </div>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div>
+            <a href="/legal.html" style="color:var(--bwk-yellow);">Impressum &amp; Datenschutz</a>
+            &nbsp;·&nbsp;
+            <a href="https://pacdi.eu" target="_blank" rel="noopener" style="color:var(--bwk-yellow);">PACDI Digital Studio</a>
+        </div>
+        <div style="margin-top:0.6rem;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:0.6rem;">
+            <span style="display:inline-flex;align-items:center;gap:0.3rem;background:rgba(219,225,29,0.1);color:var(--bwk-yellow);font-size:0.65rem;font-weight:700;padding:0.25rem 0.8rem;border-radius:2rem;border:1px solid var(--bwk-yellow);text-transform:uppercase;letter-spacing:0.05em;">
+                🛡️ FSEK Registered · Pacdi Framework
+            </span>
+        </div>
+        <div style="margin-top:0.4rem;font-size:0.6rem;color:rgba(255,255,255,0.2);">
+            © 2026 PACDI Global Yazılım Ltd. Şti. · Alle Rechte vorbehalten / Tüm Hakları Saklıdır · FSEK No: 2026/18897
+        </div>
+    </div>
+</footer>
+
+<button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">▲</button>
+
+<script>
+    (function() {
+        var i18n = {
+            tr: {
+                "nav-baslik": "Hızlı Navigasyon",
+                "nav-home": "🏠 Ana Sayfa",
+                "nav-umschulung": "🔄 Yeniden Eğitim",
+                "nav-ausbildung": "📚 Mesleki Eğitim",
+                "nav-weiterbildung": "📈 İleri Eğitim",
+                "nav-avoed": "🏛️ AVöD",
+                "nav-kontakt": "📞 İletişim",
+                "ausbildung-title": "Mesleki Eğitim – Gençler İçin Daha İyi Fırsatlar",
+                "ausbildung-sub": "BWK, 40 yıldır gençlerin, özellikle göçmen kökenli gençlerin mesleki eğitimi için çalışıyor.",
+                "ausbildung-text1": "BWK, 40 yıldır işletme dışı eğitmen olarak gençlerin, özellikle göçmen kökenli gençlerin mesleki eğitimi için çalışıyor. Öncelikli hedefimiz, gençlere umut verici bir yaşam perspektifi sunmak ve onları başarılı bir şekilde çalışma hayatına entegre etmektir. Bunun için Berlin Çalışma İdaresi, Gençlik Meslek Ajansları, Berlin Odaları ve eyalet ile ilçe düzeyindeki yetkili makamlarla yakın işbirliği içindeyiz.",
+                "ausbildung-support-title": "Özel Destekli Eğitim",
+                "ausbildung-support-sub": "Kuaför, bisiklet tamircisi veya hemşire – birçok meslek dalında eğitim veriyoruz.",
+                "ausbildung-support-text1": "Kuaför, bisiklet tamircisi veya hemşire – yeniden eğitim sunduğumuz birçok meslek alanında da eğitim veriyoruz. Çıraklarımız, BWK'de normal işletme eğitimine ek olarak ilgili tüm meslek okulu derslerinde destek eğitimi ve kişisel sorunlarında sosyal pedagojik destek alır.",
+                "ausbildung-support-text2": "Çıraklar, Berlin'deki işletmelerde yapılan uygulama çalışmalarıyla pratik deneyim kazanır. Bazı mesleklerde yurtdışı stajlarıyla kültürlerarası eğitim imkanı sunuyoruz.",
+                "ausbildung-verbund-title": "Bağlantılı Eğitim (Verbundausbildung)",
+                "ausbildung-verbund-sub": "İşbirliği işletmeleriyle birlikte – BAPP sistemi.",
+                "ausbildung-verbund-text": "BWK, bazı meslekleri BAPP (Berlin Eğitim Yeri Programı) adı verilen bağlantılı sistemde sunar. Eğitimin pratik kısmını bir işbirliği işletmesiyle birlikte yürütürüz. Çıraklar, eğitim sürelerinin yarısını bu işletmede geçirir. Amaç, gençleri eğitim sırasında özel sektör işletmelerine bağlamak ve eğitim sonrası işe alımı kolaylaştırmaktır.",
+                "ausbildung-kausa-title": "KAUSA Servis Noktası Berlin",
+                "ausbildung-kausa-sub": "Berlin'de Eğitim – Göçmen kökenli işletmeler için danışmanlık.",
+                "ausbildung-kausa-text": "BWK bünyesindeki KAUSA Servis Noktası Berlin, göçmen kökenli Berlin işletmelerine ve öğrencilere tüm eğitim konularında danışmanlık yapar. Daha fazla bilgi için: 'Gelecek için Eğitim' ve KAUSA Servis Noktası Berlin web sitesi.",
+                "cta-title": "📩 Eğitim hakkında sorularınız mı var?",
+                "cta-text": "Eğitim programlarımız ve teşvik imkanları hakkında size memnuniyetle danışmanlık yaparız.",
+                "cta-btn": "📞 Şimdi iletişime geçin"
+            },
+            de: {
+                "nav-baslik": "Schnellnavigation",
+                "nav-home": "🏠 Start",
+                "nav-umschulung": "🔄 Umschulung",
+                "nav-ausbildung": "📚 Ausbildung",
+                "nav-weiterbildung": "📈 Weiterbildung",
+                "nav-avoed": "🏛️ AVöD",
+                "nav-kontakt": "📞 Kontakt",
+                "ausbildung-title": "Berufsausbildung – Bessere Chancen für junge Menschen",
+                "ausbildung-sub": "Seit 40 Jahren engagiert sich das BWK für die Berufsausbildung von jungen Menschen, insbesondere mit Migrationshintergrund.",
+                "ausbildung-text1": "Das BWK engagiert sich seit 40 Jahren als außerbetrieblicher Ausbilder für die Berufsausbildung von jungen Menschen, insbesondere von Jugendlichen mit Migrationshintergrund. Unser vorrangiges Ziel ist es, Jugendlichen eine vielversprechende Lebensperspektive zu ermöglichen und sie erfolgreich in ein Arbeitsleben zu integrieren. Dafür arbeiten wir eng mit den Berliner Arbeitsverwaltungen, den Jugendberufsagenturen, den Berliner Kammern sowie den zuständigen Stellen auf Landes- wie auch auf Bezirksebene zusammen.",
+                "ausbildung-support-title": "Ausbildung mit besonderer Unterstützung",
+                "ausbildung-support-sub": "Ob Friseur/in, Fahrradmonteur/in oder Pfleger/in – in vielen Berufsfeldern bilden wir aus.",
+                "ausbildung-support-text1": "Ob Friseur/in, Fahrradmonteur/in oder Pfleger/in – in vielen Berufsfeldern, in denen wir Umschulungen anbieten, bilden wir auch aus. Dabei erhalten unsere Auszubildenden im BWK zusätzlich zur regulären betrieblichen Ausbildung auch Stützunterricht in allen relevanten Berufsschulfächern sowie sozialpädagogische Unterstützung bei persönlichen Problemen.",
+                "ausbildung-support-text2": "Praktische Erfahrungen sammeln die Azubis bei Praxiseinsätzen in Berliner Betrieben. In einigen Ausbildungsberufen bieten wir die Möglichkeit einer interkulturellen Ausbildung mit Auslandspraktika.",
+                "ausbildung-verbund-title": "Verbundausbildung",
+                "ausbildung-verbund-sub": "Gemeinsam mit Kooperationsbetrieben – das BAPP-System.",
+                "ausbildung-verbund-text": "Einige Ausbildungsberufe bietet das BWK im sogenannten Verbundsystem BAPP (Berliner Ausbildungsplatzprogramm) an. Dabei führen wir den praktischen Teil der Ausbildung gemeinsam mit einem Kooperationsbetrieb durch. Die Hälfte ihrer Ausbildungszeit verbringen die Azubis in diesem Betrieb. Ziel ist es, die Jugendlichen schon während der Ausbildung an Unternehmen der freien Wirtschaft zu binden und eine Übernahme nach der Ausbildung zu erleichtern.",
+                "ausbildung-kausa-title": "KAUSA-Servicestelle Berlin",
+                "ausbildung-kausa-sub": "Ausbilden in Berlin – Beratung für Unternehmen mit Migrationshintergrund.",
+                "ausbildung-kausa-text": "Die KAUSA-Servicestelle Berlin im BWK berät Berliner Unternehmen mit Migrationshintergrund und Schüler(innen) zu allen Ausbildungsthemen. Auf diesen Webseiten lesen Sie mehr: Ausbilden für die Zukunft und Webseite der KAUSA-Servicestelle Berlin.",
+                "cta-title": "📩 Haben Sie Fragen zur Ausbildung?",
+                "cta-text": "Wir beraten Sie gerne zu unseren Ausbildungsangeboten und den Möglichkeiten der Förderung.",
+                "cta-btn": "📞 Jetzt Kontakt aufnehmen"
+            },
+            en: {
+                "nav-baslik": "Quick Navigation",
+                "nav-home": "🏠 Home",
+                "nav-umschulung": "🔄 Retraining",
+                "nav-ausbildung": "📚 Vocational Training",
+                "nav-weiterbildung": "📈 Further Education",
+                "nav-avoed": "🏛️ AVöD",
+                "nav-kontakt": "📞 Contact",
+                "ausbildung-title": "Vocational Training – Better Opportunities for Young People",
+                "ausbildung-sub": "For 40 years, BWK has been committed to the vocational training of young people, especially those with a migration background.",
+                "ausbildung-text1": "For 40 years, BWK has been an off-the-job trainer for the vocational training of young people, especially young people with a migration background. Our primary goal is to offer young people a promising life perspective and to successfully integrate them into working life. To this end, we work closely with the Berlin labor administrations, the youth employment agencies, the Berlin chambers and the responsible authorities at state and district level.",
+                "ausbildung-support-title": "Training with special support",
+                "ausbildung-support-sub": "Whether hairdresser, bicycle mechanic or nurse – we train in many professional fields.",
+                "ausbildung-support-text1": "Whether hairdresser, bicycle mechanic or nurse – we also train in many professional fields in which we offer retraining. In addition to regular company training, our trainees at BWK receive remedial instruction in all relevant vocational school subjects as well as socio-educational support for personal problems.",
+                "ausbildung-support-text2": "Trainees gain practical experience during placements in Berlin companies. In some training occupations, we offer intercultural training with internships abroad.",
+                "ausbildung-verbund-title": "Cooperative training (Verbundausbildung)",
+                "ausbildung-verbund-sub": "Together with cooperation companies – the BAPP system.",
+                "ausbildung-verbund-text": "BWK offers some training occupations in the so-called cooperative system BAPP (Berlin Training Place Program). We carry out the practical part of the training together with a cooperation company. The trainees spend half of their training time in this company. The aim is to bind young people to companies in the private sector during their training and to facilitate their transfer after training.",
+                "ausbildung-kausa-title": "KAUSA Service Point Berlin",
+                "ausbildung-kausa-sub": "Training in Berlin – Advice for companies with a migration background.",
+                "ausbildung-kausa-text": "The KAUSA Service Point Berlin at BWK advises Berlin companies with a migration background and school students on all training topics. Read more on these websites: Training for the future and the KAUSA Service Point Berlin website.",
+                "cta-title": "📩 Do you have questions about training?",
+                "cta-text": "We will be happy to advise you on our training offers and funding options.",
+                "cta-btn": "📞 Contact us now"
+            }
+        };
+
+        var langBtns = document.querySelectorAll('.lang-btn');
+        var i18nElements = document.querySelectorAll('[data-i18n]');
+        var themeToggle = document.getElementById('themeToggle');
+        var htmlEl = document.documentElement;
+
+        function setTheme(theme) {
+            htmlEl.setAttribute('data-theme', theme);
+            localStorage.setItem('pacdi-theme', theme);
+            themeToggle.textContent = theme === 'dark' ? '☀️' : '🌗';
+        }
+        var savedTheme = localStorage.getItem('pacdi-theme');
+        setTheme(savedTheme || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+        if (themeToggle) themeToggle.addEventListener('click', function() {
+            setTheme(htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+        });
+
+        function applyLanguage(lang) {
+            var t = i18n[lang];
+            if (!t) return;
+            for (var i = 0; i < i18nElements.length; i++) {
+                var el = i18nElements[i];
+                var key = el.getAttribute('data-i18n');
+                if (t[key] !== undefined) el.textContent = t[key];
+            }
+            for (var j = 0; j < langBtns.length; j++) {
+                var btn = langBtns[j];
+                btn.classList.remove('active');
+                if (btn.getAttribute('data-lang') === lang) btn.classList.add('active');
+            }
+            document.documentElement.lang = lang;
+            localStorage.setItem('pacdi-lang', lang);
+        }
+        var savedLang = localStorage.getItem('pacdi-lang');
+        applyLanguage(savedLang && i18n[savedLang] ? savedLang : 'de');
+        for (var k = 0; k < langBtns.length; k++) {
+            langBtns[k].addEventListener('click', function() {
+                applyLanguage(this.getAttribute('data-lang'));
+            });
+        }
+
+        function updateProgress() {
+            var scrollTop = window.scrollY;
+            var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            var progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+            var bar = document.getElementById('progress-bar');
+            if (bar) {
+                bar.style.width = progress + '%';
+                bar.setAttribute('aria-valuenow', Math.round(progress));
+            }
+        }
+        function toggleBackToTop() {
+            var btt = document.getElementById('back-to-top');
+            if (btt) btt.style.display = window.scrollY > 500 ? 'flex' : 'none';
+        }
+        window.addEventListener('scroll', function() { updateProgress(); toggleBackToTop(); });
+        window.addEventListener('resize', updateProgress);
+        updateProgress();
+
+        window.saveAsPdf = function() {
+            document.title = 'BWK_Ausbildung';
+            window.print();
+        };
+
+        // Arama
+        var searchInput = document.getElementById('ai-search');
+        var searchTimeout;
+        function clearHighlights() {
+            document.querySelectorAll('mark').forEach(function(m) {
+                var parent = m.parentNode;
+                parent.replaceChild(document.createTextNode(m.textContent), m);
+                parent.normalize();
+            });
+        }
+        function highlightText(node, query) {
+            if (node.nodeType === 3) {
+                var text = node.textContent;
+                var index = text.toLowerCase().indexOf(query);
+                if (index > -1) {
+                    var span = document.createElement('span');
+                    span.appendChild(document.createTextNode(text.substring(0, index)));
+                    var mark = document.createElement('mark');
+                    mark.textContent = text.substring(index, index + query.length);
+                    span.appendChild(mark);
+                    span.appendChild(document.createTextNode(text.substring(index + query.length)));
+                    node.parentNode.replaceChild(span, node);
+                    return true;
+                }
+            } else if (node.nodeType === 1 && node.tagName !== 'SCRIPT' && node.tagName !== 'STYLE') {
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    if (highlightText(node.childNodes[i], query)) return true;
+                }
+            }
+            return false;
+        }
+        if (searchInput) {
+            searchInput.addEventListener('input', function(e) {
+                var query = e.target.value.toLowerCase().trim();
+                clearTimeout(searchTimeout);
+                searchTimeout = setTimeout(function() {
+                    clearHighlights();
+                    var cards = document.querySelectorAll('.card, .bwk-service, .faq-item');
+                    for (var i = 0; i < cards.length; i++) {
+                        var card = cards[i];
+                        if (card.contains(searchInput)) continue;
+                        var text = card.textContent.toLowerCase();
+                        if (text.indexOf(query) > -1) {
+                            card.style.display = '';
+                            if (query.length > 1) {
+                                var targets = card.querySelectorAll('.card p, .card h3, .bwk-service h3, .bwk-service p');
+                                targets.forEach(function(el) { highlightText(el, query); });
+                            }
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    }
+                }, 300);
+            });
+        }
+    })();
+</script>
+</body>
+</html>

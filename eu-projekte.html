@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<!--
+╔═══════════════════════════════════════════════════════════════╗
+║         🛡️  PACDI FRAMEWORK — KORUNAN ESER                   ║
+║                                                               ║
+║  © 2026 PACDI Global Yazılım Ltd. Şti.                       ║
+║  FSEK Tescil No: 2026/18897                                   ║
+║  Tüm Hakları Saklıdır / Alle Rechte vorbehalten               ║
+║                                                               ║
+║  Bu yazılım mimarisi PACDI Yazılım Kütüphanesi FSEK           ║
+║  tescili kapsamında yasal koruma altındadır.                  ║
+║  İzinsiz kopyalama yasal yaptırıma tabidir.                   ║
+║                                                               ║
+║  pacdi.eu · info@pacdi.eu                                     ║
+╚═══════════════════════════════════════════════════════════════╝
+-->
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EU Projekte | BWK BildungsWerk in Kreuzberg</title>
+    <meta name="description" content="EU-Projekte des BWK – über den Tellerrand blicken, europäische Ansätze vergleichen und voneinander lernen." />
+    <link rel="canonical" href="https://bwk-berlin.de/eu-projekte.html" />
+
+    <meta property="og:title" content="EU Projekte | BWK BildungsWerk" />
+    <meta property="og:description" content="BWK beteiligt sich an EU-Projekten zur vergleichenden Berufsbildung und Integration." />
+    <meta property="og:url" content="https://bwk-berlin.de/eu-projekte.html" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8426936740213369" crossorigin="anonymous"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6ML8EDW0H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-E6ML8EDW0H');
+    </script>
+
+    <style>
+        /* ––– PACDI Base CSS (aynı) ––– */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-body, #f8fafc);
+            color: var(--text-color, #1e293b);
+            line-height: 1.6;
+            padding: 0 0 2rem 0;
+            transition: background 0.3s, color 0.3s;
+        }
+        :root {
+            --navy: #0B1E35;
+            --gold: #F0D080;
+            --gold-dark: #C9A84C;
+            --gold-dim: rgba(240, 208, 128, 0.15);
+            --gold-border: rgba(240, 208, 128, 0.3);
+            --amber: #f59e0b;
+            --amber-bg: #fffbeb;
+            --amber-border: #fcd34d;
+            --gray-50: #f8fafc;
+            --gray-100: #f1f5f9;
+            --gray-200: #e2e8f0;
+            --gray-300: #cbd5e1;
+            --gray-600: #475569;
+            --gray-700: #334155;
+            --gray-800: #1e293b;
+            --white: #ffffff;
+            --shadow: 0 4px 16px rgba(11, 30, 53, 0.08);
+            --radius: 1.2rem;
+
+            --bwk-blue: #323276;
+            --bwk-yellow: #dbe11d;
+            --bwk-pink: #d53a96;
+            --bwk-lightblue: #436aad;
+            --bwk-gray: #f0f0ee;
+
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --bg-alt: #f1f5f9;
+            --bg-input: #ffffff;
+            --text-color: #1e293b;
+            --text-muted: #475569;
+            --border-color: #e2e8f0;
+            --card-shadow: 0 4px 16px rgba(11, 30, 53, 0.08);
+        }
+
+        [data-theme="dark"] {
+            --bg-body: #0f172a;
+            --bg-card: #1e293b;
+            --bg-alt: #1e293b;
+            --bg-input: #1e293b;
+            --text-color: #e2e8f0;
+            --text-muted: #94a3b8;
+            --border-color: #334155;
+            --card-shadow: 0 4px 16px rgba(0,0,0,0.4);
+            --bwk-blue: #1e293b;
+            --bwk-yellow: #F0D080;
+            --bwk-pink: #d53a96;
+            --bwk-lightblue: #436aad;
+            --bwk-gray: #1e293b;
+            --amber-bg: #2d1f00;
+            --amber-border: #92400e;
+            --gray-50: #0f172a;
+            --gray-100: #1e293b;
+            --gray-200: #334155;
+            --gray-300: #475569;
+            --gray-600: #94a3b8;
+            --gray-700: #cbd5e1;
+            --gray-800: #e2e8f0;
+            --white: #1e293b;
+        }
+
+        [data-theme="dark"] .site-header { background: #0f172a; border-bottom-color: var(--bwk-yellow); }
+        [data-theme="dark"] .card { background: var(--bg-card); border-color: var(--border-color); }
+        [data-theme="dark"] .card:hover { border-color: var(--bwk-yellow); }
+        [data-theme="dark"] .lang-btn { color: rgba(255,255,255,0.5); }
+        [data-theme="dark"] .lang-btn.active { background: var(--bwk-yellow); color: var(--navy); }
+        [data-theme="dark"] .pdf-btn { border-color: rgba(255,255,255,0.1); color: rgba(255,255,255,0.5); }
+        [data-theme="dark"] .pdf-btn:hover { background: rgba(255,255,255,0.05); color: #fff; }
+        [data-theme="dark"] .site-footer { background: #0f172a; border-top-color: var(--bwk-yellow); }
+        [data-theme="dark"] .cta-banner { background: #0f172a; border-color: var(--bwk-yellow); }
+        [data-theme="dark"] #ai-search { background: var(--bg-input); color: var(--text-color); border-color: var(--border-color); }
+
+        html { scroll-behavior: smooth; }
+
+        h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; color: var(--text-color); }
+        h1 { font-size: 1.7rem; letter-spacing: -0.3px; }
+        h2 { font-size: 1.4rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+        h2 .icon { font-size: 1.6rem; }
+        h3 { font-size: 1.05rem; margin-bottom: 0.3rem; }
+        p { color: var(--text-muted); }
+        a { color: var(--text-color); text-decoration: none; }
+
+        .container { max-width: 960px; margin: 0 auto; padding: 0 1rem; }
+
+        #progress-bar { position: fixed; top: 0; left: 0; height: 4px; background: var(--bwk-yellow); width: 0%; z-index: 1000; transition: width 0.1s ease; }
+
+        .site-header { background: var(--bwk-blue); padding: 1.2rem 1rem; border-bottom: 3px solid var(--bwk-yellow); position: sticky; top: 0; z-index: 100; transition: background 0.3s; }
+        .header-inner { max-width: 960px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.8rem; }
+        .site-title { color: var(--white); font-size: 1.15rem; font-weight: 700; letter-spacing: -0.2px; }
+        .site-title span { color: var(--bwk-yellow); }
+        .site-title small { display: block; font-size: 0.6rem; font-weight: 400; color: rgba(255, 255, 255, 0.5); letter-spacing: 0.08em; margin-top: 0.05rem; }
+        .header-actions { display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap; }
+        .pdf-btn { background: transparent; border: 1px solid rgba(255, 255, 255, 0.2); color: rgba(255, 255, 255, 0.7); font-size: 0.7rem; padding: 0.3rem 0.8rem; border-radius: 2rem; cursor: pointer; transition: 0.2s; font-family: system-ui; font-weight: 500; white-space: nowrap; }
+        .pdf-btn:hover { background: rgba(255, 255, 255, 0.1); color: #fff; }
+        .lang-toggle { display: flex; background: rgba(255, 255, 255, 0.08); border-radius: 2rem; padding: 0.15rem; gap: 0.1rem; flex-shrink: 0; }
+        .lang-btn { background: transparent; border: none; color: rgba(255, 255, 255, 0.5); font-size: 0.7rem; font-weight: 600; padding: 0.3rem 0.7rem; border-radius: 2rem; cursor: pointer; transition: all 0.2s; font-family: system-ui; text-transform: uppercase; letter-spacing: 0.04em; }
+        .lang-btn.active { background: var(--bwk-yellow); color: var(--bwk-blue); }
+        .lang-btn:hover:not(.active) { color: var(--white); }
+        .theme-toggle { background: rgba(255,255,255,0.08); border: none; color: rgba(255,255,255,0.7); font-size: 1rem; padding: 0.3rem 0.6rem; border-radius: 2rem; cursor: pointer; transition: 0.2s; line-height: 1; }
+        .theme-toggle:hover { background: rgba(255,255,255,0.15); color: #fff; }
+
+        .section { padding: 2.5rem 0; border-bottom: 1px solid var(--border-color); }
+        .section:last-of-type { border-bottom: none; }
+        .section-alt { background: var(--bg-alt); }
+        .section-sub { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
+
+        .card { background: var(--bg-card); border-radius: var(--radius); padding: 1.5rem; border: 1px solid var(--border-color); transition: border-color 0.2s, box-shadow 0.2s, background 0.3s; }
+        .card:hover { border-color: var(--bwk-yellow); box-shadow: var(--card-shadow); }
+
+        .cta-banner { background: var(--bwk-blue); border-radius: var(--radius); padding: 2rem 1.5rem; text-align: center; margin: 2rem 0 1rem 0; border: 1px solid var(--bwk-yellow); }
+        .cta-banner h3 { color: var(--bwk-yellow); font-size: 1.2rem; margin-bottom: 0.4rem; }
+        .cta-banner p { color: rgba(255, 255, 255, 0.7); font-size: 0.9rem; margin-bottom: 1.2rem; }
+        .cta-banner .cta-btn { display: inline-block; background: var(--bwk-yellow); color: var(--bwk-blue); font-weight: 700; padding: 0.6rem 2rem; border-radius: 2rem; transition: background 0.2s, transform 0.2s; }
+        .cta-banner .cta-btn:hover { background: var(--gold-dark); transform: translateY(-2px); }
+
+        .site-footer { background: var(--bwk-blue); color: rgba(255, 255, 255, 0.4); padding: 1.8rem 1rem; margin-top: 2rem; text-align: center; font-size: 0.75rem; border-top: 2px solid var(--bwk-yellow); }
+        .site-footer a { color: var(--bwk-yellow); font-weight: 500; transition: color 0.2s; }
+        .site-footer a:hover { text-decoration: underline; color: #ffffff; }
+
+        #back-to-top { position: fixed; bottom: 2rem; right: 2rem; width: 2.5rem; height: 2.5rem; border-radius: 50%; background: var(--bwk-blue); color: var(--bwk-yellow); border: 1px solid var(--bwk-yellow); font-size: 1.2rem; cursor: pointer; display: none; z-index: 99; justify-content: center; align-items: center; box-shadow: var(--card-shadow); transition: background 0.2s, transform 0.2s; }
+        #back-to-top:hover { background: var(--bwk-yellow); color: var(--bwk-blue); transform: scale(1.05); }
+        @media (max-width: 480px) { #back-to-top { bottom: 1.5rem; right: 1.5rem; width: 2.2rem; height: 2.2rem; font-size: 1rem; } }
+
+        .nav-sticky { position: sticky; top: 80px; z-index: 50; transition: box-shadow 0.2s; background: var(--bg-alt); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 1rem; margin-bottom: 1.5rem; }
+        .nav-sticky.scrolled { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+        .nav-link-active { background: var(--bwk-yellow) !important; color: var(--bwk-blue) !important; border-color: var(--bwk-yellow) !important; }
+
+        mark { background: #fde047; color: #1e293b; padding: 0 0.1rem; border-radius: 2px; }
+        [data-theme="dark"] mark { background: #facc15; color: #0f172a; }
+
+        @media print {
+            #progress-bar, .pdf-btn, .lang-toggle, .site-header .header-actions .pdf-btn,
+            .site-header .lang-toggle, #back-to-top, .theme-toggle { display: none !important; }
+            .site-header { position: static !important; border-bottom: 2px solid var(--bwk-yellow); }
+            body { background: #fff !important; color: #000 !important; padding: 0; }
+            .card, .cta-banner { border: 1px solid #ccc !important; box-shadow: none !important; background: #fff !important; }
+            .site-footer { background: #eee !important; color: #333 !important; border-top: 1px solid #ccc !important; }
+            .site-footer a { color: #0B1E35 !important; }
+        }
+
+        @media (max-width: 480px) {
+            .site-title { font-size: 1rem; }
+            .header-inner { flex-direction: column; align-items: stretch; gap: 0.5rem; }
+            .header-actions { justify-content: space-between; }
+            .lang-toggle { align-self: flex-start; }
+            h2 { font-size: 1.2rem; }
+            .card { padding: 1.2rem; }
+        }
+        @media (min-width: 640px) {
+            .header-inner { flex-wrap: nowrap; }
+            .site-title small { display: inline; margin-left: 0.3rem; font-size: 0.55rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div id="progress-bar" role="progressbar"></div>
+
+<header class="site-header" id="site-header">
+    <div class="header-inner">
+        <div class="site-title">
+            BWK BildungsWerk
+            <span>/ Kreuzberg</span>
+            <small>Berlin</small>
+        </div>
+        <div class="header-actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Koyu/Açık mod">🌗</button>
+            <button class="pdf-btn" onclick="saveAsPdf()" aria-label="PDF">📄 PDF</button>
+            <div class="lang-toggle" role="group">
+                <button class="lang-btn active" data-lang="tr">TR</button>
+                <button class="lang-btn" data-lang="de">DE</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+
+    <div class="card" style="margin: 1rem 0; padding: 1rem; border-color: var(--bwk-yellow);">
+        <input type="text" id="ai-search" placeholder="🔍 Rehberde ara..."
+               style="width:100%; padding:0.6rem 1rem; border-radius:2rem; border:1px solid var(--border-color); font-size:0.9rem; font-family:system-ui; outline:none; transition:border-color 0.2s; background:var(--bg-input); color:var(--text-color);">
+    </div>
+
+    <div class="nav-sticky" id="quickNav">
+        <h4 style="font-size: 0.85rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.5rem; letter-spacing: 0.05em;">📍 <span data-i18n="nav-baslik">Hızlı Navigasyon</span></h4>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+            <a href="index.html" style="font-size: 0.8rem; background: var(--bg-card); padding: 0.3rem 0.8rem; border-radius: 1rem; border: 1px solid var(--border-color); text-decoration:none; color:var(--text-color); font-weight:500; transition:0.2s;" data-i18n="nav-home">🏠 Start</a>
+            <a href="umschulung.html" style="font-size: 0.8rem; background: var(--bg-card); padding: 0.3rem 0.8rem; border-radius: 1rem; border: 1px solid var(--border-color); text-decoration:none; color:var(--text-color); font-weight:500; transition:0.2s;" data-i18n="nav-umschulung">🔄 Umschulung</a>
+            <a href="ausbildung.html" style="font-size: 0.8rem; background: var(--bg-card); padding: 0.3rem 0.8rem; border-radius: 1rem; border: 1px solid var(--border-color); text-decoration:none; color:var(--text-color); font-weight:500; transition:0.2s;" data-i18n="nav-ausbildung">📚 Ausbildung</a>
+            <a href="weiterbildung.html" style="font-size: 0.8rem; background: var(--bg-card); padding: 0.3rem 0.8rem; border-radius: 1rem; border: 1px solid var(--border-color); text-decoration:none; color:var(--text-color); font-weight:500; transition:0.2s;" data-i18n="nav-weiterbildung">📈 Weiterbildung</a>
+            <a href="avoed.html" style="font-size: 0.8rem; background: var(--bg-card); padding: 0.3rem 0.8rem; border-radius: 1rem; border: 1px solid var(--border-color); text-decoration:none; color:var(--text-color); font-weight:500; transition:0.2s;" data-i18n="nav-avoed">🏛️ AVöD</a>
+            <a href="dienstleistungen.html" style="font-size: 0.8rem; background: var(--bg-card); padding: 0.3rem 0.8rem; border-radius: 1rem; border: 1px solid var(--border-color); text-decoration:none; color:var(--text-color); font-weight:500; transition:0.2s;" data-i18n="nav-dienst">🛠️ Dienstleistungen</a>
+            <a href="eu-projekte.html" class="nav-link-active" style="font-size: 0.8rem; background: var(--bg-card); padding: 0.3rem 0.8rem; border-radius: 1rem; border: 1px solid var(--border-color); text-decoration:none; color:var(--text-color); font-weight:500; transition:0.2s;" data-i18n="nav-eu">🇪🇺 EU Projekte</a>
+            <a href="kontakt.html" style="font-size: 0.8rem; background: var(--bg-card); padding: 0.3rem 0.8rem; border-radius: 1rem; border: 1px solid var(--border-color); text-decoration:none; color:var(--text-color); font-weight:500; transition:0.2s;" data-i18n="nav-kontakt">📞 Kontakt</a>
+        </div>
+    </div>
+
+    <section class="section" id="section-eu-projekte">
+        <h1><span class="icon">🇪🇺</span> <span data-i18n="eu-title">EU Projekte – über den Tellerrand!</span></h1>
+        <p class="section-sub" data-i18n="eu-sub">Die Probleme des Arbeitsmarktes lassen sich oft besser betrachten, wenn wir "über den Tellerrand" blicken.</p>
+
+        <div class="card" style="margin-bottom:1.5rem;">
+            <p data-i18n="eu-text1">Die Probleme des Arbeitsmarktes lassen sich oftmals besser betrachten, wenn wir "über den Tellerrand" blicken. Für uns heißt das, unsere Situation mit denen unserer Europäischen Nachbarn zu vergleichen, ihre Diskussionen kennenzulernen und zu schauen, wie sie mit vergleichbaren Anforderungen umgehen. Manchmal macht es Sinn, sich die verschiedenen Ansätze gegenseitig vorzustellen, zu vergleichen und zu diskutieren.</p>
+            <p data-i18n="eu-text2">Das BWK BildungsWerk in Kreuzberg beteiligt sich regelmäßig an oder initiiert selbst Projekte, die genau dieses Ziel haben: Sich vergleichend und gegenseitig lernend den Herausforderungen der Zeit auf Europäischem Level zu stellen.</p>
+            <p data-i18n="eu-text3">Hier stellen wir Ihnen einige dieser Projekte vor, die oft von der Europäischen Union mit hervorragenden Noten bewertet werden.</p>
+        </div>
+
+        <!-- Platzhalter für EU-Projektkarten -->
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+            <div class="card">
+                <h3 data-i18n="eu-projekt1-title">Projekt 1 – Berufsbildung im Vergleich</h3>
+                <p data-i18n="eu-projekt1-text">Vergleich der Berufsbildungssysteme in Deutschland, Frankreich und Polen. Laufzeit: 2024–2026.</p>
+                <span style="display:inline-block; background:var(--bwk-yellow); color:var(--bwk-blue); padding:0.2rem 0.8rem; border-radius:1rem; font-size:0.7rem; font-weight:700;">EU gefördert</span>
+            </div>
+            <div class="card">
+                <h3 data-i18n="eu-projekt2-title">Projekt 2 – Integration durch Ausbildung</h3>
+                <p data-i18n="eu-projekt2-text">Gemeinsames Projekt mit Partnern aus Italien und Spanien zur Integration von Migranten durch berufliche Bildung.</p>
+                <span style="display:inline-block; background:var(--bwk-yellow); color:var(--bwk-blue); padding:0.2rem 0.8rem; border-radius:1rem; font-size:0.7rem; font-weight:700;">EU gefördert</span>
+            </div>
+            <div class="card">
+                <h3 data-i18n="eu-projekt3-title">Projekt 3 – Digitalisierung in der Berufsbildung</h3>
+                <p data-i18n="eu-projekt3-text">Erprobung digitaler Lernformate mit Partnern aus den Niederlanden und Dänemark.</p>
+                <span style="display:inline-block; background:var(--bwk-yellow); color:var(--bwk-blue); padding:0.2rem 0.8rem; border-radius:1rem; font-size:0.7rem; font-weight:700;">EU gefördert</span>
+            </div>
+            <div class="card">
+                <h3 data-i18n="eu-projekt4-title">Projekt 4 – Nachhaltigkeit in der Ausbildung</h3>
+                <p data-i18n="eu-projekt4-text">Entwicklung von Nachhaltigkeitsmodulen für Ausbildungsberufe mit Partnern aus Schweden und Österreich.</p>
+                <span style="display:inline-block; background:var(--bwk-yellow); color:var(--bwk-blue); padding:0.2rem 0.8rem; border-radius:1rem; font-size:0.7rem; font-weight:700;">EU gefördert</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="cta-banner">
+        <h3 data-i18n="cta-title">📩 Interesse an EU-Projekten?</h3>
+        <p data-i18n="cta-text">Wir informieren Sie gerne über aktuelle und geplante Projekte.</p>
+        <a href="kontakt.html" class="cta-btn" data-i18n="cta-btn">📞 Kontakt aufnehmen</a>
+    </div>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div>
+            <a href="/legal.html" style="color:var(--bwk-yellow);">Impressum &amp; Datenschutz</a>
+            &nbsp;·&nbsp;
+            <a href="https://pacdi.eu" target="_blank" rel="noopener" style="color:var(--bwk-yellow);">PACDI Digital Studio</a>
+        </div>
+        <div style="margin-top:0.6rem;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:0.6rem;">
+            <span style="display:inline-flex;align-items:center;gap:0.3rem;background:rgba(219,225,29,0.1);color:var(--bwk-yellow);font-size:0.65rem;font-weight:700;padding:0.25rem 0.8rem;border-radius:2rem;border:1px solid var(--bwk-yellow);text-transform:uppercase;letter-spacing:0.05em;">
+                🛡️ FSEK Registered · Pacdi Framework
+            </span>
+        </div>
+        <div style="margin-top:0.4rem;font-size:0.6rem;color:rgba(255,255,255,0.2);">
+            © 2026 PACDI Global Yazılım Ltd. Şti. · Alle Rechte vorbehalten / Tüm Hakları Saklıdır · FSEK No: 2026/18897
+        </div>
+    </div>
+</footer>
+
+<button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">▲</button>
+
+<script>
+    (function() {
+        var i18n = {
+            tr: {
+                "nav-baslik": "Hızlı Navigasyon",
+                "nav-home": "🏠 Ana Sayfa",
+                "nav-umschulung": "🔄 Yeniden Eğitim",
+                "nav-ausbildung": "📚 Mesleki Eğitim",
+                "nav-weiterbildung": "📈 İleri Eğitim",
+                "nav-avoed": "🏛️ AVöD",
+                "nav-dienst": "🛠️ Hizmetler",
+                "nav-eu": "🇪🇺 AB Projeleri",
+                "nav-kontakt": "📞 İletişim",
+                "eu-title": "AB Projeleri – sınırların ötesine bakın!",
+                "eu-sub": "İş piyasasının sorunlarına, 'sınırların ötesine bakarak' daha iyi çözümler bulabiliriz.",
+                "eu-text1": "İş piyasasının sorunlarına, genellikle 'sınırların ötesine bakarak' daha iyi çözümler bulabiliriz. Bu, durumumuzu Avrupalı komşularımızla karşılaştırmak, tartışmalarını tanımak ve benzer taleplerle nasıl başa çıktıklarını görmek anlamına gelir. Bazen farklı yaklaşımları birbirine sunmak, karşılaştırmak ve tartışmak mantıklıdır.",
+                "eu-text2": "Kreuzberg'deki BWK BildungsWerk, tam olarak bu hedefe yönelik projelere düzenli olarak katılır veya bunları kendisi başlatır: Zamanın zorluklarıyla Avrupa düzeyinde karşılaştırmalı ve karşılıklı öğrenerek yüzleşmek.",
+                "eu-text3": "Burada size, genellikle Avrupa Birliği tarafından mükemmel notlarla değerlendirilen bu projelerden bazılarını sunuyoruz.",
+                "eu-projekt1-title": "Proje 1 – Mesleki Eğitim Karşılaştırması",
+                "eu-projekt1-text": "Almanya, Fransa ve Polonya'daki mesleki eğitim sistemlerinin karşılaştırılması. Süre: 2024–2026.",
+                "eu-projekt2-title": "Proje 2 – Eğitim Yoluyla Entegrasyon",
+                "eu-projekt2-text": "İtalya ve İspanya'daki ortaklarla göçmenlerin mesleki eğitim yoluyla entegrasyonu için ortak proje.",
+                "eu-projekt3-title": "Proje 3 – Mesleki Eğitimde Dijitalleşme",
+                "eu-projekt3-text": "Hollanda ve Danimarka'daki ortaklarla dijital öğrenme formatlarının denenmesi.",
+                "eu-projekt4-title": "Proje 4 – Eğitimde Sürdürülebilirlik",
+                "eu-projekt4-text": "İsveç ve Avusturya'daki ortaklarla mesleki eğitim için sürdürülebilirlik modüllerinin geliştirilmesi.",
+                "cta-title": "📩 AB Projeleriyle ilgileniyor musunuz?",
+                "cta-text": "Güncel ve planlanan projeler hakkında size memnuniyetle bilgi veririz.",
+                "cta-btn": "📞 İletişime geçin"
+            },
+            de: {
+                "nav-baslik": "Schnellnavigation",
+                "nav-home": "🏠 Start",
+                "nav-umschulung": "🔄 Umschulung",
+                "nav-ausbildung": "📚 Ausbildung",
+                "nav-weiterbildung": "📈 Weiterbildung",
+                "nav-avoed": "🏛️ AVöD",
+                "nav-dienst": "🛠️ Dienstleistungen",
+                "nav-eu": "🇪🇺 EU Projekte",
+                "nav-kontakt": "📞 Kontakt",
+                "eu-title": "EU Projekte – über den Tellerrand!",
+                "eu-sub": "Die Probleme des Arbeitsmarktes lassen sich oft besser betrachten, wenn wir 'über den Tellerrand' blicken.",
+                "eu-text1": "Die Probleme des Arbeitsmarktes lassen sich oftmals besser betrachten, wenn wir 'über den Tellerrand' blicken. Für uns heißt das, unsere Situation mit denen unserer Europäischen Nachbarn zu vergleichen, ihre Diskussionen kennenzulernen und zu schauen, wie sie mit vergleichbaren Anforderungen umgehen. Manchmal macht es Sinn, sich die verschiedenen Ansätze gegenseitig vorzustellen, zu vergleichen und zu diskutieren.",
+                "eu-text2": "Das BWK BildungsWerk in Kreuzberg beteiligt sich regelmäßig an oder initiiert selbst Projekte, die genau dieses Ziel haben: Sich vergleichend und gegenseitig lernend den Herausforderungen der Zeit auf Europäischem Level zu stellen.",
+                "eu-text3": "Hier stellen wir Ihnen einige dieser Projekte vor, die oft von der Europäischen Union mit hervorragenden Noten bewertet werden.",
+                "eu-projekt1-title": "Projekt 1 – Berufsbildung im Vergleich",
+                "eu-projekt1-text": "Vergleich der Berufsbildungssysteme in Deutschland, Frankreich und Polen. Laufzeit: 2024–2026.",
+                "eu-projekt2-title": "Projekt 2 – Integration durch Ausbildung",
+                "eu-projekt2-text": "Gemeinsames Projekt mit Partnern aus Italien und Spanien zur Integration von Migranten durch berufliche Bildung.",
+                "eu-projekt3-title": "Projekt 3 – Digitalisierung in der Berufsbildung",
+                "eu-projekt3-text": "Erprobung digitaler Lernformate mit Partnern aus den Niederlanden und Dänemark.",
+                "eu-projekt4-title": "Projekt 4 – Nachhaltigkeit in der Ausbildung",
+                "eu-projekt4-text": "Entwicklung von Nachhaltigkeitsmodulen für Ausbildungsberufe mit Partnern aus Schweden und Österreich.",
+                "cta-title": "📩 Interesse an EU-Projekten?",
+                "cta-text": "Wir informieren Sie gerne über aktuelle und geplante Projekte.",
+                "cta-btn": "📞 Kontakt aufnehmen"
+            },
+            en: {
+                "nav-baslik": "Quick Navigation",
+                "nav-home": "🏠 Home",
+                "nav-umschulung": "🔄 Retraining",
+                "nav-ausbildung": "📚 Vocational Training",
+                "nav-weiterbildung": "📈 Further Education",
+                "nav-avoed": "🏛️ AVöD",
+                "nav-dienst": "🛠️ Services",
+                "nav-eu": "🇪🇺 EU Projects",
+                "nav-kontakt": "📞 Contact",
+                "eu-title": "EU Projects – thinking outside the box!",
+                "eu-sub": "The problems of the labor market can often be better understood if we look beyond our own borders.",
+                "eu-text1": "The problems of the labor market can often be better understood if we look beyond our own borders. For us, this means comparing our situation with those of our European neighbors, learning about their discussions and seeing how they deal with comparable challenges. Sometimes it makes sense to present, compare and discuss the different approaches with each other.",
+                "eu-text2": "BWK BildungsWerk in Kreuzberg regularly participates in or initiates projects that have exactly this goal: To face the challenges of our time at a European level through comparison and mutual learning.",
+                "eu-text3": "Here we present some of these projects, which are often rated with excellent marks by the European Union.",
+                "eu-projekt1-title": "Project 1 – Vocational training in comparison",
+                "eu-projekt1-text": "Comparison of vocational training systems in Germany, France and Poland. Duration: 2024–2026.",
+                "eu-projekt2-title": "Project 2 – Integration through training",
+                "eu-projekt2-text": "Joint project with partners from Italy and Spain on the integration of migrants through vocational training.",
+                "eu-projekt3-title": "Project 3 – Digitalisation in vocational training",
+                "eu-projekt3-text": "Testing digital learning formats with partners from the Netherlands and Denmark.",
+                "eu-projekt4-title": "Project 4 – Sustainability in training",
+                "eu-projekt4-text": "Development of sustainability modules for training occupations with partners from Sweden and Austria.",
+                "cta-title": "📩 Interested in EU projects?",
+                "cta-text": "We will be happy to inform you about current and planned projects.",
+                "cta-btn": "📞 Contact us"
+            }
+        };
+
+        var langBtns = document.querySelectorAll('.lang-btn');
+        var i18nElements = document.querySelectorAll('[data-i18n]');
+        var themeToggle = document.getElementById('themeToggle');
+        var htmlEl = document.documentElement;
+
+        function setTheme(theme) {
+            htmlEl.setAttribute('data-theme', theme);
+            localStorage.setItem('pacdi-theme', theme);
+            themeToggle.textContent = theme === 'dark' ? '☀️' : '🌗';
+        }
+        var savedTheme = localStorage.getItem('pacdi-theme');
+        setTheme(savedTheme || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+        if (themeToggle) themeToggle.addEventListener('click', function() {
+            setTheme(htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+        });
+
+        function applyLanguage(lang) {
+            var t = i18n[lang];
+            if (!t) return;
+            for (var i = 0; i < i18nElements.length; i++) {
+                var el = i18nElements[i];
+                var key = el.getAttribute('data-i18n');
+                if (t[key] !== undefined) el.textContent = t[key];
+            }
+            for (var j = 0; j < langBtns.length; j++) {
+                var btn = langBtns[j];
+                btn.classList.remove('active');
+                if (btn.getAttribute('data-lang') === lang) btn.classList.add('active');
+            }
+            document.documentElement.lang = lang;
+            localStorage.setItem('pacdi-lang', lang);
+        }
+        var savedLang = localStorage.getItem('pacdi-lang');
+        applyLanguage(savedLang && i18n[savedLang] ? savedLang : 'de');
+        for (var k = 0; k < langBtns.length; k++) {
+            langBtns[k].addEventListener('click', function() {
+                applyLanguage(this.getAttribute('data-lang'));
+            });
+        }
+
+        function updateProgress() {
+            var scrollTop = window.scrollY;
+            var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            var progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+            var bar = document.getElementById('progress-bar');
+            if (bar) {
+                bar.style.width = progress + '%';
+                bar.setAttribute('aria-valuenow', Math.round(progress));
+            }
+        }
+        function toggleBackToTop() {
+            var btt = document.getElementById('back-to-top');
+            if (btt) btt.style.display = window.scrollY > 500 ? 'flex' : 'none';
+        }
+        window.addEventListener('scroll', function() { updateProgress(); toggleBackToTop(); });
+        window.addEventListener('resize', updateProgress);
+        updateProgress();
+
+        window.saveAsPdf = function() {
+            document.title = 'BWK_EU_Projekte';
+            window.print();
+        };
+
+        var searchInput = document.getElementById('ai-search');
+        var searchTimeout;
+        function clearHighlights() {
+            document.querySelectorAll('mark').forEach(function(m) {
+                var parent = m.parentNode;
+                parent.replaceChild(document.createTextNode(m.textContent), m);
+                parent.normalize();
+            });
+        }
+        function highlightText(node, query) {
+            if (node.nodeType === 3) {
+                var text = node.textContent;
+                var index = text.toLowerCase().indexOf(query);
+                if (index > -1) {
+                    var span = document.createElement('span');
+                    span.appendChild(document.createTextNode(text.substring(0, index)));
+                    var mark = document.createElement('mark');
+                    mark.textContent = text.substring(index, index + query.length);
+                    span.appendChild(mark);
+                    span.appendChild(document.createTextNode(text.substring(index + query.length)));
+                    node.parentNode.replaceChild(span, node);
+                    return true;
+                }
+            } else if (node.nodeType === 1 && node.tagName !== 'SCRIPT' && node.tagName !== 'STYLE') {
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    if (highlightText(node.childNodes[i], query)) return true;
+                }
+            }
+            return false;
+        }
+        if (searchInput) {
+            searchInput.addEventListener('input', function(e) {
+                var query = e.target.value.toLowerCase().trim();
+                clearTimeout(searchTimeout);
+                searchTimeout = setTimeout(function() {
+                    clearHighlights();
+                    var cards = document.querySelectorAll('.card');
+                    for (var i = 0; i < cards.length; i++) {
+                        var card = cards[i];
+                        if (card.contains(searchInput)) continue;
+                        var text = card.textContent.toLowerCase();
+                        if (text.indexOf(query) > -1) {
+                            card.style.display = '';
+                            if (query.length > 1) {
+                                var targets = card.querySelectorAll('.card p, .card h3');
+                                targets.forEach(function(el) { highlightText(el, query); });
+                            }
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    }
+                }, 300);
+            });
+        }
+    })();
+</script>
+</body>
+</html>
