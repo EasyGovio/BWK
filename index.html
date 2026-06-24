@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<!--
+╔═══════════════════════════════════════════════════════════════╗
+║         🛡️  PACDI FRAMEWORK — KORUNAN ESER                   ║
+║                                                               ║
+║  © 2026 PACDI Global Yazılım Ltd. Şti.                       ║
+║  FSEK Tescil No: 2026/18897                                   ║
+║  Tüm Hakları Saklıdır / Alle Rechte vorbehalten               ║
+║                                                               ║
+║  Bu yazılım mimarisi PACDI Yazılım Kütüphanesi FSEK           ║
+║  tescili kapsamında yasal koruma altındadır.                  ║
+║  İzinsiz kopyalama yasal yaptırıma tabidir.                   ║
+║                                                               ║
+║  pacdi.eu · info@pacdi.eu                                     ║
+╚═══════════════════════════════════════════════════════════════╝
+-->
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BWK BildungsWerk in Kreuzberg GmbH</title>
+    <meta name="description" content="BWK BildungsWerk in Kreuzberg – Berufsbildung, Umschulung, Job-Coaching und mehr in Berlin. Kompetenzen stärken, Neustart in den Beruf." />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://bwk-berlin.de/" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="BWK BildungsWerk in Kreuzberg" />
+    <meta property="og:description" content="Berufsbildung, Umschulung und Job-Coaching in Berlin-Kreuzberg. Kompetenzen stärken – erfolgreich in den Beruf." />
+    <meta property="og:url" content="https://bwk-berlin.de/" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8426936740213369" crossorigin="anonymous"></script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6ML8EDW0H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-E6ML8EDW0H');
+    </script>
+
+    <!-- Schema.org Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "BWK BildungsWerk in Kreuzberg GmbH",
+      "description": "Berufsbildung, Umschulung und Job-Coaching in Berlin-Kreuzberg.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Cuvrystr. 34",
+        "addressLocality": "Berlin",
+        "postalCode": "10997",
+        "addressCountry": "DE"
+      },
+      "telephone": "+49-30-6179290",
+      "email": "info@bwk-berlin.de",
+      "url": "https://bwk-berlin.de/"
+    }
+    </script>
+
+    <style>
+        /* ––– Reset & Base ––– */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-body, #f8fafc);
+            color: var(--text-color, #1e293b);
+            line-height: 1.6;
+            padding: 0 0 2rem 0;
+            transition: background 0.3s, color 0.3s;
+        }
+        :root {
+            --navy: #0B1E35;
+            --gold: #F0D080;
+            --gold-dark: #C9A84C;
+            --gold-dim: rgba(240, 208, 128, 0.15);
+            --gold-border: rgba(240, 208, 128, 0.3);
+            --amber: #f59e0b;
+            --amber-bg: #fffbeb;
+            --amber-border: #fcd34d;
+            --gray-50: #f8fafc;
+            --gray-100: #f1f5f9;
+            --gray-200: #e2e8f0;
+            --gray-300: #cbd5e1;
+            --gray-600: #475569;
+            --gray-700: #334155;
+            --gray-800: #1e293b;
+            --white: #ffffff;
+            --shadow: 0 4px 16px rgba(11, 30, 53, 0.08);
+            --radius: 1.2rem;
+
+            /* BWK Renkleri */
+            --bwk-blue: #323276;
+            --bwk-yellow: #dbe11d;
+            --bwk-pink: #d53a96;
+            --bwk-lightblue: #436aad;
+            --bwk-gray: #f0f0ee;
+
+            /* Tema değişkenleri */
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --bg-alt: #f1f5f9;
+            --bg-input: #ffffff;
+            --text-color: #1e293b;
+            --text-muted: #475569;
+            --border-color: #e2e8f0;
+            --card-shadow: 0 4px 16px rgba(11, 30, 53, 0.08);
+        }
+
+        [data-theme="dark"] {
+            --bg-body: #0f172a;
+            --bg-card: #1e293b;
+            --bg-alt: #1e293b;
+            --bg-input: #1e293b;
+            --text-color: #e2e8f0;
+            --text-muted: #94a3b8;
+            --border-color: #334155;
+            --card-shadow: 0 4px 16px rgba(0,0,0,0.4);
+            --bwk-blue: #1e293b;
+            --bwk-yellow: #F0D080;
+            --bwk-pink: #d53a96;
+            --bwk-lightblue: #436aad;
+            --bwk-gray: #1e293b;
+            --amber-bg: #2d1f00;
+            --amber-border: #92400e;
+            --gray-50: #0f172a;
+            --gray-100: #1e293b;
+            --gray-200: #334155;
+            --gray-300: #475569;
+            --gray-600: #94a3b8;
+            --gray-700: #cbd5e1;
+            --gray-800: #e2e8f0;
+            --white: #1e293b;
+        }
+
+        [data-theme="dark"] .site-header { background: #0f172a; border-bottom-color: var(--bwk-yellow); }
+        [data-theme="dark"] .card { background: var(--bg-card); border-color: var(--border-color); }
+        [data-theme="dark"] .card:hover { border-color: var(--bwk-yellow); }
+        [data-theme="dark"] .prompt-card .p-text { background: #0f172a; border-color: var(--border-color); color: var(--text-color); }
+        [data-theme="dark"] .prompt-card { background: var(--bg-card); border-color: var(--border-color); }
+        [data-theme="dark"] .example-item { background: var(--bg-card); border-color: var(--border-color); }
+        [data-theme="dark"] .faq-item { background: var(--bg-card); border-color: var(--border-color); }
+        [data-theme="dark"] .do-box { background: #0f2d1a; border-color: #1a4a2a; }
+        [data-theme="dark"] .dont-box { background: #2d0f0f; border-color: #4a1a1a; }
+        [data-theme="dark"] .warning-box { background: #2d1f00; border-color: #92400e; }
+        [data-theme="dark"] .warning-box h4 { color: #fbbf24; }
+        [data-theme="dark"] .warning-box p { color: #fde68a; }
+        [data-theme="dark"] .cta-banner { background: #0f172a; border-color: var(--bwk-yellow); }
+        [data-theme="dark"] .site-footer { background: #0f172a; border-top-color: var(--bwk-yellow); }
+        [data-theme="dark"] .real-case-box { background: #1a0a00; border-color: #f59e0b; }
+        [data-theme="dark"] .prompt-box.good { background: #0f2d1a; border-color: #22c55e; }
+        [data-theme="dark"] .prompt-box.bad { background: #2d0f0f; border-color: #ef4444; }
+        [data-theme="dark"] .prompt-box pre { background: #0f172a; color: #e2e8f0; }
+        [data-theme="dark"] .lang-btn { color: rgba(255,255,255,0.5); }
+        [data-theme="dark"] .lang-btn.active { background: var(--bwk-yellow); color: var(--navy); }
+        [data-theme="dark"] .pdf-btn { border-color: rgba(255,255,255,0.1); color: rgba(255,255,255,0.5); }
+        [data-theme="dark"] .pdf-btn:hover { background: rgba(255,255,255,0.05); color: #fff; }
+        [data-theme="dark"] #ai-search { background: var(--bg-input); color: var(--text-color); border-color: var(--border-color); }
+        [data-theme="dark"] .comp-table { background: var(--bg-card); border-color: var(--border-color); }
+        [data-theme="dark"] .comp-table th { background: #0f172a; color: #e2e8f0; }
+        [data-theme="dark"] .comp-table td { border-bottom-color: var(--border-color); }
+        [data-theme="dark"] .card[style*="background: var(--gray-100)"] { background: var(--bg-alt) !important; }
+        [data-theme="dark"] .bwk-blue-bg { background: #0f172a !important; }
+        [data-theme="dark"] .bwk-yellow-bg { background: #1a2a0a !important; }
+        [data-theme="dark"] .bwk-pink-bg { background: #2a0a1a !important; }
+        [data-theme="dark"] .bwk-lightblue-bg { background: #0a1a2a !important; }
+        [data-theme="dark"] .bwk-gray-bg { background: #1e1e1e !important; }
+
+        /* ––– Smooth Scroll ––– */
+        html { scroll-behavior: smooth; }
+
+        /* ––– Typography ––– */
+        h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; color: var(--text-color); }
+        h1 { font-size: 1.7rem; letter-spacing: -0.3px; }
+        h2 { font-size: 1.4rem; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+        h2 .icon { font-size: 1.6rem; }
+        h3 { font-size: 1.05rem; margin-bottom: 0.3rem; }
+        p { color: var(--text-muted); }
+        a { color: var(--text-color); text-decoration: none; }
+
+        /* ––– Layout ––– */
+        .container { max-width: 960px; margin: 0 auto; padding: 0 1rem; }
+
+        /* ––– Progress Bar ––– */
+        #progress-bar { position: fixed; top: 0; left: 0; height: 4px; background: var(--bwk-yellow); width: 0%; z-index: 1000; transition: width 0.1s ease; box-shadow: 0 0 8px rgba(219, 225, 29, 0.4); }
+
+        /* ––– Header ––– */
+        .site-header { background: var(--bwk-blue); padding: 1.2rem 1rem; border-bottom: 3px solid var(--bwk-yellow); position: sticky; top: 0; z-index: 100; transition: background 0.3s; }
+        .header-inner { max-width: 960px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.8rem; }
+        .site-title { color: var(--white); font-size: 1.15rem; font-weight: 700; letter-spacing: -0.2px; }
+        .site-title span { color: var(--bwk-yellow); }
+        .site-title small { display: block; font-size: 0.6rem; font-weight: 400; color: rgba(255, 255, 255, 0.5); letter-spacing: 0.08em; margin-top: 0.05rem; }
+        .header-actions { display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap; }
+        .pdf-btn { background: transparent; border: 1px solid rgba(255, 255, 255, 0.2); color: rgba(255, 255, 255, 0.7); font-size: 0.7rem; padding: 0.3rem 0.8rem; border-radius: 2rem; cursor: pointer; transition: 0.2s; font-family: system-ui; font-weight: 500; white-space: nowrap; }
+        .pdf-btn:hover { background: rgba(255, 255, 255, 0.1); color: #fff; }
+        .lang-toggle { display: flex; background: rgba(255, 255, 255, 0.08); border-radius: 2rem; padding: 0.15rem; gap: 0.1rem; flex-shrink: 0; }
+        .lang-btn { background: transparent; border: none; color: rgba(255, 255, 255, 0.5); font-size: 0.7rem; font-weight: 600; padding: 0.3rem 0.7rem; border-radius: 2rem; cursor: pointer; transition: all 0.2s; font-family: system-ui; text-transform: uppercase; letter-spacing: 0.04em; }
+        .lang-btn.active { background: var(--bwk-yellow); color: var(--bwk-blue); }
+        .lang-btn:hover:not(.active) { color: var(--white); }
+        .theme-toggle { background: rgba(255,255,255,0.08); border: none; color: rgba(255,255,255,0.7); font-size: 1rem; padding: 0.3rem 0.6rem; border-radius: 2rem; cursor: pointer; transition: 0.2s; line-height: 1; }
+        .theme-toggle:hover { background: rgba(255,255,255,0.15); color: #fff; }
+
+        /* ––– Sections ––– */
+        .section { padding: 2.5rem 0; border-bottom: 1px solid var(--border-color); }
+        .section:last-of-type { border-bottom: none; }
+        .section-alt { background: var(--bg-alt); }
+        .section-sub { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
+
+        /* ––– Cards ––– */
+        .card-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+        @media (min-width: 640px) { .card-grid { grid-template-columns: repeat(3, 1fr); } .card-grid-2 { grid-template-columns: repeat(2, 1fr); } }
+        .card { background: var(--bg-card); border-radius: var(--radius); padding: 1.5rem; border: 1px solid var(--border-color); transition: border-color 0.2s, box-shadow 0.2s, background 0.3s; }
+        .card:hover { border-color: var(--bwk-yellow); box-shadow: var(--card-shadow); }
+        .card .icon { font-size: 2.2rem; display: block; margin-bottom: 0.5rem; }
+        .card h3 { color: var(--text-color); }
+        .card p { font-size: 0.88rem; color: var(--text-muted); }
+
+        /* ––– BWK Slider ––– */
+        .bwk-slider { background: var(--bwk-yellow); padding: 2rem; border-radius: var(--radius); margin: 1rem 0; position: relative; overflow: hidden; }
+        .bwk-slider .slide { display: none; padding: 1rem; }
+        .bwk-slider .slide.active { display: block; }
+        .bwk-slider .slide h2 { color: var(--bwk-blue); font-size: 1.6rem; }
+        .bwk-slider .slide p { color: var(--bwk-blue); font-size: 1.1rem; }
+        .bwk-slider .slide a { display: inline-block; margin-top: 0.5rem; color: var(--bwk-blue); font-weight: 700; }
+        .bwk-slider .slide a::after { content: " →"; }
+        .bwk-slider-controls { display: flex; justify-content: center; gap: 0.5rem; margin-top: 1rem; }
+        .bwk-slider-controls button { background: rgba(50,50,118,0.3); border: none; width: 12px; height: 12px; border-radius: 50%; cursor: pointer; transition: 0.2s; }
+        .bwk-slider-controls button.active { background: var(--bwk-blue); }
+
+        /* ––– BWK Service Boxes ––– */
+        .bwk-service-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+        @media (min-width: 640px) { .bwk-service-grid { grid-template-columns: 1fr 1fr; } }
+        .bwk-service { padding: 1.5rem; border-radius: var(--radius); color: #fff; }
+        .bwk-service h3 { color: #fff; font-size: 1.1rem; }
+        .bwk-service p { color: rgba(255,255,255,0.85); font-size: 0.85rem; }
+        .bwk-service a { color: #fff; font-weight: 600; display: inline-block; margin-top: 0.5rem; }
+        .bwk-service a::after { content: " →"; }
+        .bwk-service.bwk-yellow-bg { background: var(--bwk-yellow); color: var(--bwk-blue); }
+        .bwk-service.bwk-yellow-bg h3 { color: var(--bwk-blue); }
+        .bwk-service.bwk-yellow-bg p { color: var(--bwk-blue); }
+        .bwk-service.bwk-yellow-bg a { color: var(--bwk-blue); }
+        .bwk-service.bwk-pink-bg { background: var(--bwk-pink); }
+        .bwk-service.bwk-lightblue-bg { background: var(--bwk-lightblue); }
+        .bwk-service.bwk-blue-bg { background: var(--bwk-blue); }
+        .bwk-service.bwk-gray-bg { background: var(--bwk-gray); color: var(--bwk-blue); }
+        .bwk-service.bwk-gray-bg h3 { color: var(--bwk-blue); }
+        .bwk-service.bwk-gray-bg p { color: var(--bwk-blue); }
+        .bwk-service.bwk-gray-bg a { color: var(--bwk-blue); }
+
+        /* ––– Comparison Table ––– */
+        .table-wrap { overflow-x: auto; margin: 1rem 0; }
+        .comp-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; background: var(--bg-card); border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border-color); }
+        .comp-table th { background: var(--bwk-blue); color: var(--white); padding: 0.7rem 0.8rem; text-align: left; font-weight: 600; font-size: 0.8rem; }
+        .comp-table td { padding: 0.7rem 0.8rem; border-bottom: 1px solid var(--border-color); vertical-align: top; color: var(--text-color); }
+        .comp-table tr:last-child td { border-bottom: none; }
+        .comp-table .use-case { font-size: 0.78rem; color: var(--text-muted); }
+
+        /* ––– FAQ ––– */
+        .faq-grid { display: grid; grid-template-columns: 1fr; gap: 0.8rem; margin: 1rem 0; }
+        .faq-item { background: var(--bg-card); border-radius: 0.8rem; padding: 1rem 1.2rem; border: 1px solid var(--border-color); transition: border-color 0.2s; }
+        .faq-item:hover { border-color: var(--bwk-yellow); }
+        .faq-item .faq-q { font-weight: 700; color: var(--text-color); font-size: 0.9rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .faq-item .faq-q .toggle-icon { font-size: 1.2rem; transition: transform 0.2s; }
+        .faq-item .faq-a { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem; display: none; padding-top: 0.5rem; border-top: 1px solid var(--border-color); }
+        .faq-item .faq-a.open { display: block; }
+
+        /* ––– CTA Banner ––– */
+        .cta-banner { background: var(--bwk-blue); border-radius: var(--radius); padding: 2rem 1.5rem; text-align: center; margin: 2rem 0 1rem 0; border: 1px solid var(--bwk-yellow); }
+        .cta-banner h3 { color: var(--bwk-yellow); font-size: 1.2rem; margin-bottom: 0.4rem; }
+        .cta-banner p { color: rgba(255, 255, 255, 0.7); font-size: 0.9rem; margin-bottom: 1.2rem; }
+        .cta-banner .cta-btn { display: inline-block; background: var(--bwk-yellow); color: var(--bwk-blue); font-weight: 700; padding: 0.6rem 2rem; border-radius: 2rem; transition: background 0.2s, transform 0.2s; }
+        .cta-banner .cta-btn:hover { background: var(--gold-dark); transform: translateY(-2px); }
+
+        /* ––– Footer ––– */
+        .site-footer { background: var(--bwk-blue); color: rgba(255, 255, 255, 0.4); padding: 1.8rem 1rem; margin-top: 2rem; text-align: center; font-size: 0.75rem; border-top: 2px solid var(--bwk-yellow); }
+        .site-footer a { color: var(--bwk-yellow); font-weight: 500; transition: color 0.2s; }
+        .site-footer a:hover { text-decoration: underline; color: #ffffff; }
+
+        /* ––– Print Styles ––– */
+        @media print {
+            #progress-bar, .pdf-btn, .lang-toggle, .site-header .header-actions .pdf-btn,
+            .site-header .lang-toggle, #back-to-top, #ai-search,
+            .card[style*="background: var(--gray-100)"], .text-center.mt-1.mb-1,
+            .theme-toggle, .bwk-slider-controls { display: none !important; }
+            .site-header { position: static !important; border-bottom: 2px solid var(--bwk-yellow); }
+            body { background: #fff !important; color: #000 !important; padding: 0; }
+            .card, .example-item, .faq-item, .cta-banner { border: 1px solid #ccc !important; box-shadow: none !important; background: #fff !important; }
+            .site-footer { background: #eee !important; color: #333 !important; border-top: 1px solid #ccc !important; }
+            .site-footer a { color: #0B1E35 !important; }
+            [data-theme="dark"] .card, [data-theme="dark"] .example-item, [data-theme="dark"] .faq-item { background: #fff !important; color: #000 !important; }
+            [data-theme="dark"] .prompt-card .p-text { background: #f8fafc !important; color: #1e293b !important; }
+        }
+
+        /* ––– Responsive ––– */
+        @media (max-width: 480px) {
+            .site-title { font-size: 1rem; }
+            .header-inner { flex-direction: column; align-items: stretch; gap: 0.5rem; }
+            .header-actions { justify-content: space-between; }
+            .lang-toggle { align-self: flex-start; }
+            h2 { font-size: 1.2rem; }
+            .card { padding: 1.2rem; }
+        }
+        @media (min-width: 640px) {
+            .header-inner { flex-wrap: nowrap; }
+            .site-title small { display: inline; margin-left: 0.3rem; font-size: 0.55rem; }
+        }
+
+        /* ––– Copy feedback ––– */
+        .copy-feedback { font-size: 0.7rem; color: #16a34a; margin-left: 0.5rem; opacity: 0; transition: opacity 0.2s; }
+        .copy-feedback.show { opacity: 1; }
+
+        /* ––– Back to Top ––– */
+        #back-to-top { position: fixed; bottom: 2rem; right: 2rem; width: 2.5rem; height: 2.5rem; border-radius: 50%; background: var(--bwk-blue); color: var(--bwk-yellow); border: 1px solid var(--bwk-yellow); font-size: 1.2rem; cursor: pointer; display: none; z-index: 99; justify-content: center; align-items: center; box-shadow: var(--card-shadow); transition: background 0.2s, transform 0.2s; }
+        #back-to-top:hover { background: var(--bwk-yellow); color: var(--bwk-blue); transform: scale(1.05); }
+        @media (max-width: 480px) { #back-to-top { bottom: 1.5rem; right: 1.5rem; width: 2.2rem; height: 2.2rem; font-size: 1rem; } }
+
+        /* ––– Sticky Navigation ––– */
+        .nav-sticky { position: sticky; top: 80px; z-index: 50; transition: box-shadow 0.2s; }
+        .nav-sticky.scrolled { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+        [data-theme="dark"] .nav-sticky.scrolled { box-shadow: 0 4px 12px rgba(0,0,0,0.4); }
+
+        /* ––– Scroll Spy ––– */
+        .nav-link-active { background: var(--bwk-yellow) !important; color: var(--bwk-blue) !important; border-color: var(--bwk-yellow) !important; }
+
+        /* ––– Arama vurgusu ––– */
+        mark { background: #fde047; color: #1e293b; padding: 0 0.1rem; border-radius: 2px; }
+        [data-theme="dark"] mark { background: #facc15; color: #0f172a; }
+
+        /* ––– BWK özel ––– */
+        .bwk-address { background: var(--bg-card); padding: 1.5rem; border-radius: var(--radius); border: 1px solid var(--border-color); }
+        .bwk-address h4 { color: var(--bwk-yellow); }
+        .bwk-address p { margin: 0.2rem 0; }
+        .bwk-map { width: 100%; height: 300px; border: 0; border-radius: var(--radius); margin-top: 1rem; }
+    </style>
+</head>
+<body>
+
+    <!-- ––– PROGRESS BAR ––– -->
+    <div id="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+
+    <!-- ––––– HEADER ––––– -->
+    <header class="site-header" id="site-header">
+        <div class="header-inner">
+            <div class="site-title">
+                BWK BildungsWerk
+                <span>/ Kreuzberg</span>
+                <small>Berlin</small>
+            </div>
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Koyu/Açık mod">🌗</button>
+                <button class="pdf-btn" onclick="saveAsPdf()" aria-label="Sayfayı PDF olarak kaydet">📄 PDF</button>
+                <div class="lang-toggle" role="group" aria-label="Dil seçimi">
+                    <button class="lang-btn active" data-lang="tr" aria-label="Türkçe">TR</button>
+                    <button class="lang-btn" data-lang="de" aria-label="Deutsch">DE</button>
+                    <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- ––– ARAMA ÇUBUĞU ––– -->
+        <div class="card" style="margin: 1rem 0; padding: 1rem; border-color: var(--bwk-yellow);">
+            <input type="text" id="ai-search" placeholder="🔍 Rehberde ara... (Örn: Umschulung, Bewerbung, Jobcenter)"
+                   style="width:100%; padding:0.6rem 1rem; border-radius:2rem; border:1px solid var(--border-color); font-size:0.9rem; font-family:system-ui; outline:none; transition:border-color 0.2s; background:var(--bg-input); color:var(--text-color);">
+        </div>
+
+        <!-- ––– HIZLI NAVİGASYON ––– -->
+        <div class="card nav-sticky" id="quickNav" style="margin-bottom: 1.5rem; background: var(--bg-alt); border-color: var(--border-color);">
+            <h4 style="font-size: 0.85rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.5rem; letter-spacing: 0.05em;">📍 <span data-i18n="nav-baslik">Hızlı Navigasyon</span></h4>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                <a href="#section-umschulung" class="nav-link" data-target="section-umschulung" style="font-size: 0.8rem; background: var(--bg-card); padding: 0.3rem 0.8rem; border-radius: 1rem; border: 1px solid var(--border-color); text-decoration:none; color:var(--text-color); font-weight:500; transition:0.2s;" data-i18n="nav-umschulung">🔄 Umschulung</a>
+                <a href="#section-berufsbildung" class="nav-link" data-target="section-berufsbildung" style="font-size: 0.8rem; background: var(--bg-card); padding: 0.3rem 0.8rem; border-radius: 1rem; border: 1px solid var(--border-color); text-decoration:none; color:var(--text-color); font-weight:500; transition:0.2s;" data-i18n="nav-berufsbildung">📚 Berufsbildung</a>
+                <a href="#section-bewerbung" class="nav-link" data-target="section-bewerbung" style="font-size: 0.8rem; background: var(--bg-card); padding: 0.3rem 0.8rem; border-radius: 1rem; border: 1px solid var(--border-color); text-decoration:none; color:var(--text-color); font-weight:500; transition:0.2s;" data-i18n="nav-bewerbung">📝 Bewerbung</a>
+                <a href="#section-onlineschule" class="nav-link" data-target="section-onlineschule" style="font-size: 0.8rem; background: var(--bg-card); padding: 0.3rem 0.8rem; border-radius: 1rem; border: 1px solid var(--border-color); text-decoration:none; color:var(--text-color); font-weight:500; transition:0.2s;" data-i18n="nav-onlineschule">💻 Onlineschule</a>
+                <a href="#section-projekte" class="nav-link" data-target="section-projekte" style="font-size: 0.8rem; background: var(--bg-card); padding: 0.3rem 0.8rem; border-radius: 1rem; border: 1px solid var(--border-color); text-decoration:none; color:var(--text-color); font-weight:500; transition:0.2s;" data-i18n="nav-projekte">🚀 Projekte</a>
+                <a href="#section-kontakt" class="nav-link" data-target="section-kontakt" style="font-size: 0.8rem; background: var(--bg-card); padding: 0.3rem 0.8rem; border-radius: 1rem; border: 1px solid var(--border-color); text-decoration:none; color:var(--text-color); font-weight:500; transition:0.2s;" data-i18n="nav-kontakt">📞 Kontakt</a>
+                <a href="#faq" class="nav-link" data-target="faq" style="font-size: 0.8rem; background: var(--bg-card); padding: 0.3rem 0.8rem; border-radius: 1rem; border: 1px solid var(--border-color); text-decoration:none; color:var(--text-color); font-weight:500; transition:0.2s;" data-i18n="nav-sss">❓ FAQ</a>
+            </div>
+        </div>
+
+        <!-- ––– SLIDER (BWK ZITAT-SLIDE) ––– -->
+        <section class="section" id="section-slider">
+            <div class="bwk-slider" id="bwkSlider">
+                <div class="slide active" data-index="0">
+                    <h2 data-i18n="slider-title1">zu einem anerkannten Beruf</h2>
+                    <p data-i18n="slider-text1">Kompetenzen stärken – erfolgreich in den Beruf starten. Wir begleiten Sie auf Ihrem Weg.</p>
+                    <a href="#" data-i18n="slider-link1">mehr erfahren</a>
+                </div>
+                <div class="slide" data-index="1">
+                    <h2 data-i18n="slider-title2">Ausbildungsvorbereitung Öffentlicher Dienst</h2>
+                    <p data-i18n="slider-text2">Bereiten Sie sich gezielt auf eine Ausbildung im öffentlichen Dienst vor.</p>
+                    <a href="#" data-i18n="slider-link2">mehr erfahren</a>
+                </div>
+                <div class="slide" data-index="2">
+                    <h2 data-i18n="slider-title3">Neustart in den Beruf</h2>
+                    <p data-i18n="slider-text3">Unterstützung auf ganzer Linie – wir helfen Ihnen beim Wiedereinstieg.</p>
+                    <a href="#" data-i18n="slider-link3">mehr erfahren</a>
+                </div>
+                <div class="bwk-slider-controls">
+                    <button class="active" data-index="0"></button>
+                    <button data-index="1"></button>
+                    <button data-index="2"></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ––– UMSCHULUNG ––– -->
+        <section class="section" id="section-umschulung">
+            <h2><span class="icon">🔄</span> <span data-i18n="umschulung-title">Umschulung – Neustart in den Beruf</span></h2>
+            <p class="section-sub" data-i18n="umschulung-sub">Unterstützung auf ganzer Linie – wir begleiten Sie auf Ihrem neuen Lebensabschnitt.</p>
+            <div class="card">
+                <p data-i18n="umschulung-text1">Sie sind nach längerer Krankheit, einer Familien-Auszeit oder Arbeitslosigkeit auf der Suche nach einem Wiedereinstieg ins Arbeitsleben? Sie können aus gesundheitlichen Gründen Ihren Beruf nicht mehr ausüben? Oder sind einfach unzufrieden mit Ihrem bisherigen Job?</p>
+                <p data-i18n="umschulung-text2">Eine Umschulung im BildungsWerk in Kreuzberg ermöglicht Ihnen einen Neustart in einen attraktiven Beruf. Sie lernen praxisnah, auf fachlich höchstem Niveau und unter besten Bedingungen – in positiver Atmosphäre, mit erfahrenen Lehrern und Trainern.</p>
+                <p data-i18n="umschulung-text3"><strong>Weiterbildungsprämie:</strong> Lassen Sie sich nicht Ihre Weiterbildungsprämie in Höhe von bis zu 2.500,00 € entgehen! Geschenkt bei erfolgreich bestandener Abschlussprüfung.</p>
+                <a href="#" class="bwk-link" data-i18n="umschulung-link">Erfahren Sie mehr →</a>
+            </div>
+        </section>
+
+        <!-- ––– BERUFSBILDUNG (SERVICES) ––– -->
+        <section class="section section-alt" id="section-berufsbildung">
+            <h2><span class="icon">📚</span> <span data-i18n="berufsbildung-title">Berufsbildung – Kompetenzen stärken</span></h2>
+            <p class="section-sub" data-i18n="berufsbildung-sub">Unsere Angebote für Ihre berufliche Zukunft.</p>
+            <div class="bwk-service-grid">
+                <div class="bwk-service bwk-yellow-bg">
+                    <h3 data-i18n="service-jobcoaching-title">Job-Coaching</h3>
+                    <p data-i18n="service-jobcoaching-text">Mit Erfolg durchstarten – in persönlichen Gesprächen beraten wir Sie, welche Qualifizierung, Ausbildung oder welcher neue Beruf am besten zu Ihnen passt.</p>
+                    <a href="#" data-i18n="service-jobcoaching-link">mehr erfahren</a>
+                </div>
+                <div class="bwk-service bwk-pink-bg">
+                    <h3 data-i18n="service-studium-title">Vorbereitung Studium</h3>
+                    <p data-i18n="service-studium-text">Spezielle Sprachkurse für junge Menschen aus der ganzen Welt, die in Deutschland studieren oder arbeiten möchten. Bereiten Sie sich auf die Sprachprüfung vor.</p>
+                    <a href="#" data-i18n="service-studium-link">mehr erfahren</a>
+                </div>
+                <div class="bwk-service bwk-lightblue-bg">
+                    <h3 data-i18n="service-onlineschule-title">Onlineschule</h3>
+                    <p data-i18n="service-onlineschule-text">Wir haben einen großen Teil unserer Angebote digitalisiert. Lernen Sie bequem und sicher von zuhause aus.</p>
+                    <a href="#" data-i18n="service-onlineschule-link">mehr erfahren</a>
+                </div>
+                <div class="bwk-service bwk-blue-bg">
+                    <h3 data-i18n="service-projekte-title">Projekte</h3>
+                    <p data-i18n="service-projekte-text">Innovative Programme für Politik und Verwaltung. Wir entwickeln Projekte, die den Herausforderungen der Gesellschaft und des Arbeitsmarktes begegnen.</p>
+                    <a href="#" data-i18n="service-projekte-link">mehr erfahren</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ––– BEWERBUNG ––– -->
+        <section class="section" id="section-bewerbung">
+            <h2><span class="icon">📝</span> <span data-i18n="bewerbung-title">Rund um die Bewerbung</span></h2>
+            <p class="section-sub" data-i18n="bewerbung-sub">Der erste Schritt zu Ihrer neuen beruflichen Zukunft.</p>
+            <div class="card">
+                <p data-i18n="bewerbung-text1">Die Kontaktaufnahme ist der erste Schritt. Wir beraten Sie zu unseren Angeboten und helfen Ihnen, den richtigen Ansprechpartner zu finden.</p>
+                <p data-i18n="bewerbung-text2">Der nächste Schritt ist die Bewerbung um einen Ausbildungsplatz. Die Verfahren unterscheiden sich je nach Angebot. Erfahren Sie in einem ersten Gespräch, wie das für Sie zutreffende Verfahren aussieht.</p>
+                <p data-i18n="bewerbung-text3"><strong>Finanzierung:</strong> Wir informieren Sie über die notwendigen Schritte zur Finanzierung Ihrer Umschulung oder Weiterbildung.</p>
+                <p data-i18n="bewerbung-text4">Zögern Sie nicht, uns anzusprechen, sofern Sie nicht sicher sind oder Hindernisse auftreten. Unsere Mitarbeiter*innen sind stets für Sie da!</p>
+                <a href="#" class="bwk-link" data-i18n="bewerbung-link">Jetzt kontaktieren →</a>
+            </div>
+        </section>
+
+        <!-- ––– ONLINESCHULE ––– -->
+        <section class="section section-alt" id="section-onlineschule">
+            <h2><span class="icon">💻</span> <span data-i18n="onlineschule-title">Onlineschule</span></h2>
+            <p class="section-sub" data-i18n="onlineschule-sub">Lernen Sie bequem und sicher von zuhause.</p>
+            <div class="card">
+                <p data-i18n="onlineschule-text">Wir haben einen großen Teil unserer Angebote ohne Einbußen der Qualität so digitalisiert, dass Sie sie bequem und sicher von zuhause aus lernen können. Den Zugang zu unseren Angeboten erhalten Sie, sobald Sie Teilnehmer*in der BWK geworden sind!</p>
+                <a href="#" class="bwk-link" data-i18n="onlineschule-link">Mehr erfahren →</a>
+            </div>
+        </section>
+
+        <!-- ––– PROJEKTE ––– -->
+        <section class="section" id="section-projekte">
+            <h2><span class="icon">🚀</span> <span data-i18n="projekte-title">Projekte</span></h2>
+            <p class="section-sub" data-i18n="projekte-sub">Innovative Programme für die Zukunft.</p>
+            <div class="card">
+                <p data-i18n="projekte-text1">Das BWK ist Ansprechpartner für Politik und Verwaltung. Mit innovativen Programmen schafft das BWK initiativ und auf Anfrage Möglichkeiten, den Herausforderungen, die die Gesellschaft und der Arbeitsmarkt an die Menschen stellen, zu begegnen.</p>
+                <p data-i18n="projekte-text2">So entwickelte das BWK Projekte, die es Interessierten erlauben, spaßorientiert und dynamisch das Dickicht der Ausbildungsberufe zu durchstöbern – oder Projekte, die Müttern mit Flucht- oder Migrationserfahrung das Berliner Bildungssystem im Interesse ihrer Kinder zu erläutern.</p>
+                <p data-i18n="projekte-text3">Auch auf europäischer Ebene werden Projekte zur Erforschung und zum Vergleich von Ansätzen in den Bereichen Bildung und Integration durchgeführt.</p>
+            </div>
+        </section>
+
+        <!-- ––– YOUTUBE VIDEOS ––– -->
+        <section class="section section-alt" id="section-videos">
+            <h2><span class="icon">🎬</span> <span data-i18n="videos-title">Eindrücke aus unserer Arbeit</span></h2>
+            <p class="section-sub" data-i18n="videos-sub">Sehen Sie, wer wir sind und was wir tun.</p>
+            <div class="card-grid card-grid-2">
+                <div class="card">
+                    <h3 data-i18n="video1-title">Das BWK stellt sich vor – Hauswirtschaft</h3>
+                    <div style="background:var(--bg-alt); border-radius:0.5rem; padding:2rem; text-align:center; margin-top:0.5rem;">
+                        <span style="font-size:3rem;">▶️</span>
+                        <p style="font-size:0.8rem; margin-top:0.5rem;" data-i18n="video1-placeholder">YouTube-Video laden</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 data-i18n="video2-title">Erlernen Sie den Friseurberuf mit Bildungsgutschein</h3>
+                    <div style="background:var(--bg-alt); border-radius:0.5rem; padding:2rem; text-align:center; margin-top:0.5rem;">
+                        <span style="font-size:3rem;">▶️</span>
+                        <p style="font-size:0.8rem; margin-top:0.5rem;" data-i18n="video2-placeholder">YouTube-Video laden</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ––– KONTAKT & ANFAHRT ––– -->
+        <section class="section" id="section-kontakt">
+            <h2><span class="icon">📞</span> <span data-i18n="kontakt-title">Kontakt &amp; Anfahrt</span></h2>
+            <p class="section-sub" data-i18n="kontakt-sub">Wir sind für Sie da – besuchen Sie uns in Kreuzberg.</p>
+            <div style="display:grid; grid-template-columns:1fr; gap:1.5rem;">
+                <div class="bwk-address">
+                    <h4 data-i18n="kontakt-address-title">Hauptgeschäftsstelle</h4>
+                    <p><strong data-i18n="kontakt-address-name">BWK BildungsWerk in Kreuzberg GmbH</strong></p>
+                    <p>Cuvrystr. 34 // 10997 Berlin-Kreuzberg</p>
+                    <p><strong data-i18n="kontakt-phone">Telefon:</strong> 030. 61 79 29 – 0</p>
+                    <p><strong>E-Mail:</strong> <a href="mailto:info@bwk-berlin.de">info@bwk-berlin.de</a></p>
+                    <p style="margin-top:0.5rem;"><strong data-i18n="kontakt-transport">Verkehrsverbindungen:</strong> U1 Schlesisches Tor, Bus 165 und 265 (Haltestellen: Falckensteinstraße oder Taborstraße)</p>
+                </div>
+                <iframe class="bwk-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.7109814757157!2d13.4381268!3d52.4963952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84e39f3c9a1b1%3A0x8f5f0a4b1f7e5c1!2sCuvrystra%C3%9Fe%2034%2C%2010997%20Berlin!5e0!3m2!1sde!2sde!4v1719234567890" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+        <!-- ––– FAQ ––– -->
+        <section class="section section-alt" id="faq">
+            <h2><span class="icon">❓</span> <span data-i18n="faq-title">Häufig gestellte Fragen</span></h2>
+            <p class="section-sub" data-i18n="faq-sub">Antworten auf die wichtigsten Fragen.</p>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">
+                        <span data-i18n="faq-q1">Wie finanziere ich meine Umschulung?</span>
+                        <span class="toggle-icon">▾</span>
+                    </div>
+                    <div class="faq-a" data-i18n="faq-a1">Wir beraten Sie zu den verschiedenen Finanzierungsmöglichkeiten, darunter Bildungsgutschein, Agentur für Arbeit, Rentenversicherung und Weiterbildungsprämien. Kommen Sie einfach auf uns zu!</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">
+                        <span data-i18n="faq-q2">Welche Voraussetzungen muss ich für eine Umschulung mitbringen?</span>
+                        <span class="toggle-icon">▾</span>
+                    </div>
+                    <div class="faq-a" data-i18n="faq-a2">Die Voraussetzungen variieren je nach Beruf. In der Regel benötigen Sie einen Hauptschulabschluss oder eine gleichwertige Qualifikation. Bei manchen Berufen sind auch praktische Erfahrungen oder Sprachkenntnisse erforderlich. Sprechen Sie uns an – wir prüfen gemeinsam Ihre Möglichkeiten.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">
+                        <span data-i18n="faq-q3">Kann ich die Onlineschule auch ohne Vorkenntnisse nutzen?</span>
+                        <span class="toggle-icon">▾</span>
+                    </div>
+                    <div class="faq-a" data-i18n="faq-a3">Ja, unsere Online-Angebote sind für alle Teilnehmer*innen geeignet. Wir begleiten Sie beim Einstieg und bieten bei Bedarf zusätzliche Unterstützung.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q" onclick="toggleFaq(this)">
+                        <span data-i18n="faq-q4">Wie lange dauert eine Umschulung?</span>
+                        <span class="toggle-icon">▾</span>
+                    </div>
+                    <div class="faq-a" data-i18n="faq-a4">Die Dauer einer Umschulung beträgt in der Regel 2 bis 3 Jahre, kann aber je nach Beruf und Vorkenntnissen variieren. In einem persönlichen Gespräch informieren wir Sie über die genauen Zeitrahmen.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ––– SOSYAL MEDYA ––– -->
+        <div class="text-center mt-1 mb-1">
+            <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:1rem;" data-i18n="social-title">
+                Folgen Sie uns auf Social Media:
+            </p>
+            <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:0.8rem;max-width:400px;margin:0 auto;">
+                <a href="#" style="display:inline-flex;align-items:center;gap:0.4rem;background:#25D366;color:white;font-size:0.78rem;font-weight:700;padding:0.5rem 1.1rem;border-radius:2rem;text-decoration:none;min-width:120px;justify-content:center;">WhatsApp</a>
+                <a href="#" style="display:inline-flex;align-items:center;gap:0.4rem;background:#0077B5;color:white;font-size:0.78rem;font-weight:700;padding:0.5rem 1.1rem;border-radius:2rem;text-decoration:none;min-width:120px;justify-content:center;">LinkedIn</a>
+                <a href="#" style="display:inline-flex;align-items:center;gap:0.4rem;background:#000000;color:white;font-size:0.78rem;font-weight:700;padding:0.5rem 1.1rem;border-radius:2rem;text-decoration:none;min-width:120px;justify-content:center;">X / Twitter</a>
+                <a href="#" style="display:inline-flex;align-items:center;gap:0.4rem;background:#E1306C;color:white;font-size:0.78rem;font-weight:700;padding:0.5rem 1.1rem;border-radius:2rem;text-decoration:none;min-width:120px;justify-content:center;">Instagram</a>
+            </div>
+        </div>
+
+        <!-- ––– CTA BANNER ––– -->
+        <div class="cta-banner">
+            <h3>📩 <span data-i18n="cta-title">Haben Sie Fragen? Wir beraten Sie gerne!</span></h3>
+            <p data-i18n="cta-text">Vereinbaren Sie einen persönlichen Termin oder kontaktieren Sie uns telefonisch. Wir helfen Ihnen bei jedem Schritt.</p>
+            <a href="#" class="cta-btn" data-i18n="cta-btn">📞 Jetzt Kontakt aufnehmen</a>
+        </div>
+
+    </main>
+
+    <!-- ––––– FOOTER ––––– -->
+    <footer class="site-footer">
+        <div class="container">
+            <div>
+                <a href="/legal.html" style="color:var(--bwk-yellow);">Impressum &amp; Datenschutz</a>
+                &nbsp;·&nbsp;
+                <a href="https://pacdi.eu" target="_blank" rel="noopener" style="color:var(--bwk-yellow);">PACDI Digital Studio</a>
+            </div>
+            <div style="margin-top:0.6rem;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:0.6rem;">
+                <span style="display:inline-flex;align-items:center;gap:0.3rem;background:rgba(219,225,29,0.1);color:var(--bwk-yellow);font-size:0.65rem;font-weight:700;padding:0.25rem 0.8rem;border-radius:2rem;border:1px solid var(--bwk-yellow);text-transform:uppercase;letter-spacing:0.05em;">
+                    🛡️ FSEK Registered · Pacdi Framework
+                </span>
+            </div>
+            <div style="margin-top:0.4rem;font-size:0.6rem;color:rgba(255,255,255,0.2);">
+                © 2026 PACDI Global Yazılım Ltd. Şti. · Alle Rechte vorbehalten / Tüm Hakları Saklıdır · FSEK No: 2026/18897
+            </div>
+        </div>
+    </footer>
+
+    <!-- ––– BACK TO TOP ––– -->
+    <button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Sayfa başına dön">▲</button>
+
+    <!-- ––––– JAVASCRIPT ––––– -->
+    <script>
+        (function() {
+
+            // ———— i18n DATA ————
+            var i18n = {
+                tr: {
+                    "nav-baslik": "Hızlı Navigasyon",
+                    "nav-umschulung": "🔄 Yeniden Eğitim",
+                    "nav-berufsbildung": "📚 Mesleki Eğitim",
+                    "nav-bewerbung": "📝 Başvuru",
+                    "nav-onlineschule": "💻 Online Okul",
+                    "nav-projekte": "🚀 Projeler",
+                    "nav-kontakt": "📞 İletişim",
+                    "nav-sss": "❓ SSS",
+
+                    "slider-title1": "tanınmış bir mesleğe",
+                    "slider-text1": "Yetenekleri güçlendirin – başarıyla kariyere başlayın. Size yolculuğunuzda eşlik ediyoruz.",
+                    "slider-link1": "daha fazla bilgi",
+                    "slider-title2": "Kamu Hizmeti Meslek Hazırlığı",
+                    "slider-text2": "Kamu hizmetinde bir meslek eğitimine hedefe yönelik hazırlanın.",
+                    "slider-link2": "daha fazla bilgi",
+                    "slider-title3": "Meslekte Yeni Başlangıç",
+                    "slider-text3": "Her konuda destek – işe dönüşte size yardımcı oluyoruz.",
+                    "slider-link3": "daha fazla bilgi",
+
+                    "umschulung-title": "Yeniden Eğitim – Meslekte Yeni Başlangıç",
+                    "umschulung-sub": "Her konuda destek – yeni yaşam döneminizde size eşlik ediyoruz.",
+                    "umschulung-text1": "Uzun süreli hastalık, aile izni veya işsizlikten sonra çalışma hayatına yeniden girmek mi istiyorsunuz? Sağlık nedenleriyle eski mesleğinizi icra edemiyor musunuz? Yoksa mevcut işinizden memnun değil misiniz?",
+                    "umschulung-text2": "Kreuzberg'deki BildungsWerk'te yeniden eğitim, size cazip bir meslekte yeni bir başlangıç fırsatı sunar. Uygulamaya yakın, en üst düzeyde ve en iyi koşullarda – olumlu bir atmosferde, deneyimli öğretmenler ve eğitmenler eşliğinde öğrenirsiniz.",
+                    "umschulung-text3": "**İleri Eğitim İkramiyesi:** Başarıyla tamamlanan sınav sonrasında size 2.500,00 €'ya kadar ikramiye verilir. Bunu kaçırmayın!",
+                    "umschulung-link": "Daha fazla bilgi edinin →",
+
+                    "berufsbildung-title": "Mesleki Eğitim – Yetenekleri Güçlendirin",
+                    "berufsbildung-sub": "Mesleki geleceğiniz için hizmetlerimiz.",
+                    "service-jobcoaching-title": "İş Koçluğu",
+                    "service-jobcoaching-text": "Başarıyla başlayın – kişisel görüşmelerde size hangi nitelik, eğitim veya yeni mesleğin en uygun olduğu konusunda danışmanlık yapıyoruz.",
+                    "service-jobcoaching-link": "daha fazla bilgi",
+                    "service-studium-title": "Üniversite Hazırlığı",
+                    "service-studium-text": "Almanya'da okumak veya çalışmak isteyen gençler için özel dil kursları. Dil sınavına kapsamlı ve başarılı bir şekilde hazırlanın.",
+                    "service-studium-link": "daha fazla bilgi",
+                    "service-onlineschule-title": "Online Okul",
+                    "service-onlineschule-text": "Hizmetlerimizin büyük bir kısmını dijitalleştirdik. Evinizden rahat ve güvenli bir şekilde öğrenin.",
+                    "service-onlineschule-link": "daha fazla bilgi",
+                    "service-projekte-title": "Projeler",
+                    "service-projekte-text": "Politika ve yönetim için yenilikçi programlar. Toplumun ve iş piyasasının zorluklarına yanıt veren projeler geliştiriyoruz.",
+                    "service-projekte-link": "daha fazla bilgi",
+
+                    "bewerbung-title": "Başvuru Hakkında Her Şey",
+                    "bewerbung-sub": "Yeni mesleki geleceğinize ilk adım.",
+                    "bewerbung-text1": "İletişime geçmek ilk adımdır. Hizmetlerimiz hakkında size danışmanlık yapar ve doğru iletişim kişisini bulmanıza yardımcı oluruz.",
+                    "bewerbung-text2": "Bir sonraki adım, bir eğitim pozisyonu için başvuruda bulunmaktır. Prosedürler hizmete göre değişir. Sizin için geçerli olan prosedürü ilk görüşmede öğreneceksiniz.",
+                    "bewerbung-text3": "**Finansman:** Yeniden eğitim veya ileri eğitiminizin finansmanı için gerekli adımları size anlatıyoruz.",
+                    "bewerbung-text4": "Emin değilseniz veya engellerle karşılaşırsanız lütfen bize başvurmaktan çekinmeyin. Çalışanlarımız her zaman sizin için burada!",
+                    "bewerbung-link": "Şimdi iletişime geçin →",
+
+                    "onlineschule-title": "Online Okul",
+                    "onlineschule-sub": "Evinizden rahat ve güvenli öğrenin.",
+                    "onlineschule-text": "Hizmetlerimizin büyük bir kısmını kalite kaybı olmadan dijitalleştirdik, böylece evinizden rahat ve güvenli bir şekilde öğrenebilirsiniz. Hizmetlerimize erişim, BWK'ye katılımcı olduğunuzda sağlanır.",
+                    "onlineschule-link": "Daha fazla bilgi edinin →",
+
+                    "projekte-title": "Projeler",
+                    "projekte-sub": "Gelecek için yenilikçi programlar.",
+                    "projekte-text1": "BWK, politika ve yönetim için bir irtibat noktasıdır. Yenilikçi programlarla BWK, inisiyatif alarak ve talep üzerine, toplumun ve iş piyasasının insanlara yönelik zorluklarına yanıt vermek için fırsatlar yaratır.",
+                    "projekte-text2": "Bu kapsamda BWK, ilgililerin eğlenceli ve dinamik bir şekilde meslek eğitimlerinin karmaşıklığını keşfetmelerine olanak tanıyan projeler geliştirdi – veya göç veya mülteci geçmişi olan annelere, çocuklarının yararına Berlin eğitim sistemini açıklayan projeler.",
+                    "projekte-text3": "Ayrıca Avrupa düzeyinde, eğitim ve entegrasyon alanındaki yaklaşımları araştırmak ve karşılaştırmak için projeler yürütülmektedir.",
+
+                    "videos-title": "Çalışmalarımızdan İzlenimler",
+                    "videos-sub": "Kim olduğumuzu ve ne yaptığımızı görün.",
+                    "video1-title": "BWK kendini tanıtıyor – Ev Ekonomisi",
+                    "video1-placeholder": "YouTube videosu yükleniyor",
+                    "video2-title": "Eğitim Kuponu ile Berber Mesleğini Öğrenin",
+                    "video2-placeholder": "YouTube videosu yükleniyor",
+
+                    "kontakt-title": "İletişim ve Yol Tarifi",
+                    "kontakt-sub": "Sizin için buradayız – Kreuzberg'de bizi ziyaret edin.",
+                    "kontakt-address-title": "Ana Merkez",
+                    "kontakt-address-name": "BWK BildungsWerk in Kreuzberg GmbH",
+                    "kontakt-phone": "Telefon:",
+                    "kontakt-transport": "Toplu taşıma bağlantıları:",
+
+                    "faq-title": "Sık Sorulan Sorular",
+                    "faq-sub": "En önemli sorulara cevaplar.",
+                    "faq-q1": "Yeniden eğitimimi nasıl finanse edebilirim?",
+                    "faq-a1": "Size eğitim kuponu, İş Kurumu, emeklilik sigortası ve ileri eğitim ikramiyesi gibi çeşitli finansman seçenekleri hakkında danışmanlık yapıyoruz. Bize ulaşmanız yeterli!",
+                    "faq-q2": "Yeniden eğitim için hangi ön koşulları getirmeliyim?",
+                    "faq-a2": "Ön koşullar mesleğe göre değişir. Genellikle ortaokul diploması veya eşdeğer bir yeterlilik gerekir. Bazı mesleklerde pratik deneyim veya dil bilgisi de aranabilir. Bize ulaşın – birlikte imkanlarınızı değerlendirelim.",
+                    "faq-q3": "Online okulu ön bilgi olmadan kullanabilir miyim?",
+                    "faq-a3": "Evet, online hizmetlerimiz tüm katılımcılar için uygundur. Başlangıçta size rehberlik eder ve gerektiğinde ek destek sunarız.",
+                    "faq-q4": "Yeniden eğitim ne kadar sürer?",
+                    "faq-a4": "Yeniden eğitim süresi genellikle 2 ila 3 yıldır, ancak mesleğe ve ön bilgilere bağlı olarak değişebilir. Kişisel bir görüşmede size kesin zaman çerçeveleri hakkında bilgi veririz.",
+
+                    "cta-title": "Sorularınız mı var? Size memnuniyetle danışmanlık yaparız!",
+                    "cta-text": "Kişisel bir randevu ayarlayın veya bizi telefonla arayın. Her adımda size yardımcı oluyoruz.",
+                    "cta-btn": "📞 Şimdi iletişime geçin",
+
+                    "social-title": "Bizi sosyal medyada takip edin:"
+                },
+                de: {
+                    "nav-baslik": "Schnellnavigation",
+                    "nav-umschulung": "🔄 Umschulung",
+                    "nav-berufsbildung": "📚 Berufsbildung",
+                    "nav-bewerbung": "📝 Bewerbung",
+                    "nav-onlineschule": "💻 Onlineschule",
+                    "nav-projekte": "🚀 Projekte",
+                    "nav-kontakt": "📞 Kontakt",
+                    "nav-sss": "❓ FAQ",
+
+                    "slider-title1": "zu einem anerkannten Beruf",
+                    "slider-text1": "Kompetenzen stärken – erfolgreich in den Beruf starten. Wir begleiten Sie auf Ihrem Weg.",
+                    "slider-link1": "mehr erfahren",
+                    "slider-title2": "Ausbildungsvorbereitung Öffentlicher Dienst",
+                    "slider-text2": "Bereiten Sie sich gezielt auf eine Ausbildung im öffentlichen Dienst vor.",
+                    "slider-link2": "mehr erfahren",
+                    "slider-title3": "Neustart in den Beruf",
+                    "slider-text3": "Unterstützung auf ganzer Linie – wir helfen Ihnen beim Wiedereinstieg.",
+                    "slider-link3": "mehr erfahren",
+
+                    "umschulung-title": "Umschulung – Neustart in den Beruf",
+                    "umschulung-sub": "Unterstützung auf ganzer Linie – wir begleiten Sie auf Ihrem neuen Lebensabschnitt.",
+                    "umschulung-text1": "Sie sind nach längerer Krankheit, einer Familien-Auszeit oder Arbeitslosigkeit auf der Suche nach einem Wiedereinstieg ins Arbeitsleben? Sie können aus gesundheitlichen Gründen Ihren Beruf nicht mehr ausüben? Oder sind einfach unzufrieden mit Ihrem bisherigen Job?",
+                    "umschulung-text2": "Eine Umschulung im BildungsWerk in Kreuzberg ermöglicht Ihnen einen Neustart in einen attraktiven Beruf. Sie lernen praxisnah, auf fachlich höchstem Niveau und unter besten Bedingungen – in positiver Atmosphäre, mit erfahrenen Lehrern und Trainern.",
+                    "umschulung-text3": "**Weiterbildungsprämie:** Lassen Sie sich nicht Ihre Weiterbildungsprämie in Höhe von bis zu 2.500,00 € entgehen! Geschenkt bei erfolgreich bestandener Abschlussprüfung.",
+                    "umschulung-link": "Erfahren Sie mehr →",
+
+                    "berufsbildung-title": "Berufsbildung – Kompetenzen stärken",
+                    "berufsbildung-sub": "Unsere Angebote für Ihre berufliche Zukunft.",
+                    "service-jobcoaching-title": "Job-Coaching",
+                    "service-jobcoaching-text": "Mit Erfolg durchstarten – in persönlichen Gesprächen beraten wir Sie, welche Qualifizierung, Ausbildung oder welcher neue Beruf am besten zu Ihnen passt.",
+                    "service-jobcoaching-link": "mehr erfahren",
+                    "service-studium-title": "Vorbereitung Studium",
+                    "service-studium-text": "Spezielle Sprachkurse für junge Menschen aus der ganzen Welt, die in Deutschland studieren oder arbeiten möchten. Bereiten Sie sich auf die Sprachprüfung vor.",
+                    "service-studium-link": "mehr erfahren",
+                    "service-onlineschule-title": "Onlineschule",
+                    "service-onlineschule-text": "Wir haben einen großen Teil unserer Angebote digitalisiert. Lernen Sie bequem und sicher von zuhause aus.",
+                    "service-onlineschule-link": "mehr erfahren",
+                    "service-projekte-title": "Projekte",
+                    "service-projekte-text": "Innovative Programme für Politik und Verwaltung. Wir entwickeln Projekte, die den Herausforderungen der Gesellschaft und des Arbeitsmarktes begegnen.",
+                    "service-projekte-link": "mehr erfahren",
+
+                    "bewerbung-title": "Rund um die Bewerbung",
+                    "bewerbung-sub": "Der erste Schritt zu Ihrer neuen beruflichen Zukunft.",
+                    "bewerbung-text1": "Die Kontaktaufnahme ist der erste Schritt. Wir beraten Sie zu unseren Angeboten und helfen Ihnen, den richtigen Ansprechpartner zu finden.",
+                    "bewerbung-text2": "Der nächste Schritt ist die Bewerbung um einen Ausbildungsplatz. Die Verfahren unterscheiden sich je nach Angebot. Erfahren Sie in einem ersten Gespräch, wie das für Sie zutreffende Verfahren aussieht.",
+                    "bewerbung-text3": "**Finanzierung:** Wir informieren Sie über die notwendigen Schritte zur Finanzierung Ihrer Umschulung oder Weiterbildung.",
+                    "bewerbung-text4": "Zögern Sie nicht, uns anzusprechen, sofern Sie nicht sicher sind oder Hindernisse auftreten. Unsere Mitarbeiter*innen sind stets für Sie da!",
+                    "bewerbung-link": "Jetzt kontaktieren →",
+
+                    "onlineschule-title": "Onlineschule",
+                    "onlineschule-sub": "Lernen Sie bequem und sicher von zuhause.",
+                    "onlineschule-text": "Wir haben einen großen Teil unserer Angebote ohne Einbußen der Qualität so digitalisiert, dass Sie sie bequem und sicher von zuhause aus lernen können. Den Zugang zu unseren Angeboten erhalten Sie, sobald Sie Teilnehmer*in der BWK geworden sind!",
+                    "onlineschule-link": "Mehr erfahren →",
+
+                    "projekte-title": "Projekte",
+                    "projekte-sub": "Innovative Programme für die Zukunft.",
+                    "projekte-text1": "Das BWK ist Ansprechpartner für Politik und Verwaltung. Mit innovativen Programmen schafft das BWK initiativ und auf Anfrage Möglichkeiten, den Herausforderungen, die die Gesellschaft und der Arbeitsmarkt an die Menschen stellen, zu begegnen.",
+                    "projekte-text2": "So entwickelte das BWK Projekte, die es Interessierten erlauben, spaßorientiert und dynamisch das Dickicht der Ausbildungsberufe zu durchstöbern – oder Projekte, die Müttern mit Flucht- oder Migrationserfahrung das Berliner Bildungssystem im Interesse ihrer Kinder zu erläutern.",
+                    "projekte-text3": "Auch auf europäischer Ebene werden Projekte zur Erforschung und zum Vergleich von Ansätzen in den Bereichen Bildung und Integration durchgeführt.",
+
+                    "videos-title": "Eindrücke aus unserer Arbeit",
+                    "videos-sub": "Sehen Sie, wer wir sind und was wir tun.",
+                    "video1-title": "Das BWK stellt sich vor – Hauswirtschaft",
+                    "video1-placeholder": "YouTube-Video laden",
+                    "video2-title": "Erlernen Sie den Friseurberuf mit Bildungsgutschein",
+                    "video2-placeholder": "YouTube-Video laden",
+
+                    "kontakt-title": "Kontakt & Anfahrt",
+                    "kontakt-sub": "Wir sind für Sie da – besuchen Sie uns in Kreuzberg.",
+                    "kontakt-address-title": "Hauptgeschäftsstelle",
+                    "kontakt-address-name": "BWK BildungsWerk in Kreuzberg GmbH",
+                    "kontakt-phone": "Telefon:",
+                    "kontakt-transport": "Verkehrsverbindungen:",
+
+                    "faq-title": "Häufig gestellte Fragen",
+                    "faq-sub": "Antworten auf die wichtigsten Fragen.",
+                    "faq-q1": "Wie finanziere ich meine Umschulung?",
+                    "faq-a1": "Wir beraten Sie zu den verschiedenen Finanzierungsmöglichkeiten, darunter Bildungsgutschein, Agentur für Arbeit, Rentenversicherung und Weiterbildungsprämien. Kommen Sie einfach auf uns zu!",
+                    "faq-q2": "Welche Voraussetzungen muss ich für eine Umschulung mitbringen?",
+                    "faq-a2": "Die Voraussetzungen variieren je nach Beruf. In der Regel benötigen Sie einen Hauptschulabschluss oder eine gleichwertige Qualifikation. Bei manchen Berufen sind auch praktische Erfahrungen oder Sprachkenntnisse erforderlich. Sprechen Sie uns an – wir prüfen gemeinsam Ihre Möglichkeiten.",
+                    "faq-q3": "Kann ich die Onlineschule auch ohne Vorkenntnisse nutzen?",
+                    "faq-a3": "Ja, unsere Online-Angebote sind für alle Teilnehmer*innen geeignet. Wir begleiten Sie beim Einstieg und bieten bei Bedarf zusätzliche Unterstützung.",
+                    "faq-q4": "Wie lange dauert eine Umschulung?",
+                    "faq-a4": "Die Dauer einer Umschulung beträgt in der Regel 2 bis 3 Jahre, kann aber je nach Beruf und Vorkenntnissen variieren. In einem persönlichen Gespräch informieren wir Sie über die genauen Zeitrahmen.",
+
+                    "cta-title": "Haben Sie Fragen? Wir beraten Sie gerne!",
+                    "cta-text": "Vereinbaren Sie einen persönlichen Termin oder kontaktieren Sie uns telefonisch. Wir helfen Ihnen bei jedem Schritt.",
+                    "cta-btn": "📞 Jetzt Kontakt aufnehmen",
+
+                    "social-title": "Folgen Sie uns auf Social Media:"
+                },
+                en: {
+                    "nav-baslik": "Quick Navigation",
+                    "nav-umschulung": "🔄 Retraining",
+                    "nav-berufsbildung": "📚 Vocational Training",
+                    "nav-bewerbung": "📝 Application",
+                    "nav-onlineschule": "💻 Online School",
+                    "nav-projekte": "🚀 Projects",
+                    "nav-kontakt": "📞 Contact",
+                    "nav-sss": "❓ FAQ",
+
+                    "slider-title1": "to a recognized profession",
+                    "slider-text1": "Strengthen your skills – successfully start your career. We accompany you on your journey.",
+                    "slider-link1": "learn more",
+                    "slider-title2": "Training preparation for public service",
+                    "slider-text2": "Prepare specifically for training in the public service.",
+                    "slider-link2": "learn more",
+                    "slider-title3": "Fresh start in your career",
+                    "slider-text3": "Full support – we help you get back to work.",
+                    "slider-link3": "learn more",
+
+                    "umschulung-title": "Retraining – A Fresh Start in Your Career",
+                    "umschulung-sub": "Full support – we accompany you on your new life chapter.",
+                    "umschulung-text1": "Are you looking to re-enter the workforce after a long illness, family break, or unemployment? Can you no longer work in your profession for health reasons? Or are you simply dissatisfied with your current job?",
+                    "umschulung-text2": "Retraining at BildungsWerk in Kreuzberg offers you a fresh start in an attractive profession. You learn practically, at the highest professional level and under the best conditions – in a positive atmosphere, with experienced teachers and trainers.",
+                    "umschulung-text3": "**Continuing Education Bonus:** Don't miss out on your continuing education bonus of up to €2,500! Gifted upon successful completion of the final exam.",
+                    "umschulung-link": "Learn more →",
+
+                    "berufsbildung-title": "Vocational Training – Strengthen Your Skills",
+                    "berufsbildung-sub": "Our offers for your professional future.",
+                    "service-jobcoaching-title": "Job Coaching",
+                    "service-jobcoaching-text": "Start successfully – in personal conversations, we advise you on which qualification, training or new profession best suits you.",
+                    "service-jobcoaching-link": "learn more",
+                    "service-studium-title": "University Preparation",
+                    "service-studium-text": "Special language courses for young people from around the world who want to study or work in Germany. Prepare for the language exam.",
+                    "service-studium-link": "learn more",
+                    "service-onlineschule-title": "Online School",
+                    "service-onlineschule-text": "We have digitized a large part of our offerings. Learn comfortably and safely from home.",
+                    "service-onlineschule-link": "learn more",
+                    "service-projekte-title": "Projects",
+                    "service-projekte-text": "Innovative programs for politics and administration. We develop projects that meet the challenges of society and the labor market.",
+                    "service-projekte-link": "learn more",
+
+                    "bewerbung-title": "All About Your Application",
+                    "bewerbung-sub": "The first step to your new professional future.",
+                    "bewerbung-text1": "Making contact is the first step. We advise you on our offerings and help you find the right contact person.",
+                    "bewerbung-text2": "The next step is applying for a training position. The procedures vary depending on the offering. Learn in an initial meeting which procedure applies to you.",
+                    "bewerbung-text3": "**Financing:** We inform you about the necessary steps to finance your retraining or further education.",
+                    "bewerbung-text4": "Don't hesitate to contact us if you are unsure or encounter obstacles. Our staff are always here for you!",
+                    "bewerbung-link": "Contact us now →",
+
+                    "onlineschule-title": "Online School",
+                    "onlineschule-sub": "Learn comfortably and safely from home.",
+                    "onlineschule-text": "We have digitized a large part of our offerings without any loss of quality, so you can learn comfortably and safely from home. You will receive access to our offerings as soon as you become a participant at BWK!",
+                    "onlineschule-link": "Learn more →",
+
+                    "projekte-title": "Projects",
+                    "projekte-sub": "Innovative programs for the future.",
+                    "projekte-text1": "BWK is a contact point for politics and administration. With innovative programs, BWK creates opportunities, on its own initiative and on request, to meet the challenges that society and the labor market pose to people.",
+                    "projekte-text2": "BWK developed projects that allow interested parties to explore the maze of training professions in a fun and dynamic way – or projects that explain the Berlin education system to mothers with refugee or migration backgrounds for the benefit of their children.",
+                    "projekte-text3": "Projects are also being carried out at the European level to research and compare approaches in the fields of education and integration.",
+
+                    "videos-title": "Impressions from Our Work",
+                    "videos-sub": "See who we are and what we do.",
+                    "video1-title": "BWK introduces itself – Home Economics",
+                    "video1-placeholder": "Load YouTube video",
+                    "video2-title": "Learn the hairdressing profession with an education voucher",
+                    "video2-placeholder": "Load YouTube video",
+
+                    "kontakt-title": "Contact & Directions",
+                    "kontakt-sub": "We are here for you – visit us in Kreuzberg.",
+                    "kontakt-address-title": "Head Office",
+                    "kontakt-address-name": "BWK BildungsWerk in Kreuzberg GmbH",
+                    "kontakt-phone": "Phone:",
+                    "kontakt-transport": "Public transport connections:",
+
+                    "faq-title": "Frequently Asked Questions",
+                    "faq-sub": "Answers to the most important questions.",
+                    "faq-q1": "How do I finance my retraining?",
+                    "faq-a1": "We advise you on various financing options, including education vouchers, the Employment Agency, pension insurance, and continuing education bonuses. Just get in touch with us!",
+                    "faq-q2": "What prerequisites do I need for retraining?",
+                    "faq-a2": "The prerequisites vary depending on the profession. Generally, you need a secondary school leaving certificate or an equivalent qualification. Some professions also require practical experience or language skills. Contact us – we will check your options together.",
+                    "faq-q3": "Can I use the online school without prior knowledge?",
+                    "faq-a3": "Yes, our online offerings are suitable for all participants. We will guide you through the start and offer additional support if needed.",
+                    "faq-q4": "How long does retraining take?",
+                    "faq-a4": "Retraining usually takes 2 to 3 years, but can vary depending on the profession and prior knowledge. We will inform you about the exact time frames in a personal conversation.",
+
+                    "cta-title": "Do you have questions? We are happy to advise you!",
+                    "cta-text": "Make a personal appointment or contact us by phone. We help you at every step.",
+                    "cta-btn": "📞 Contact us now",
+
+                    "social-title": "Follow us on social media:"
+                }
+            };
+
+            // ———— DOM refs ————
+            var langBtns = document.querySelectorAll('.lang-btn');
+            var i18nElements = document.querySelectorAll('[data-i18n]');
+            var themeToggle = document.getElementById('themeToggle');
+            var htmlEl = document.documentElement;
+            var navLinks = document.querySelectorAll('.nav-link');
+            var sections = document.querySelectorAll('.section, #faq, #section-slider');
+
+            // ———— Tema ————
+            function setTheme(theme) {
+                htmlEl.setAttribute('data-theme', theme);
+                localStorage.setItem('pacdi-theme', theme);
+                themeToggle.textContent = theme === 'dark' ? '☀️' : '🌗';
+            }
+            var savedTheme = localStorage.getItem('pacdi-theme');
+            setTheme(savedTheme || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+            if (themeToggle) themeToggle.addEventListener('click', function() {
+                setTheme(htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+            });
+
+            // ———— Dil ————
+            function applyLanguage(lang) {
+                var t = i18n[lang];
+                if (!t) return;
+                for (var i = 0; i < i18nElements.length; i++) {
+                    var el = i18nElements[i];
+                    var key = el.getAttribute('data-i18n');
+                    if (t[key] !== undefined) el.textContent = t[key];
+                }
+                for (var j = 0; j < langBtns.length; j++) {
+                    var btn = langBtns[j];
+                    btn.classList.remove('active');
+                    if (btn.getAttribute('data-lang') === lang) btn.classList.add('active');
+                }
+                document.documentElement.lang = lang;
+                localStorage.setItem('pacdi-lang', lang);
+            }
+            var savedLang = localStorage.getItem('pacdi-lang');
+            applyLanguage(savedLang && i18n[savedLang] ? savedLang : 'de');
+            for (var k = 0; k < langBtns.length; k++) {
+                langBtns[k].addEventListener('click', function() {
+                    applyLanguage(this.getAttribute('data-lang'));
+                });
+            }
+
+            // ———— Slider ————
+            var slides = document.querySelectorAll('.bwk-slider .slide');
+            var dots = document.querySelectorAll('.bwk-slider-controls button');
+            var currentSlide = 0;
+            var slideInterval;
+
+            function showSlide(index) {
+                slides.forEach(function(s, i) { s.classList.toggle('active', i === index); });
+                dots.forEach(function(d, i) { d.classList.toggle('active', i === index); });
+                currentSlide = index;
+            }
+
+            function nextSlide() {
+                showSlide((currentSlide + 1) % slides.length);
+            }
+
+            dots.forEach(function(dot) {
+                dot.addEventListener('click', function() {
+                    clearInterval(slideInterval);
+                    showSlide(parseInt(this.getAttribute('data-index')));
+                    slideInterval = setInterval(nextSlide, 6000);
+                });
+            });
+
+            slideInterval = setInterval(nextSlide, 6000);
+
+            // ———— FAQ ————
+            window.toggleFaq = function(el) {
+                var answer = el.parentElement.querySelector('.faq-a');
+                var icon = el.querySelector('.toggle-icon');
+                if (answer) {
+                    answer.classList.toggle('open');
+                    icon.textContent = answer.classList.contains('open') ? '▴' : '▾';
+                }
+            };
+
+            // ———— Progress Bar ————
+            function updateProgress() {
+                var scrollTop = window.scrollY;
+                var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                var progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+                var bar = document.getElementById('progress-bar');
+                if (bar) {
+                    bar.style.width = progress + '%';
+                    bar.setAttribute('aria-valuenow', Math.round(progress));
+                }
+            }
+
+            // ———— Back to Top ————
+            function toggleBackToTop() {
+                var btt = document.getElementById('back-to-top');
+                if (btt) btt.style.display = window.scrollY > 500 ? 'flex' : 'none';
+            }
+
+            // ———— Sticky Nav ————
+            var nav = document.getElementById('quickNav');
+
+            function toggleNavShadow() {
+                if (nav) {
+                    var offset = nav.getBoundingClientRect().top;
+                    nav.classList.toggle('scrolled', offset <= 80);
+                }
+            }
+
+            // ———— Scroll Spy ————
+            function updateScrollSpy() {
+                var current = '';
+                var scrollPos = window.scrollY + 150;
+                sections.forEach(function(section) {
+                    var top = section.offsetTop;
+                    var height = section.offsetHeight;
+                    if (scrollPos >= top && scrollPos < top + height) current = section.id;
+                });
+                navLinks.forEach(function(link) {
+                    link.classList.remove('nav-link-active');
+                    if (link.getAttribute('data-target') === current) link.classList.add('nav-link-active');
+                });
+            }
+
+            var scrollTimeout;
+            window.addEventListener('scroll', function() {
+                updateProgress();
+                toggleBackToTop();
+                toggleNavShadow();
+                if (!scrollTimeout) {
+                    scrollTimeout = setTimeout(function() {
+                        updateScrollSpy();
+                        scrollTimeout = null;
+                    }, 100);
+                }
+            });
+            window.addEventListener('resize', updateProgress);
+            updateProgress();
+            updateScrollSpy();
+
+            // ———— PDF save ————
+            window.saveAsPdf = function() {
+                document.title = 'BWK_BildungsWerk';
+                window.print();
+            };
+
+            // ———— Arama ————
+            var searchInput = document.getElementById('ai-search');
+            var searchTimeout;
+
+            function clearHighlights() {
+                document.querySelectorAll('mark').forEach(function(m) {
+                    var parent = m.parentNode;
+                    parent.replaceChild(document.createTextNode(m.textContent), m);
+                    parent.normalize();
+                });
+            }
+
+            function highlightText(node, query) {
+                if (node.nodeType === 3) {
+                    var text = node.textContent;
+                    var index = text.toLowerCase().indexOf(query);
+                    if (index > -1) {
+                        var span = document.createElement('span');
+                        span.appendChild(document.createTextNode(text.substring(0, index)));
+                        var mark = document.createElement('mark');
+                        mark.textContent = text.substring(index, index + query.length);
+                        span.appendChild(mark);
+                        span.appendChild(document.createTextNode(text.substring(index + query.length)));
+                        node.parentNode.replaceChild(span, node);
+                        return true;
+                    }
+                } else if (node.nodeType === 1 && node.tagName !== 'SCRIPT' && node.tagName !== 'STYLE') {
+                    for (var i = 0; i < node.childNodes.length; i++) {
+                        if (highlightText(node.childNodes[i], query)) return true;
+                    }
+                }
+                return false;
+            }
+
+            if (searchInput) {
+                searchInput.addEventListener('input', function(e) {
+                    var query = e.target.value.toLowerCase().trim();
+                    clearTimeout(searchTimeout);
+                    searchTimeout = setTimeout(function() {
+                        clearHighlights();
+                        var cards = document.querySelectorAll('.card, .bwk-service, .bwk-slider .slide, .faq-item');
+                        for (var i = 0; i < cards.length; i++) {
+                            var card = cards[i];
+                            if (card.contains(searchInput)) continue;
+                            if (card.querySelector('h4') && card.textContent.indexOf('Navigasyon') > -1) continue;
+                            var text = card.textContent.toLowerCase();
+                            if (text.indexOf(query) > -1) {
+                                card.style.display = '';
+                                if (query.length > 1) {
+                                    var targets = card.querySelectorAll('.card p, .card h3, .bwk-service h3, .bwk-service p, .faq-q');
+                                    targets.forEach(function(el) { highlightText(el, query); });
+                                }
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        }
+                    }, 300);
+                });
+            }
+
+        })();
+    </script>
+</body>
+</html>
