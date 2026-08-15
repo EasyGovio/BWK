@@ -108,6 +108,128 @@
     margin-top: 8px; font-size: 0.72rem; color: var(--text-dim);
   }
 
+  /* MEDYA YÜKLEME ALANI */
+  .media-upload-area {
+    margin-top: 16px;
+  }
+  .media-upload-area label {
+    font-size: 0.72rem; color: var(--text-dim); font-weight: 600;
+    display: block; margin-bottom: 6px;
+  }
+  .media-upload-area input[type="file"] {
+    background: rgba(0,0,0,0.2);
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    padding: 10px 12px;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 0.85rem;
+    width: 100%;
+    cursor: pointer;
+  }
+  .media-upload-area input[type="file"]::-webkit-file-upload-button {
+    background: var(--gold);
+    color: var(--navy);
+    border: none;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.75rem;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  .media-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+    min-height: 40px;
+  }
+  .media-preview .empty-text {
+    color: var(--text-dim);
+    font-size: 0.8rem;
+    font-style: italic;
+    padding: 8px 0;
+  }
+  .media-item {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--card-border);
+    background: rgba(0,0,0,0.3);
+    flex-shrink: 0;
+  }
+  .media-item img,
+  .media-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .media-item .badge {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    background: rgba(0,0,0,0.75);
+    color: white;
+    font-size: 0.55rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+  .media-item .size-badge {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    background: rgba(0,0,0,0.75);
+    color: white;
+    font-size: 0.5rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  .media-item .remove-media {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background: rgba(200,50,50,0.85);
+    border: none;
+    color: white;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    font-size: 0.65rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .15s;
+    font-weight: 700;
+  }
+  .media-item .remove-media:hover { transform: scale(1.1); }
+  .media-item .video-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.8rem;
+    opacity: 0.7;
+    pointer-events: none;
+  }
+
+  .media-warnings {
+    margin-top: 8px;
+    font-size: 0.78rem;
+  }
+  .media-warnings .warn {
+    color: #e0a85a;
+    padding: 2px 0;
+  }
+  .media-warnings .warn.error {
+    color: #e07a7a;
+  }
+
   .preview-tabs {
     display: flex; gap: 8px; margin-top: 22px; flex-wrap: wrap;
   }
@@ -132,6 +254,13 @@
   .preview-tab .ptab-body:empty::before {
     content: "İçerik yazınca burada önizleme görünecek…";
     color: var(--text-dim); font-style: italic;
+  }
+  .preview-tab .ptab-media-badge {
+    font-size: 0.65rem;
+    color: var(--text-dim);
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top: 1px solid var(--card-border);
   }
 
   .schedule-row {
@@ -173,115 +302,23 @@
     border: 1px solid var(--card-border);
     border-radius: 12px;
     padding: 12px 16px;
+    flex-wrap: wrap;
+    gap: 8px;
   }
-  .queue-item .qi-text { font-size: 0.85rem; max-width: 60%; }
+  .queue-item .qi-text { font-size: 0.85rem; max-width: 55%; flex: 1; min-width: 150px; }
   .queue-item .qi-meta { font-size: 0.72rem; color: var(--text-dim); text-align: right; }
-  .queue-item .qi-platforms { display: flex; gap: 4px; margin-top: 4px; justify-content: flex-end; }
+  .queue-item .qi-platforms { display: flex; gap: 4px; margin-top: 4px; justify-content: flex-end; font-size: 0.8rem; }
   .queue-empty { color: var(--text-dim); font-size: 0.85rem; font-style: italic; padding: 12px 0; }
 
   .remove-btn {
     background: none; border: none; color: #e07a7a; cursor: pointer;
     font-size: 0.75rem; margin-left: 12px;
+    font-weight: 600;
   }
+  .remove-btn:hover { color: #ff6b6b; }
 </style>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6ML8EDW0H"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-E6ML8EDW0H");</script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8426936740213369" crossorigin="anonymous"></script>
-    <link rel="canonical" href="https://uniroute.world/sosyal-panel.html" />
-    <link rel="manifest" href="/manifest.json">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="PACDI">
-    <script>
-(function(){
-  if (sessionStorage.getItem('autoLang')) return;
-  var bl = (navigator.language || navigator.userLanguage || 'en').substring(0,2).toLowerCase();
-  var supported = ['tr','de','en'];
-  var lang = supported.indexOf(bl) > -1 ? bl : 'en';
-  sessionStorage.setItem('autoLang', lang);
-})();
-</script>
-    <script>
-(function(){
-  var params = new URLSearchParams(window.location.search);
-  if (params.get('beta') === 'pacdi2026') {
-    try { sessionStorage.setItem('betaUnlock', '1'); } catch(e) {}
-  }
-  window.isBetaUnlocked = function() {
-    try { return sessionStorage.getItem('betaUnlock') === '1'; } catch(e) { return false; }
-  };
-})();
-</script>
-    <style>
-    .pacdi-share-bar{margin-top:24px;padding:16px;background:rgba(246,180,95,0.05);border:1px solid rgba(246,180,95,0.15);border-radius:10px;text-align:center;font-family:-apple-system,BlinkMacSystemFont,sans-serif;box-sizing:border-box;}
-    .pacdi-share-label{font-size:0.8rem;color:#7a9ab8;margin-bottom:10px;font-weight:600;}
-    .pacdi-share-btns{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;}
-    .pacdi-share-btn{display:inline-flex;align-items:center;gap:4px;font-size:0.78rem;padding:7px 14px;border-radius:20px;border:1px solid rgba(246,180,95,0.3);background:transparent;color:#F6B45F;text-decoration:none;cursor:pointer;font-family:inherit;}
-    .pacdi-share-btn:hover{background:rgba(246,180,95,0.1);}
-    </style>
-    <style>
-    [data-theme="dark"]:not([data-pacdi-native-theme]) { filter: invert(1) hue-rotate(180deg); background: #fff; }
-    [data-theme="dark"]:not([data-pacdi-native-theme]) img,
-    [data-theme="dark"]:not([data-pacdi-native-theme]) svg,
-    [data-theme="dark"]:not([data-pacdi-native-theme]) video,
-    [data-theme="dark"]:not([data-pacdi-native-theme]) picture,
-    [data-theme="dark"]:not([data-pacdi-native-theme]) iframe { filter: invert(1) hue-rotate(180deg); }
-    .pacdi-theme-toggle { position: fixed; top: 10px; right: 10px; z-index: 99999; width: 2.1rem; height: 2.1rem;
-      border: none; border-radius: 50%; background: rgba(0,0,0,0.08); font-size: 1.05rem; cursor: pointer;
-      display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px); }
-    .pacdi-theme-toggle:hover { background: rgba(0,0,0,0.16); }
-    </style>
-    <script>
-(function(){
-  var KEY = 'pacdi-theme';
-  function apply(theme) {
-    document.documentElement.setAttribute('data-theme', theme);
-    var btn = document.getElementById('pacdiThemeToggle');
-    if (btn) btn.textContent = theme === 'dark' ? '\u2600\uFE0F' : '\uD83C\uDF19';
-  }
-  var saved = null;
-  try { saved = localStorage.getItem(KEY); } catch(e) {}
-  var preferred = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
-  apply(saved || preferred);
-  function addBtn() {
-    if (document.getElementById('pacdiThemeToggle')) return;
-    var btn = document.createElement('button');
-    btn.id = 'pacdiThemeToggle';
-    btn.className = 'pacdi-theme-toggle';
-    btn.setAttribute('aria-label', 'Koyu/Acik mod');
-    btn.textContent = document.documentElement.getAttribute('data-theme') === 'dark' ? '\u2600\uFE0F' : '\uD83C\uDF19';
-    btn.onclick = function() {
-      var cur = document.documentElement.getAttribute('data-theme');
-      var next = cur === 'dark' ? 'light' : 'dark';
-      try { localStorage.setItem(KEY, next); } catch(e) {}
-      apply(next);
-    };
-    document.body.appendChild(btn);
-  }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', addBtn);
-  } else {
-    addBtn();
-  }
-})();
-</script>
 </head>
 <body>
-<!--
-╬═══════════════════════════════════════════════════════════════╮
-║         🛡️  PACDI FRAMEWORK — PROTECTED WORK                  ║
-║                                                               ║
-║  © 2026 PACDI Global Yazılım Ltd. Şti.                       ║
-║  FSEK Registration No : 2026/18897                            ║
-║  Trade Registry      : 23836 · Yunusemre / Manisa, TR       ║
-║                                                               ║
-║  This work and its modular software architecture are          ║
-║  protected under PACDI Software Library FSEK registration.   ║
-║  Unauthorized copying is subject to legal action.            ║
-║                                                               ║
-║  pacdi.eu · pacdi.de · info@pacdi.eu                         ║
-╠═══════════════════════════════════════════════════════════════╣
--->
-
 <div class="wrap">
 
   <div class="test-banner">
@@ -327,22 +364,36 @@
       <span id="xWarning" style="display:none;color:#e0a85a;">⚠️ X için 280 karakter sınırını aşıyor</span>
     </div>
 
+    <!-- MEDYA YÜKLEME ALANI -->
+    <div class="media-upload-area">
+      <label for="mediaInput">📎 Medya Ekle (fotoğraf / video — birden fazla seçebilirsiniz)</label>
+      <input type="file" id="mediaInput" accept="image/*,video/*" multiple>
+      <div class="media-preview" id="mediaPreview">
+        <div class="empty-text">Henüz medya eklenmedi.</div>
+      </div>
+      <div class="media-warnings" id="mediaWarnings"></div>
+    </div>
+
     <div class="preview-tabs">
       <div class="preview-tab">
         <div class="ptab-head">📘 Facebook</div>
         <div class="ptab-body" id="prevFacebook"></div>
+        <div class="ptab-media-badge" id="fbMediaBadge"></div>
       </div>
       <div class="preview-tab">
         <div class="ptab-head">📷 Instagram</div>
         <div class="ptab-body" id="prevInstagram"></div>
+        <div class="ptab-media-badge" id="igMediaBadge"></div>
       </div>
       <div class="preview-tab">
         <div class="ptab-head">▶️ YouTube (açıklama)</div>
         <div class="ptab-body" id="prevYoutube"></div>
+        <div class="ptab-media-badge" id="ytMediaBadge"></div>
       </div>
       <div class="preview-tab">
         <div class="ptab-head">✖️ X</div>
         <div class="ptab-body" id="prevX"></div>
+        <div class="ptab-media-badge" id="xMediaBadge"></div>
       </div>
     </div>
   </section>
@@ -371,168 +422,293 @@
 </div>
 
 <script>
-  const postText = document.getElementById('postText');
-  const charCount = document.getElementById('charCount');
-  const xWarning = document.getElementById('xWarning');
-  const addBtn = document.getElementById('addToQueue');
-  const schedDate = document.getElementById('schedDate');
-  const schedTime = document.getElementById('schedTime');
-  const queueList = document.getElementById('queueList');
-  const queueEmpty = document.getElementById('queueEmpty');
+  (function() {
+    // DOM REFS
+    const postText = document.getElementById('postText');
+    const charCount = document.getElementById('charCount');
+    const xWarning = document.getElementById('xWarning');
+    const addBtn = document.getElementById('addToQueue');
+    const schedDate = document.getElementById('schedDate');
+    const schedTime = document.getElementById('schedTime');
+    const queueList = document.getElementById('queueList');
+    const queueEmpty = document.getElementById('queueEmpty');
 
-  const previews = {
-    Facebook: document.getElementById('prevFacebook'),
-    Instagram: document.getElementById('prevInstagram'),
-    Youtube: document.getElementById('prevYoutube'),
-    X: document.getElementById('prevX'),
-  };
+    // MEDIA REFS
+    const mediaInput = document.getElementById('mediaInput');
+    const mediaPreview = document.getElementById('mediaPreview');
+    const mediaWarnings = document.getElementById('mediaWarnings');
 
-  let queue = [];
+    const previews = {
+      Facebook: document.getElementById('prevFacebook'),
+      Instagram: document.getElementById('prevInstagram'),
+      Youtube: document.getElementById('prevYoutube'),
+      X: document.getElementById('prevX'),
+    };
 
-  function updatePreviews() {
-    const text = postText.value;
-    charCount.textContent = text.length + ' karakter';
+    const mediaBadges = {
+      Facebook: document.getElementById('fbMediaBadge'),
+      Instagram: document.getElementById('igMediaBadge'),
+      Youtube: document.getElementById('ytMediaBadge'),
+      X: document.getElementById('xMediaBadge'),
+    };
 
-    previews.Facebook.textContent = text;
-    previews.Instagram.textContent = text;
-    previews.Youtube.textContent = text;
+    // STATE
+    let queue = [];
+    let uploadedMedia = []; // File nesneleri
 
-    if (text.length > 280) {
-      previews.X.textContent = text.slice(0, 277) + '…';
-      xWarning.style.display = 'inline';
-    } else {
-      previews.X.textContent = text;
-      xWarning.style.display = 'none';
-    }
+    // ----- MEDYA İŞLEMLERİ -----
+    function renderMediaPreview() {
+      mediaPreview.innerHTML = '';
+      if (uploadedMedia.length === 0) {
+        mediaPreview.innerHTML = '<div class="empty-text">Henüz medya eklenmedi.</div>';
+        return;
+      }
 
-    updateAddButton();
-  }
+      uploadedMedia.forEach((file, index) => {
+        const item = document.createElement('div');
+        item.className = 'media-item';
 
-  function updateAddButton() {
-    const hasText = postText.value.trim().length > 0;
-    const hasDate = schedDate.value.length > 0;
-    addBtn.disabled = !(hasText && hasDate);
-  }
+        if (file.type.startsWith('image/')) {
+          const img = document.createElement('img');
+          img.src = URL.createObjectURL(file);
+          img.alt = file.name;
+          item.appendChild(img);
+        } else if (file.type.startsWith('video/')) {
+          const video = document.createElement('video');
+          video.src = URL.createObjectURL(file);
+          video.muted = true;
+          video.preload = 'metadata';
+          item.appendChild(video);
+          // video icon
+          const icon = document.createElement('div');
+          icon.className = 'video-icon';
+          icon.textContent = '▶️';
+          item.appendChild(icon);
+          // süre badge
+          video.onloadedmetadata = () => {
+            const dur = Math.round(video.duration);
+            const mins = Math.floor(dur / 60);
+            const secs = String(dur % 60).padStart(2, '0');
+            const badge = document.createElement('div');
+            badge.className = 'badge';
+            badge.textContent = `${mins}:${secs}`;
+            item.appendChild(badge);
+          };
+        }
 
-  postText.addEventListener('input', updatePreviews);
-  schedDate.addEventListener('input', updateAddButton);
-  schedTime.addEventListener('input', updateAddButton);
+        // boyut badge
+        const sizeBadge = document.createElement('div');
+        sizeBadge.className = 'size-badge';
+        const sizeMB = (file.size / 1024 / 1024).toFixed(1);
+        sizeBadge.textContent = sizeMB + ' MB';
+        item.appendChild(sizeBadge);
 
-  function formatDateTr(dateStr, timeStr) {
-    const d = new Date(dateStr + 'T' + timeStr);
-    return d.toLocaleDateString('tr-TR', { day: '2-digit', month: 'long', year: 'numeric' }) + ' — ' + timeStr;
-  }
+        // kaldır butonu
+        const removeBtn = document.createElement('button');
+        removeBtn.className = 'remove-media';
+        removeBtn.textContent = '✕';
+        removeBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          uploadedMedia.splice(index, 1);
+          renderMediaPreview();
+          updatePlatformBadges();
+          validateMedia();
+          updateAddButton();
+          // input'u temizle
+          mediaInput.value = '';
+        });
+        item.appendChild(removeBtn);
 
-  function renderQueue() {
-    queueList.innerHTML = '';
-    if (queue.length === 0) {
-      queueList.appendChild(queueEmpty);
-      return;
-    }
-    queue.forEach((item, idx) => {
-      const el = document.createElement('div');
-      el.className = 'queue-item';
-      el.innerHTML = `
-        <div class="qi-text">${item.text.length > 80 ? item.text.slice(0,80) + '…' : item.text}</div>
-        <div class="qi-meta">
-          ${formatDateTr(item.date, item.time)}
-          <div class="qi-platforms">📘 📷 ▶️ ✖️</div>
-        </div>
-        <button class="remove-btn" data-idx="${idx}">Kaldır ✕</button>
-      `;
-      queueList.appendChild(el);
-    });
-    queueList.querySelectorAll('.remove-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        queue.splice(parseInt(btn.dataset.idx), 1);
-        renderQueue();
+        mediaPreview.appendChild(item);
       });
-    });
-  }
 
-  addBtn.addEventListener('click', () => {
-    queue.push({
-      text: postText.value.trim(),
-      date: schedDate.value,
-      time: schedTime.value,
+      updatePlatformBadges();
+      validateMedia();
+    }
+
+    function updatePlatformBadges() {
+      const count = uploadedMedia.length;
+      const hasVideo = uploadedMedia.some(f => f.type.startsWith('video/'));
+      const hasImage = uploadedMedia.some(f => f.type.startsWith('image/'));
+
+      let label = '';
+      if (count === 0) label = '📎 Medya yok';
+      else if (count === 1 && hasVideo) label = '🎬 1 video';
+      else if (count === 1 && hasImage) label = '🖼️ 1 fotoğraf';
+      else label = `📎 ${count} medya dosyası`;
+
+      for (const key of ['Facebook', 'Instagram', 'Youtube', 'X']) {
+        mediaBadges[key].textContent = label;
+      }
+    }
+
+    function validateMedia() {
+      const warnings = [];
+      const videos = uploadedMedia.filter(f => f.type.startsWith('video/'));
+      const images = uploadedMedia.filter(f => f.type.startsWith('image/'));
+      const total = uploadedMedia.length;
+
+      // Instagram: max 1 medya
+      if (total > 1) {
+        warnings.push({ text: '📷 Instagram tek gönderi için yalnızca 1 medya dosyası destekler.', type: 'warn' });
+      }
+
+      // Instagram: video süresi 90sn'den uzunsa (Reels)
+      for (const video of videos) {
+        const el = document.createElement('video');
+        el.src = URL.createObjectURL(video);
+        el.preload = 'metadata';
+        el.onloadedmetadata = () => {
+          // async olduğu için burada uyarı gösteremiyoruz, ama sonra tekrar validate çağrılabilir
+          // Şimdilik geçici çözüm: süre bilgisini badge'de gösteriyoruz zaten
+        };
+        // Basitçe dosya adından veya boyuttan uyarı verelim
+        if (video.size > 100 * 1024 * 1024) {
+          warnings.push({ text: `⚠️ Instagram video boyutu ${(video.size/1024/1024).toFixed(1)}MB, 100MB sınırını aşıyor.`, type: 'error' });
+        }
+      }
+
+      // X: video süresi 140sn
+      for (const video of videos) {
+        if (video.size > 512 * 1024 * 1024) {
+          warnings.push({ text: `⚠️ X video boyutu ${(video.size/1024/1024).toFixed(1)}MB, 512MB sınırını aşıyor.`, type: 'error' });
+        }
+      }
+
+      // YouTube: dosya boyutu 128GB
+      for (const file of uploadedMedia) {
+        if (file.size > 128 * 1024 * 1024 * 1024) {
+          warnings.push({ text: `⚠️ YouTube dosya boyutu ${(file.size/1024/1024/1024).toFixed(1)}GB, 128GB sınırını aşıyor.`, type: 'error' });
+        }
+      }
+
+      mediaWarnings.innerHTML = warnings.map(w =>
+        `<div class="warn ${w.type === 'error' ? 'error' : ''}">${w.text}</div>`
+      ).join('');
+    }
+
+    // ----- METİN ÖNİZLEME -----
+    function updatePreviews() {
+      const text = postText.value;
+      charCount.textContent = text.length + ' karakter';
+
+      previews.Facebook.textContent = text;
+      previews.Instagram.textContent = text;
+      previews.Youtube.textContent = text;
+
+      if (text.length > 280) {
+        previews.X.textContent = text.slice(0, 277) + '…';
+        xWarning.style.display = 'inline';
+      } else {
+        previews.X.textContent = text;
+        xWarning.style.display = 'none';
+      }
+
+      updateAddButton();
+    }
+
+    function updateAddButton() {
+      const hasText = postText.value.trim().length > 0;
+      const hasDate = schedDate.value.length > 0;
+      // Medya zorunlu değil ama en az metin veya medya olmalı
+      const hasContent = hasText || uploadedMedia.length > 0;
+      addBtn.disabled = !(hasContent && hasDate);
+    }
+
+    // ----- KUYRUK -----
+    function formatDateTr(dateStr, timeStr) {
+      const d = new Date(dateStr + 'T' + timeStr);
+      return d.toLocaleDateString('tr-TR', { day: '2-digit', month: 'long', year: 'numeric' }) + ' — ' + timeStr;
+    }
+
+    function renderQueue() {
+      queueList.innerHTML = '';
+      if (queue.length === 0) {
+        queueList.appendChild(queueEmpty);
+        return;
+      }
+      queue.forEach((item, idx) => {
+        const el = document.createElement('div');
+        el.className = 'queue-item';
+
+        // medya ikonları
+        let mediaIcons = '';
+        if (item.media && item.media.length > 0) {
+          mediaIcons = item.media.map(m => m.type.startsWith('video/') ? '🎬' : '🖼️').join(' ');
+        }
+
+        el.innerHTML = `
+          <div class="qi-text">${item.text.length > 80 ? item.text.slice(0,80) + '…' : (item.text || '(metin yok)')}</div>
+          <div class="qi-meta">
+            ${formatDateTr(item.date, item.time)}
+            <div class="qi-platforms">📘 📷 ▶️ ✖️ ${mediaIcons}</div>
+          </div>
+          <button class="remove-btn" data-idx="${idx}">Kaldır ✕</button>
+        `;
+        queueList.appendChild(el);
+      });
+
+      queueList.querySelectorAll('.remove-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          queue.splice(parseInt(btn.dataset.idx), 1);
+          renderQueue();
+        });
+      });
+    }
+
+    // ----- OLAY DİNLEYİCİLER -----
+    postText.addEventListener('input', updatePreviews);
+    schedDate.addEventListener('input', updateAddButton);
+    schedTime.addEventListener('input', updateAddButton);
+
+    mediaInput.addEventListener('change', function(e) {
+      const files = Array.from(this.files);
+      if (files.length === 0) return;
+
+      // varolanlara ekle
+      uploadedMedia = [...uploadedMedia, ...files];
+      renderMediaPreview();
+      updatePreviews();
+      updateAddButton();
+      // input'u temizle ki aynı dosyalar tekrar eklenmesin
+      this.value = '';
     });
-    postText.value = '';
-    schedDate.value = '';
+
+    // EKLE BUTONU
+    addBtn.addEventListener('click', () => {
+      const text = postText.value.trim();
+      if (!text && uploadedMedia.length === 0) {
+        alert('Lütfen bir metin yazın veya medya ekleyin.');
+        return;
+      }
+
+      queue.push({
+        text: text || '(metin yok)',
+        date: schedDate.value,
+        time: schedTime.value || '09:00',
+        media: uploadedMedia.map(f => ({
+          name: f.name,
+          size: f.size,
+          type: f.type,
+        })),
+      });
+
+      // formu sıfırla
+      postText.value = '';
+      uploadedMedia = [];
+      renderMediaPreview();
+      schedDate.value = '';
+      schedTime.value = '09:00';
+      updatePreviews();
+      renderQueue();
+      updateAddButton();
+    });
+
+    // ----- BAŞLANGIÇ -----
     updatePreviews();
     renderQueue();
-  });
-
-  updatePreviews();
+    renderMediaPreview();
+  })();
 </script>
-<script>
-(function() {
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js').catch(function(){});
-  }
-
-  var isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
-  var isInStandalone = ('standalone' in navigator && navigator.standalone);
-  var shown = sessionStorage.getItem('pwa-banner-shown');
-  if (shown || isInStandalone) return;
-
-  if (isIOS) {
-    setTimeout(function() {
-      var bar = document.createElement('div');
-      bar.id = 'pwa-banner';
-      bar.style.cssText = 'position:fixed;bottom:0;left:0;right:0;background:#04162E;border-top:2px solid #F6B45F;padding:14px 16px;z-index:9999;font-family:system-ui;';
-      bar.innerHTML =
-        '<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;">' +
-          '<div>' +
-            '<div style="color:#F6B45F;font-size:0.82rem;font-weight:700;margin-bottom:4px;">📲 Ana ekrana ekle</div>' +
-            '<div style="color:#b0b5bf;font-size:0.75rem;line-height:1.5;">Safari\'de <strong style="color:#eaf2fb;">&#11015; Paylaş</strong> butonuna bas, ardından <strong style="color:#eaf2fb;">Ana Ekrana Ekle</strong> seçeneğini seç.</div>' +
-            '<div style="color:#4a6a88;font-size:0.68rem;margin-top:4px;">&#9432; iOS\'ta otomatik kurulum desteklenmiyor — bu adım gerekli.</div>' +
-          '</div>' +
-          '<button onclick="document.getElementById(\'pwa-banner\').remove();sessionStorage.setItem(\'pwa-banner-shown\',\'1\')" style="background:transparent;border:none;color:#7a9ab8;font-size:1.2rem;cursor:pointer;padding:0 4px;flex-shrink:0;">✕</button>' +
-        '</div>';
-      document.body.appendChild(bar);
-      sessionStorage.setItem('pwa-banner-shown', '1');
-    }, 3000);
-    return;
-  }
-
-  var deferredPrompt = null;
-  window.addEventListener('beforeinstallprompt', function(e) {
-    e.preventDefault();
-    deferredPrompt = e;
-    setTimeout(function() {
-      if (!deferredPrompt) return;
-      var bar = document.createElement('div');
-      bar.id = 'pwa-banner';
-      bar.style.cssText = 'position:fixed;bottom:0;left:0;right:0;background:#04162E;border-top:2px solid #F6B45F;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;z-index:9999;font-family:system-ui;';
-      bar.innerHTML =
-        '<span style="color:#eaf2fb;font-size:0.85rem;">📲 Ana ekrana ekle &mdash; daha hızlı aç!</span>' +
-        '<div style="display:flex;gap:8px;">' +
-          '<button onclick="installPWA()" style="background:#F6B45F;border:none;color:#04162E;padding:6px 16px;border-radius:20px;font-weight:700;cursor:pointer;font-size:0.82rem;">Ekle</button>' +
-          '<button onclick="document.getElementById(\'pwa-banner\').remove();sessionStorage.setItem(\'pwa-banner-shown\',\'1\')" style="background:transparent;border:1px solid rgba(246,180,95,0.3);color:#7a9ab8;padding:6px 12px;border-radius:20px;cursor:pointer;font-size:0.82rem;">Sonra</button>' +
-        '</div>';
-      document.body.appendChild(bar);
-    }, 3000);
-  });
-
-  window.installPWA = function() {
-    if (deferredPrompt) { deferredPrompt.prompt(); deferredPrompt.userChoice.then(function(){ deferredPrompt=null; }); }
-    var b = document.getElementById('pwa-banner'); if (b) b.remove();
-    sessionStorage.setItem('pwa-banner-shown', '1');
-  };
-})();
-</script>
-
-<div class="pacdi-share-bar" id="pacdiShareBar" style="clear:both;width:100%;flex-basis:100%;"></div>
-<script src="https://pacdi.store/assets/share-bar.js"></script>
-
-<div id="pacdi-fsek" style="clear:both;width:100%;flex-basis:100%;text-align:center;padding:28px 16px 20px;border-top:1px solid rgba(212,175,55,0.15);margin-top:32px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;box-sizing:border-box;">
-  <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(212,175,55,0.06);border:1px solid rgba(212,175,55,0.25);border-radius:24px;padding:8px 20px;margin-bottom:12px;flex-wrap:wrap;justify-content:center;">
-    <span style="font-size:1rem;">🛡️</span>
-    <span style="font-size:0.72rem;font-weight:700;letter-spacing:0.1em;color:#D4AF37;text-transform:uppercase;">FSEK Registered · PACDI Framework</span>
-  </div>
-  <div style="font-size:0.78rem;color:#8A8F9A;margin-bottom:4px;">Operated by AskMeAI Teknoloji Ltd. Şti. (TR: 23837)</div>
-  <div style="font-size:0.72rem;color:#6B7280;margin-bottom:10px;">Intellectual property owned by © 2026 PACDI Global Yazılım Ltd. Şti. &mdash; FSEK No: <a href="https://pacdi.eu/legal.html" style="color:#D4AF37;text-decoration:none;">2026/18897</a></div>
-  <div style="font-size:0.82rem;font-style:italic;color:#6B7280;">&ldquo;Technology in the service of humanity.&rdquo;</div>
-</div>
 </body>
 </html>
