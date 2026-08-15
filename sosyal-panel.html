@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sosyal Medya Paneli — İskelet (Test Modu) | PACDI</title>
+<style>
+  :root {
+    --navy: #04162E;
+    --navy-light: #0a2340;
+    --gold: #D4AF37;
+    --teal: #1ABC9C;
+    --text: #e8edf2;
+    --text-dim: #8ba3bd;
+    --card-bg: rgba(255,255,255,0.035);
+    --card-border: rgba(212,175,55,0.18);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: radial-gradient(ellipse at top, var(--navy-light), var(--navy) 60%);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    padding: 32px 20px 80px;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; }
+
+  .test-banner {
+    background: rgba(212,175,55,0.1);
+    border: 1px solid rgba(212,175,55,0.35);
+    border-radius: 12px;
+    padding: 12px 18px;
+    font-size: 0.85rem;
+    color: var(--gold);
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  header.hero { margin-bottom: 40px; }
+  header.hero .eyebrow {
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em;
+    color: var(--teal); text-transform: uppercase; margin-bottom: 10px;
+  }
+  header.hero h1 {
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 800; letter-spacing: -0.01em; line-height: 1.15;
+    margin-bottom: 10px;
+  }
+  header.hero p { color: var(--text-dim); font-size: 0.95rem; max-width: 640px; }
+
+  .platform-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-bottom: 40px;
+  }
+  @media (max-width: 700px) { .platform-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  .platform-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 18px 14px;
+    text-align: center;
+    position: relative;
+    transition: border-color .2s;
+  }
+  .platform-card:hover { border-color: rgba(212,175,55,0.4); }
+  .platform-icon { font-size: 1.8rem; margin-bottom: 8px; }
+  .platform-name { font-weight: 700; font-size: 0.9rem; margin-bottom: 6px; }
+  .platform-status {
+    display: inline-flex; align-items: center; gap: 5px;
+    font-size: 0.7rem; color: var(--text-dim);
+    background: rgba(255,255,255,0.04);
+    border-radius: 20px; padding: 3px 10px;
+  }
+  .lock-icon { font-size: 0.7rem; }
+
+  section.panel {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    padding: 28px;
+    margin-bottom: 24px;
+  }
+  section.panel h2 {
+    font-size: 1.05rem; font-weight: 700; margin-bottom: 4px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  section.panel .sub { color: var(--text-dim); font-size: 0.82rem; margin-bottom: 20px; }
+
+  textarea#postText {
+    width: 100%; min-height: 110px;
+    background: rgba(0,0,0,0.2);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 14px;
+    color: var(--text);
+    font-family: inherit; font-size: 0.92rem;
+    resize: vertical;
+  }
+  textarea#postText:focus { outline: none; border-color: var(--gold); }
+
+  .char-row {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-top: 8px; font-size: 0.72rem; color: var(--text-dim);
+  }
+
+  .preview-tabs {
+    display: flex; gap: 8px; margin-top: 22px; flex-wrap: wrap;
+  }
+  .preview-tab {
+    flex: 1; min-width: 130px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 14px;
+  }
+  .preview-tab .ptab-head {
+    display: flex; align-items: center; gap: 6px;
+    font-size: 0.75rem; font-weight: 700; color: var(--text-dim);
+    margin-bottom: 8px;
+  }
+  .preview-tab .ptab-body {
+    font-size: 0.82rem; color: var(--text);
+    line-height: 1.4;
+    min-height: 40px;
+    word-break: break-word;
+  }
+  .preview-tab .ptab-body:empty::before {
+    content: "İçerik yazınca burada önizleme görünecek…";
+    color: var(--text-dim); font-style: italic;
+  }
+
+  .schedule-row {
+    display: flex; gap: 12px; margin-top: 20px; flex-wrap: wrap; align-items: flex-end;
+  }
+  .field { display: flex; flex-direction: column; gap: 6px; }
+  .field label { font-size: 0.72rem; color: var(--text-dim); font-weight: 600; }
+  .field input {
+    background: rgba(0,0,0,0.2);
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    padding: 10px 12px;
+    color: var(--text);
+    font-family: inherit; font-size: 0.85rem;
+  }
+  .field input:focus { outline: none; border-color: var(--gold); }
+
+  button.primary {
+    background: linear-gradient(135deg, var(--gold), #b8942c);
+    color: var(--navy);
+    border: none; font-weight: 700; font-size: 0.88rem;
+    padding: 12px 24px; border-radius: 30px; cursor: pointer;
+    transition: transform .15s;
+  }
+  button.primary:hover { transform: translateY(-1px); }
+  button.primary:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
+
+  button.ghost {
+    background: transparent; color: var(--text-dim);
+    border: 1px solid var(--card-border);
+    font-weight: 600; font-size: 0.82rem;
+    padding: 10px 18px; border-radius: 30px; cursor: pointer;
+  }
+
+  .queue-list { margin-top: 18px; display: flex; flex-direction: column; gap: 10px; }
+  .queue-item {
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 12px 16px;
+  }
+  .queue-item .qi-text { font-size: 0.85rem; max-width: 60%; }
+  .queue-item .qi-meta { font-size: 0.72rem; color: var(--text-dim); text-align: right; }
+  .queue-item .qi-platforms { display: flex; gap: 4px; margin-top: 4px; justify-content: flex-end; }
+  .queue-empty { color: var(--text-dim); font-size: 0.85rem; font-style: italic; padding: 12px 0; }
+
+  .remove-btn {
+    background: none; border: none; color: #e07a7a; cursor: pointer;
+    font-size: 0.75rem; margin-left: 12px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="test-banner">
+    🔒 <strong>İSKELET / TEST MODU</strong> — hiçbir platforma gerçek bağlantı yok. Bu panel, onay sonrası gerçek hesap bağlantıları eklenene kadar tamamen simülasyondur; hiçbir paylaşım gerçekten gönderilmez.
+  </div>
+
+  <header class="hero">
+    <div class="eyebrow">PACDI · Sosyal Medya Yönetimi</div>
+    <h1>Tek panelden yaz, dört platforma hazırla.</h1>
+    <p>Facebook, Instagram, YouTube ve X için içeriğinizi bir kez yazın, her platform için önizlemesini görün ve yayın zamanını planlayın.</p>
+  </header>
+
+  <div class="platform-grid">
+    <div class="platform-card">
+      <div class="platform-icon">📘</div>
+      <div class="platform-name">Facebook</div>
+      <div class="platform-status"><span class="lock-icon">🔒</span> Bağlı değil</div>
+    </div>
+    <div class="platform-card">
+      <div class="platform-icon">📷</div>
+      <div class="platform-name">Instagram</div>
+      <div class="platform-status"><span class="lock-icon">🔒</span> Bağlı değil</div>
+    </div>
+    <div class="platform-card">
+      <div class="platform-icon">▶️</div>
+      <div class="platform-name">YouTube</div>
+      <div class="platform-status"><span class="lock-icon">🔒</span> Bağlı değil</div>
+    </div>
+    <div class="platform-card">
+      <div class="platform-icon">✖️</div>
+      <div class="platform-name">X (Twitter)</div>
+      <div class="platform-status"><span class="lock-icon">🔒</span> Bağlı değil</div>
+    </div>
+  </div>
+
+  <section class="panel">
+    <h2>✍️ Gönderi Oluştur</h2>
+    <div class="sub">İçeriğinizi bir kez yazın — her platform için nasıl görüneceğini aşağıda görün.</div>
+
+    <textarea id="postText" placeholder="Ne paylaşmak istersiniz?"></textarea>
+    <div class="char-row">
+      <span id="charCount">0 karakter</span>
+      <span id="xWarning" style="display:none;color:#e0a85a;">⚠️ X için 280 karakter sınırını aşıyor</span>
+    </div>
+
+    <div class="preview-tabs">
+      <div class="preview-tab">
+        <div class="ptab-head">📘 Facebook</div>
+        <div class="ptab-body" id="prevFacebook"></div>
+      </div>
+      <div class="preview-tab">
+        <div class="ptab-head">📷 Instagram</div>
+        <div class="ptab-body" id="prevInstagram"></div>
+      </div>
+      <div class="preview-tab">
+        <div class="ptab-head">▶️ YouTube (açıklama)</div>
+        <div class="ptab-body" id="prevYoutube"></div>
+      </div>
+      <div class="preview-tab">
+        <div class="ptab-head">✖️ X</div>
+        <div class="ptab-body" id="prevX"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>🗓️ Planla</h2>
+    <div class="sub">Yayın tarihi ve saatini seçin — onay sonrası gerçek bağlantılar eklendiğinde otomatik paylaşılacak.</div>
+
+    <div class="schedule-row">
+      <div class="field">
+        <label for="schedDate">Tarih</label>
+        <input type="date" id="schedDate">
+      </div>
+      <div class="field">
+        <label for="schedTime">Saat</label>
+        <input type="time" id="schedTime" value="09:00">
+      </div>
+      <button class="primary" id="addToQueue" disabled>+ Planlanan Listesine Ekle</button>
+    </div>
+
+    <div class="queue-list" id="queueList">
+      <div class="queue-empty" id="queueEmpty">Henüz planlanmış gönderi yok.</div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+  const postText = document.getElementById('postText');
+  const charCount = document.getElementById('charCount');
+  const xWarning = document.getElementById('xWarning');
+  const addBtn = document.getElementById('addToQueue');
+  const schedDate = document.getElementById('schedDate');
+  const schedTime = document.getElementById('schedTime');
+  const queueList = document.getElementById('queueList');
+  const queueEmpty = document.getElementById('queueEmpty');
+
+  const previews = {
+    Facebook: document.getElementById('prevFacebook'),
+    Instagram: document.getElementById('prevInstagram'),
+    Youtube: document.getElementById('prevYoutube'),
+    X: document.getElementById('prevX'),
+  };
+
+  let queue = [];
+
+  function updatePreviews() {
+    const text = postText.value;
+    charCount.textContent = text.length + ' karakter';
+
+    previews.Facebook.textContent = text;
+    previews.Instagram.textContent = text;
+    previews.Youtube.textContent = text;
+
+    if (text.length > 280) {
+      previews.X.textContent = text.slice(0, 277) + '…';
+      xWarning.style.display = 'inline';
+    } else {
+      previews.X.textContent = text;
+      xWarning.style.display = 'none';
+    }
+
+    updateAddButton();
+  }
+
+  function updateAddButton() {
+    const hasText = postText.value.trim().length > 0;
+    const hasDate = schedDate.value.length > 0;
+    addBtn.disabled = !(hasText && hasDate);
+  }
+
+  postText.addEventListener('input', updatePreviews);
+  schedDate.addEventListener('input', updateAddButton);
+  schedTime.addEventListener('input', updateAddButton);
+
+  function formatDateTr(dateStr, timeStr) {
+    const d = new Date(dateStr + 'T' + timeStr);
+    return d.toLocaleDateString('tr-TR', { day: '2-digit', month: 'long', year: 'numeric' }) + ' — ' + timeStr;
+  }
+
+  function renderQueue() {
+    queueList.innerHTML = '';
+    if (queue.length === 0) {
+      queueList.appendChild(queueEmpty);
+      return;
+    }
+    queue.forEach((item, idx) => {
+      const el = document.createElement('div');
+      el.className = 'queue-item';
+      el.innerHTML = `
+        <div class="qi-text">${item.text.length > 80 ? item.text.slice(0,80) + '…' : item.text}</div>
+        <div class="qi-meta">
+          ${formatDateTr(item.date, item.time)}
+          <div class="qi-platforms">📘 📷 ▶️ ✖️</div>
+        </div>
+        <button class="remove-btn" data-idx="${idx}">Kaldır ✕</button>
+      `;
+      queueList.appendChild(el);
+    });
+    queueList.querySelectorAll('.remove-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        queue.splice(parseInt(btn.dataset.idx), 1);
+        renderQueue();
+      });
+    });
+  }
+
+  addBtn.addEventListener('click', () => {
+    queue.push({
+      text: postText.value.trim(),
+      date: schedDate.value,
+      time: schedTime.value,
+    });
+    postText.value = '';
+    schedDate.value = '';
+    updatePreviews();
+    renderQueue();
+  });
+
+  updatePreviews();
+</script>
+</body>
+</html>
