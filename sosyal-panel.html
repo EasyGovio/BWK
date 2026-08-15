@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sosyal Medya Paneli — İskelet (Test Modu) | PACDI</title>
+<title>Sosyal Medya Paneli — Medya Sıkıştırmalı | PACDI</title>
 <style>
   :root {
     --navy: #04162E;
@@ -36,6 +36,16 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    flex-wrap: wrap;
+  }
+  .test-banner .badge-new {
+    background: #4ade80;
+    color: #04162E;
+    font-weight: 700;
+    font-size: 0.65rem;
+    padding: 2px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.05em;
   }
 
   header.hero { margin-bottom: 40px; }
@@ -106,6 +116,8 @@
   .char-row {
     display: flex; justify-content: space-between; align-items: center;
     margin-top: 8px; font-size: 0.72rem; color: var(--text-dim);
+    flex-wrap: wrap;
+    gap: 6px;
   }
 
   /* MEDYA YÜKLEME ALANI */
@@ -184,10 +196,13 @@
     top: 4px;
     left: 4px;
     background: rgba(0,0,0,0.75);
-    color: white;
+    color: #94a3b8;
     font-size: 0.5rem;
     padding: 2px 6px;
     border-radius: 4px;
+  }
+  .media-item .size-badge.compressed {
+    color: #4ade80;
   }
   .media-item .remove-media {
     position: absolute;
@@ -206,6 +221,7 @@
     justify-content: center;
     transition: transform .15s;
     font-weight: 700;
+    z-index: 2;
   }
   .media-item .remove-media:hover { transform: scale(1.1); }
   .media-item .video-icon {
@@ -216,6 +232,17 @@
     font-size: 1.8rem;
     opacity: 0.7;
     pointer-events: none;
+  }
+  .media-item .compress-badge {
+    position: absolute;
+    bottom: 4px;
+    left: 4px;
+    background: rgba(0,0,0,0.7);
+    color: #4ade80;
+    font-size: 0.5rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 600;
   }
 
   .media-warnings {
@@ -316,109 +343,38 @@
     font-weight: 600;
   }
   .remove-btn:hover { color: #ff6b6b; }
+
+  .compress-stats {
+    font-size: 0.7rem;
+    color: #4ade80;
+    margin-top: 6px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .compress-stats span {
+    background: rgba(74, 222, 128, 0.1);
+    padding: 2px 10px;
+    border-radius: 12px;
+    border: 1px solid rgba(74, 222, 128, 0.2);
+  }
+
+  @media (max-width: 600px) {
+    .preview-tabs { flex-direction: column; }
+    .preview-tab { min-width: unset; }
+    .queue-item { flex-direction: column; align-items: stretch; }
+    .queue-item .qi-text { max-width: 100%; }
+    .queue-item .qi-meta { text-align: left; }
+  }
 </style>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E6ML8EDW0H"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-E6ML8EDW0H");</script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8426936740213369" crossorigin="anonymous"></script>
-    <link rel="canonical" href="https://uniroute.world/sosyal-panel.html" />
-    <link rel="manifest" href="/manifest.json">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="PACDI">
-    <script>
-(function(){
-  if (sessionStorage.getItem('autoLang')) return;
-  var bl = (navigator.language || navigator.userLanguage || 'en').substring(0,2).toLowerCase();
-  var supported = ['tr','de','en'];
-  var lang = supported.indexOf(bl) > -1 ? bl : 'en';
-  sessionStorage.setItem('autoLang', lang);
-})();
-</script>
-    <script>
-(function(){
-  var params = new URLSearchParams(window.location.search);
-  if (params.get('beta') === 'pacdi2026') {
-    try { sessionStorage.setItem('betaUnlock', '1'); } catch(e) {}
-  }
-  window.isBetaUnlocked = function() {
-    try { return sessionStorage.getItem('betaUnlock') === '1'; } catch(e) { return false; }
-  };
-})();
-</script>
-    <style>
-    .pacdi-share-bar{margin-top:24px;padding:16px;background:rgba(246,180,95,0.05);border:1px solid rgba(246,180,95,0.15);border-radius:10px;text-align:center;font-family:-apple-system,BlinkMacSystemFont,sans-serif;box-sizing:border-box;}
-    .pacdi-share-label{font-size:0.8rem;color:#7a9ab8;margin-bottom:10px;font-weight:600;}
-    .pacdi-share-btns{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;}
-    .pacdi-share-btn{display:inline-flex;align-items:center;gap:4px;font-size:0.78rem;padding:7px 14px;border-radius:20px;border:1px solid rgba(246,180,95,0.3);background:transparent;color:#F6B45F;text-decoration:none;cursor:pointer;font-family:inherit;}
-    .pacdi-share-btn:hover{background:rgba(246,180,95,0.1);}
-    </style>
-    <style>
-    [data-theme="dark"]:not([data-pacdi-native-theme]) { filter: invert(1) hue-rotate(180deg); background: #fff; }
-    [data-theme="dark"]:not([data-pacdi-native-theme]) img,
-    [data-theme="dark"]:not([data-pacdi-native-theme]) svg,
-    [data-theme="dark"]:not([data-pacdi-native-theme]) video,
-    [data-theme="dark"]:not([data-pacdi-native-theme]) picture,
-    [data-theme="dark"]:not([data-pacdi-native-theme]) iframe { filter: invert(1) hue-rotate(180deg); }
-    .pacdi-theme-toggle { position: fixed; top: 10px; right: 10px; z-index: 99999; width: 2.1rem; height: 2.1rem;
-      border: none; border-radius: 50%; background: rgba(0,0,0,0.08); font-size: 1.05rem; cursor: pointer;
-      display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px); }
-    .pacdi-theme-toggle:hover { background: rgba(0,0,0,0.16); }
-    </style>
-    <script>
-(function(){
-  var KEY = 'pacdi-theme';
-  function apply(theme) {
-    document.documentElement.setAttribute('data-theme', theme);
-    var btn = document.getElementById('pacdiThemeToggle');
-    if (btn) btn.textContent = theme === 'dark' ? '\u2600\uFE0F' : '\uD83C\uDF19';
-  }
-  var saved = null;
-  try { saved = localStorage.getItem(KEY); } catch(e) {}
-  var preferred = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
-  apply(saved || preferred);
-  function addBtn() {
-    if (document.getElementById('pacdiThemeToggle')) return;
-    var btn = document.createElement('button');
-    btn.id = 'pacdiThemeToggle';
-    btn.className = 'pacdi-theme-toggle';
-    btn.setAttribute('aria-label', 'Koyu/Acik mod');
-    btn.textContent = document.documentElement.getAttribute('data-theme') === 'dark' ? '\u2600\uFE0F' : '\uD83C\uDF19';
-    btn.onclick = function() {
-      var cur = document.documentElement.getAttribute('data-theme');
-      var next = cur === 'dark' ? 'light' : 'dark';
-      try { localStorage.setItem(KEY, next); } catch(e) {}
-      apply(next);
-    };
-    document.body.appendChild(btn);
-  }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', addBtn);
-  } else {
-    addBtn();
-  }
-})();
-</script>
 </head>
 <body>
-<!--
-╬═══════════════════════════════════════════════════════════════╮
-║         🛡️  PACDI FRAMEWORK — PROTECTED WORK                  ║
-║                                                               ║
-║  © 2026 PACDI Global Yazılım Ltd. Şti.                       ║
-║  FSEK Registration No : 2026/18897                            ║
-║  Trade Registry      : 23836 · Yunusemre / Manisa, TR       ║
-║                                                               ║
-║  This work and its modular software architecture are          ║
-║  protected under PACDI Software Library FSEK registration.   ║
-║  Unauthorized copying is subject to legal action.            ║
-║                                                               ║
-║  pacdi.eu · pacdi.de · info@pacdi.eu                         ║
-╠═══════════════════════════════════════════════════════════════╣
--->
-
 <div class="wrap">
 
   <div class="test-banner">
-    🔒 <strong>İSKELET / TEST MODU</strong> — hiçbir platforma gerçek bağlantı yok. Bu panel, onay sonrası gerçek hesap bağlantıları eklenene kadar tamamen simülasyondur; hiçbir paylaşım gerçekten gönderilmez.
+    🔒 <strong>İSKELET / TEST MODU</strong> — hiçbir platforma gerçek bağlantı yok.
+    <span class="badge-new">📦 SIKIŞTIRMA AKTİF</span>
+    <span style="font-size:0.75rem;color:var(--text-dim);">Fotoğraflar otomatik sıkıştırılır (1200px, %80 kalite)</span>
   </div>
 
   <header class="hero">
@@ -467,6 +423,7 @@
       <div class="media-preview" id="mediaPreview">
         <div class="empty-text">Henüz medya eklenmedi.</div>
       </div>
+      <div class="compress-stats" id="compressStats"></div>
       <div class="media-warnings" id="mediaWarnings"></div>
     </div>
 
@@ -519,7 +476,7 @@
 
 <script>
   (function() {
-    // DOM REFS
+    // ===== DOM REFS =====
     const postText = document.getElementById('postText');
     const charCount = document.getElementById('charCount');
     const xWarning = document.getElementById('xWarning');
@@ -529,10 +486,10 @@
     const queueList = document.getElementById('queueList');
     const queueEmpty = document.getElementById('queueEmpty');
 
-    // MEDIA REFS
     const mediaInput = document.getElementById('mediaInput');
     const mediaPreview = document.getElementById('mediaPreview');
     const mediaWarnings = document.getElementById('mediaWarnings');
+    const compressStats = document.getElementById('compressStats');
 
     const previews = {
       Facebook: document.getElementById('prevFacebook'),
@@ -548,15 +505,53 @@
       X: document.getElementById('xMediaBadge'),
     };
 
-    // STATE
+    // ===== STATE =====
     let queue = [];
-    let uploadedMedia = []; // File nesneleri
+    let uploadedMedia = []; // File nesneleri (sıkıştırılmış veri eklendi)
 
-    // ----- MEDYA İŞLEMLERİ -----
+    // ===== MEDYA SIKIŞTIRMA =====
+    function compressImage(file, maxSize, quality, callback) {
+      const reader = new FileReader();
+      reader.onload = function(ev) {
+        const img = new Image();
+        img.onload = function() {
+          let w = img.width, h = img.height;
+          if (w > h) {
+            if (w > maxSize) { h = Math.round(h * maxSize / w); w = maxSize; }
+          } else {
+            if (h > maxSize) { w = Math.round(w * maxSize / h); h = maxSize; }
+          }
+          const canvas = document.createElement('canvas');
+          canvas.width = w;
+          canvas.height = h;
+          const ctx = canvas.getContext('2d');
+          ctx.drawImage(img, 0, 0, w, h);
+          callback(canvas.toDataURL('image/jpeg', quality));
+        };
+        img.src = ev.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function getVideoInfo(file, callback) {
+      const video = document.createElement('video');
+      video.preload = 'metadata';
+      video.onloadedmetadata = function() {
+        callback({
+          duration: video.duration,
+          width: video.videoWidth,
+          height: video.videoHeight
+        });
+      };
+      video.src = URL.createObjectURL(file);
+    }
+
+    // ===== MEDYA İŞLEMLERİ =====
     function renderMediaPreview() {
       mediaPreview.innerHTML = '';
       if (uploadedMedia.length === 0) {
         mediaPreview.innerHTML = '<div class="empty-text">Henüz medya eklenmedi.</div>';
+        updateCompressStats();
         return;
       }
 
@@ -564,42 +559,61 @@
         const item = document.createElement('div');
         item.className = 'media-item';
 
+        // Sıkıştırılmış görsel varsa onu kullan
+        let src = null;
+        if (file._isCompressed && file._compressed) {
+          src = file._compressed;
+        } else {
+          src = URL.createObjectURL(file);
+        }
+
         if (file.type.startsWith('image/')) {
           const img = document.createElement('img');
-          img.src = URL.createObjectURL(file);
+          img.src = src;
           img.alt = file.name;
+          img.loading = 'lazy';
           item.appendChild(img);
+          
+          if (file._isCompressed) {
+            const badge = document.createElement('div');
+            badge.className = 'compress-badge';
+            const origSize = (file.size / 1024 / 1024).toFixed(1);
+            const compressedSize = (src.length * 0.75 / 1024 / 1024).toFixed(1);
+            badge.textContent = `📦 ${compressedSize}MB (${origSize}MB)`;
+            item.appendChild(badge);
+          }
         } else if (file.type.startsWith('video/')) {
           const video = document.createElement('video');
-          video.src = URL.createObjectURL(file);
+          video.src = src;
           video.muted = true;
           video.preload = 'metadata';
           item.appendChild(video);
-          // video icon
+          
           const icon = document.createElement('div');
           icon.className = 'video-icon';
           icon.textContent = '▶️';
           item.appendChild(icon);
-          // süre badge
-          video.onloadedmetadata = () => {
-            const dur = Math.round(video.duration);
+          
+          const dur = file._duration || 0;
+          if (dur > 0) {
             const mins = Math.floor(dur / 60);
-            const secs = String(dur % 60).padStart(2, '0');
+            const secs = String(Math.round(dur % 60)).padStart(2, '0');
             const badge = document.createElement('div');
             badge.className = 'badge';
             badge.textContent = `${mins}:${secs}`;
             item.appendChild(badge);
-          };
+          }
         }
 
-        // boyut badge
+        // Boyut badge
         const sizeBadge = document.createElement('div');
         sizeBadge.className = 'size-badge';
         const sizeMB = (file.size / 1024 / 1024).toFixed(1);
         sizeBadge.textContent = sizeMB + ' MB';
+        if (file._isCompressed) sizeBadge.classList.add('compressed');
         item.appendChild(sizeBadge);
 
-        // kaldır butonu
+        // Kaldır butonu
         const removeBtn = document.createElement('button');
         removeBtn.className = 'remove-media';
         removeBtn.textContent = '✕';
@@ -610,28 +624,57 @@
           updatePlatformBadges();
           validateMedia();
           updateAddButton();
-          // input'u temizle
-          mediaInput.value = '';
         });
         item.appendChild(removeBtn);
 
         mediaPreview.appendChild(item);
       });
 
+      updateCompressStats();
       updatePlatformBadges();
       validateMedia();
+    }
+
+    function updateCompressStats() {
+      const total = uploadedMedia.length;
+      const compressed = uploadedMedia.filter(f => f._isCompressed).length;
+      const videos = uploadedMedia.filter(f => f.type.startsWith('video/')).length;
+      
+      let html = '';
+      if (total > 0) {
+        html += `<span>📎 Toplam: ${total} dosya</span>`;
+        if (compressed > 0) html += `<span>📦 Sıkıştırılmış: ${compressed}</span>`;
+        if (videos > 0) html += `<span>🎬 Video: ${videos}</span>`;
+        
+        // Toplam tasarruf
+        let origTotal = 0, compTotal = 0;
+        uploadedMedia.forEach(f => {
+          origTotal += f.size;
+          if (f._isCompressed && f._compressed) {
+            compTotal += f._compressed.length * 0.75;
+          }
+        });
+        if (compTotal > 0 && origTotal > 0) {
+          const saved = ((1 - compTotal / origTotal) * 100).toFixed(0);
+          html += `<span style="color:#4ade80;">💾 %${saved} tasarruf</span>`;
+        }
+      }
+      compressStats.innerHTML = html;
     }
 
     function updatePlatformBadges() {
       const count = uploadedMedia.length;
       const hasVideo = uploadedMedia.some(f => f.type.startsWith('video/'));
       const hasImage = uploadedMedia.some(f => f.type.startsWith('image/'));
+      const compressedCount = uploadedMedia.filter(f => f._isCompressed).length;
 
       let label = '';
       if (count === 0) label = '📎 Medya yok';
       else if (count === 1 && hasVideo) label = '🎬 1 video';
-      else if (count === 1 && hasImage) label = '🖼️ 1 fotoğraf';
-      else label = `📎 ${count} medya dosyası`;
+      else if (count === 1 && hasImage) {
+        label = compressedCount > 0 ? '🖼️ 1 fotoğraf (sıkıştırılmış)' : '🖼️ 1 fotoğraf';
+      }
+      else label = `📎 ${count} medya (${compressedCount} sıkıştırılmış)`;
 
       for (const key of ['Facebook', 'Instagram', 'Youtube', 'X']) {
         mediaBadges[key].textContent = label;
@@ -641,7 +684,6 @@
     function validateMedia() {
       const warnings = [];
       const videos = uploadedMedia.filter(f => f.type.startsWith('video/'));
-      const images = uploadedMedia.filter(f => f.type.startsWith('image/'));
       const total = uploadedMedia.length;
 
       // Instagram: max 1 medya
@@ -649,29 +691,28 @@
         warnings.push({ text: '📷 Instagram tek gönderi için yalnızca 1 medya dosyası destekler.', type: 'warn' });
       }
 
-      // Instagram: video süresi 90sn'den uzunsa (Reels)
+      // Instagram video: 100MB
       for (const video of videos) {
-        const el = document.createElement('video');
-        el.src = URL.createObjectURL(video);
-        el.preload = 'metadata';
-        el.onloadedmetadata = () => {
-          // async olduğu için burada uyarı gösteremiyoruz, ama sonra tekrar validate çağrılabilir
-          // Şimdilik geçici çözüm: süre bilgisini badge'de gösteriyoruz zaten
-        };
-        // Basitçe dosya adından veya boyuttan uyarı verelim
         if (video.size > 100 * 1024 * 1024) {
           warnings.push({ text: `⚠️ Instagram video boyutu ${(video.size/1024/1024).toFixed(1)}MB, 100MB sınırını aşıyor.`, type: 'error' });
         }
+        // Süre kontrolü
+        if (video._duration && video._duration > 90) {
+          warnings.push({ text: `⚠️ Instagram video süresi ${Math.round(video._duration)}sn, 90sn sınırını aşıyor (Reels için).`, type: 'warn' });
+        }
       }
 
-      // X: video süresi 140sn
+      // X: video 512MB, 140sn
       for (const video of videos) {
         if (video.size > 512 * 1024 * 1024) {
           warnings.push({ text: `⚠️ X video boyutu ${(video.size/1024/1024).toFixed(1)}MB, 512MB sınırını aşıyor.`, type: 'error' });
         }
+        if (video._duration && video._duration > 140) {
+          warnings.push({ text: `⚠️ X video süresi ${Math.round(video._duration)}sn, 140sn sınırını aşıyor.`, type: 'warn' });
+        }
       }
 
-      // YouTube: dosya boyutu 128GB
+      // YouTube: 128GB
       for (const file of uploadedMedia) {
         if (file.size > 128 * 1024 * 1024 * 1024) {
           warnings.push({ text: `⚠️ YouTube dosya boyutu ${(file.size/1024/1024/1024).toFixed(1)}GB, 128GB sınırını aşıyor.`, type: 'error' });
@@ -683,7 +724,7 @@
       ).join('');
     }
 
-    // ----- METİN ÖNİZLEME -----
+    // ===== METİN ÖNİZLEME =====
     function updatePreviews() {
       const text = postText.value;
       charCount.textContent = text.length + ' karakter';
@@ -706,12 +747,11 @@
     function updateAddButton() {
       const hasText = postText.value.trim().length > 0;
       const hasDate = schedDate.value.length > 0;
-      // Medya zorunlu değil ama en az metin veya medya olmalı
       const hasContent = hasText || uploadedMedia.length > 0;
       addBtn.disabled = !(hasContent && hasDate);
     }
 
-    // ----- KUYRUK -----
+    // ===== KUYRUK =====
     function formatDateTr(dateStr, timeStr) {
       const d = new Date(dateStr + 'T' + timeStr);
       return d.toLocaleDateString('tr-TR', { day: '2-digit', month: 'long', year: 'numeric' }) + ' — ' + timeStr;
@@ -727,10 +767,13 @@
         const el = document.createElement('div');
         el.className = 'queue-item';
 
-        // medya ikonları
         let mediaIcons = '';
         if (item.media && item.media.length > 0) {
-          mediaIcons = item.media.map(m => m.type.startsWith('video/') ? '🎬' : '🖼️').join(' ');
+          mediaIcons = item.media.map(m => {
+            if (m.type && m.type.startsWith('video/')) return '🎬';
+            if (m.isCompressed) return '📦';
+            return '🖼️';
+          }).join(' ');
         }
 
         el.innerHTML = `
@@ -752,25 +795,70 @@
       });
     }
 
-    // ----- OLAY DİNLEYİCİLER -----
-    postText.addEventListener('input', updatePreviews);
-    schedDate.addEventListener('input', updateAddButton);
-    schedTime.addEventListener('input', updateAddButton);
-
+    // ===== MEDYA YÜKLEME EVENTİ (SIKIŞTIRMALI) =====
     mediaInput.addEventListener('change', function(e) {
       const files = Array.from(this.files);
       if (files.length === 0) return;
 
-      // varolanlara ekle
-      uploadedMedia = [...uploadedMedia, ...files];
-      renderMediaPreview();
-      updatePreviews();
-      updateAddButton();
-      // input'u temizle ki aynı dosyalar tekrar eklenmesin
+      // Her dosyayı işle
+      let processed = 0;
+      const totalFiles = files.length;
+
+      files.forEach((file, idx) => {
+        // Video dosyaları
+        if (file.type.startsWith('video/')) {
+          getVideoInfo(file, (info) => {
+            file._duration = info.duration;
+            file._videoInfo = info;
+            uploadedMedia.push(file);
+            processed++;
+            if (processed === totalFiles) {
+              renderMediaPreview();
+              updatePreviews();
+              updateAddButton();
+              validateMedia();
+            }
+          });
+          return;
+        }
+
+        // Resim dosyaları: sıkıştır
+        if (file.type.startsWith('image/')) {
+          compressImage(file, 1200, 0.80, (compressedDataUrl) => {
+            file._compressed = compressedDataUrl;
+            file._isCompressed = true;
+            uploadedMedia.push(file);
+            processed++;
+            if (processed === totalFiles) {
+              renderMediaPreview();
+              updatePreviews();
+              updateAddButton();
+              validateMedia();
+            }
+          });
+          return;
+        }
+
+        // Diğer dosyalar
+        uploadedMedia.push(file);
+        processed++;
+        if (processed === totalFiles) {
+          renderMediaPreview();
+          updatePreviews();
+          updateAddButton();
+          validateMedia();
+        }
+      });
+
       this.value = '';
     });
 
-    // EKLE BUTONU
+    // ===== OLAY DİNLEYİCİLER =====
+    postText.addEventListener('input', updatePreviews);
+    schedDate.addEventListener('input', updateAddButton);
+    schedTime.addEventListener('input', updateAddButton);
+
+    // ===== EKLE BUTONU =====
     addBtn.addEventListener('click', () => {
       const text = postText.value.trim();
       if (!text && uploadedMedia.length === 0) {
@@ -786,10 +874,13 @@
           name: f.name,
           size: f.size,
           type: f.type,
+          compressed: f._compressed || null,
+          isCompressed: f._isCompressed || false,
+          duration: f._duration || 0,
         })),
       });
 
-      // formu sıfırla
+      // Formu sıfırla
       postText.value = '';
       uploadedMedia = [];
       renderMediaPreview();
@@ -798,83 +889,14 @@
       updatePreviews();
       renderQueue();
       updateAddButton();
+      mediaInput.value = '';
     });
 
-    // ----- BAŞLANGIÇ -----
+    // ===== BAŞLANGIÇ =====
     updatePreviews();
     renderQueue();
     renderMediaPreview();
   })();
 </script>
-<script>
-(function() {
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js').catch(function(){});
-  }
-
-  var isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
-  var isInStandalone = ('standalone' in navigator && navigator.standalone);
-  var shown = sessionStorage.getItem('pwa-banner-shown');
-  if (shown || isInStandalone) return;
-
-  if (isIOS) {
-    setTimeout(function() {
-      var bar = document.createElement('div');
-      bar.id = 'pwa-banner';
-      bar.style.cssText = 'position:fixed;bottom:0;left:0;right:0;background:#04162E;border-top:2px solid #F6B45F;padding:14px 16px;z-index:9999;font-family:system-ui;';
-      bar.innerHTML =
-        '<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px;">' +
-          '<div>' +
-            '<div style="color:#F6B45F;font-size:0.82rem;font-weight:700;margin-bottom:4px;">📲 Ana ekrana ekle</div>' +
-            '<div style="color:#b0b5bf;font-size:0.75rem;line-height:1.5;">Safari\'de <strong style="color:#eaf2fb;">&#11015; Paylaş</strong> butonuna bas, ardından <strong style="color:#eaf2fb;">Ana Ekrana Ekle</strong> seçeneğini seç.</div>' +
-            '<div style="color:#4a6a88;font-size:0.68rem;margin-top:4px;">&#9432; iOS\'ta otomatik kurulum desteklenmiyor — bu adım gerekli.</div>' +
-          '</div>' +
-          '<button onclick="document.getElementById(\'pwa-banner\').remove();sessionStorage.setItem(\'pwa-banner-shown\',\'1\')" style="background:transparent;border:none;color:#7a9ab8;font-size:1.2rem;cursor:pointer;padding:0 4px;flex-shrink:0;">✕</button>' +
-        '</div>';
-      document.body.appendChild(bar);
-      sessionStorage.setItem('pwa-banner-shown', '1');
-    }, 3000);
-    return;
-  }
-
-  var deferredPrompt = null;
-  window.addEventListener('beforeinstallprompt', function(e) {
-    e.preventDefault();
-    deferredPrompt = e;
-    setTimeout(function() {
-      if (!deferredPrompt) return;
-      var bar = document.createElement('div');
-      bar.id = 'pwa-banner';
-      bar.style.cssText = 'position:fixed;bottom:0;left:0;right:0;background:#04162E;border-top:2px solid #F6B45F;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;z-index:9999;font-family:system-ui;';
-      bar.innerHTML =
-        '<span style="color:#eaf2fb;font-size:0.85rem;">📲 Ana ekrana ekle &mdash; daha hızlı aç!</span>' +
-        '<div style="display:flex;gap:8px;">' +
-          '<button onclick="installPWA()" style="background:#F6B45F;border:none;color:#04162E;padding:6px 16px;border-radius:20px;font-weight:700;cursor:pointer;font-size:0.82rem;">Ekle</button>' +
-          '<button onclick="document.getElementById(\'pwa-banner\').remove();sessionStorage.setItem(\'pwa-banner-shown\',\'1\')" style="background:transparent;border:1px solid rgba(246,180,95,0.3);color:#7a9ab8;padding:6px 12px;border-radius:20px;cursor:pointer;font-size:0.82rem;">Sonra</button>' +
-        '</div>';
-      document.body.appendChild(bar);
-    }, 3000);
-  });
-
-  window.installPWA = function() {
-    if (deferredPrompt) { deferredPrompt.prompt(); deferredPrompt.userChoice.then(function(){ deferredPrompt=null; }); }
-    var b = document.getElementById('pwa-banner'); if (b) b.remove();
-    sessionStorage.setItem('pwa-banner-shown', '1');
-  };
-})();
-</script>
-
-<div class="pacdi-share-bar" id="pacdiShareBar" style="clear:both;width:100%;flex-basis:100%;"></div>
-<script src="https://pacdi.store/assets/share-bar.js"></script>
-
-<div id="pacdi-fsek" style="clear:both;width:100%;flex-basis:100%;text-align:center;padding:28px 16px 20px;border-top:1px solid rgba(212,175,55,0.15);margin-top:32px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;box-sizing:border-box;">
-  <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(212,175,55,0.06);border:1px solid rgba(212,175,55,0.25);border-radius:24px;padding:8px 20px;margin-bottom:12px;flex-wrap:wrap;justify-content:center;">
-    <span style="font-size:1rem;">🛡️</span>
-    <span style="font-size:0.72rem;font-weight:700;letter-spacing:0.1em;color:#D4AF37;text-transform:uppercase;">FSEK Registered · PACDI Framework</span>
-  </div>
-  <div style="font-size:0.78rem;color:#8A8F9A;margin-bottom:4px;">Operated by AskMeAI Teknoloji Ltd. Şti. (TR: 23837)</div>
-  <div style="font-size:0.72rem;color:#6B7280;margin-bottom:10px;">Intellectual property owned by © 2026 PACDI Global Yazılım Ltd. Şti. &mdash; FSEK No: <a href="https://pacdi.eu/legal.html" style="color:#D4AF37;text-decoration:none;">2026/18897</a></div>
-  <div style="font-size:0.82rem;font-style:italic;color:#6B7280;">&ldquo;Technology in the service of humanity.&rdquo;</div>
-</div>
 </body>
 </html>
