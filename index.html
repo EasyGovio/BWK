@@ -393,6 +393,23 @@
   });
 })();
 </script>
+    <style id="viewportLock">html,body{overscroll-behavior:none;}</style>
+<script>
+(function(){
+  function lockCanvases(){
+    document.querySelectorAll('canvas').forEach(function(c){
+      c.style.touchAction = 'none';
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', lockCanvases);
+  } else {
+    lockCanvases();
+  }
+  var mo = new MutationObserver(lockCanvases);
+  mo.observe(document.documentElement, { childList: true, subtree: true });
+})();
+</script>
 </head>
 <body>
 
